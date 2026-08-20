@@ -1,0 +1,6 @@
+{
+  "name": "AI Study Planner",
+  "description": "Plan Smarter. Learn Better. Comprehensive preparation platform for Academic Studies and Professional GATE Exams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

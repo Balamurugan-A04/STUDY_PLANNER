@@ -1,0 +1,932 @@
+[
+  {
+    "id": "GATE2025_CS1_Q01",
+    "question_number": 1,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Ravi had ______ younger brother who taught at ______ university. He was widely regarded as ______ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+    "options": {
+      "A": "a; a; an",
+      "B": "the; an; a",
+      "C": "a; an; a",
+      "D": "an; an; a"
+    },
+    "correct_answer": "A",
+    "explanation": "To choose the correct articles, listen to the starting sound (vowel vs. consonant) of each word following the blank:\n\n1. First Blank: 'younger' starts with a consonant sound (/j/), so the indefinite article 'a' is used ('a younger brother').\n2. Second Blank: 'university' starts with a consonant sound (/j/ as in 'you'), despite starting with the vowel letter 'u'. Therefore, 'a' is used ('a university').\n3. Third Blank: 'honorable' begins with a silent 'h', so the word starts with an open vowel sound (/ɒ/). Therefore, 'an' is used ('an honorable man').\n\nThus, the correct sequence of articles is 'a; a; an'."
+  },
+  {
+    "id": "GATE2025_CS1_Q02",
+    "question_number": 2,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word “myopic” without changing the meaning of the sentence.",
+    "options": {
+      "A": "visionary",
+      "B": "shortsighted",
+      "C": "progressive",
+      "D": "innovative"
+    },
+    "correct_answer": "B",
+    "explanation": "The term 'myopic' literally refers to nearsightedness, but in a broader or metaphorical sense, it describes a lack of foresight or focusing strictly on immediate, short-term needs while ignoring long-term consequences.\n\n- The context of the sentence states that long-term stability was sacrificed for short-term gains.\n- 'Shortsighted' directly matches this meaning and serves as an exact synonym.\n- 'Visionary', 'progressive', and 'innovative' are positive traits expressing forward-thinking or creativity, which are antonyms to the intended meaning."
+  },
+  {
+    "id": "GATE2025_CS1_Q03",
+    "question_number": 3,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+    "options": {
+      "A": "25",
+      "B": "28",
+      "C": "30",
+      "D": "32"
+    },
+    "correct_answer": "C",
+    "explanation": "Let N be the total number of students in the class.\n\n1. Initial Sum of Marks = 30.8 * N\n2. Difference caused by the correction = Correct Value - Incorrect Value = 42 - 24 = +18 marks\n3. Corrected Sum of Marks = (30.8 * N) + 18\n4. Using the new average formula:\n   Corrected Average = (Corrected Sum) / N = 31.4\n   (30.8 * N + 18) / N = 31.4\n   30.8 * N + 18 = 31.4 * N\n   31.4 * N - 30.8 * N = 18\n   0.6 * N = 18\n   N = 18 / 0.6 = 30\n\nHence, the class has 30 students."
+  },
+  {
+    "id": "GATE2025_CS1_Q04",
+    "question_number": 4,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider the relationships among P, Q, R, S, and T:\n• P is the brother of Q.\n• S is the daughter of Q.\n• T is the sister of S.\n• R is the mother of Q.\nThe following statements are made based on the relationships given above.\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+    "options": {
+      "A": "Both (1) and (2) are true.",
+      "B": "Both (1) and (3) are true.",
+      "C": "Only (3) is true.",
+      "D": "Only (4) is true."
+    },
+    "correct_answer": "A",
+    "explanation": "Let us break down the relationships step by step:\n\n1. R is the mother of Q and P (since P is the male sibling/brother of Q).\n2. S is Q's daughter, and T is S's sister, meaning T is also Q's daughter.\n\nEvaluating the statements:\n- Statement (1): R is Q's mother, and Q is S's parent. Thus, R is indeed the grandmother of S (True).\n- Statement (2): P is the brother of parent Q, which makes P the maternal/paternal uncle of both S and T (True).\n- Statement (3): The gender of Q is not mentioned. Q could be male (another son) or female (a daughter). Hence, we cannot confirm if R has only one son (Unverifiable/False).\n- Statement (4): S and T are both daughters of Q. Thus, Q has at least two daughters (False).\n\nTherefore, both (1) and (2) are true."
+  },
+  {
+    "id": "GATE2025_CS1_Q05",
+    "question_number": 5,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "According to the map shown in the figure, which one of the following statements is correct?",
+    "options": {
+      "A": "The library is located to the northwest of the canteen.",
+      "B": "The hospital is located to the east of the chemistry lab.",
+      "C": "The chemistry lab is to the southeast of physics lab.",
+      "D": "The classrooms and canteen are next to each other."
+    },
+    "correct_answer": "C",
+    "explanation": "Based on standard map orientation (North at the top, East to the right, South at the bottom, West to the left):\n\n- The Physics Lab is positioned in the upper-left (North-West) region of the layout.\n- The Chemistry Lab is positioned below and to the right of the Physics Lab relative to the directional grid axes.\n- Moving downwards (South) and to the right (East) from the Physics Lab confirms that the Chemistry Lab is located to the Southeast of the Physics Lab."
+  },
+  {
+    "id": "GATE2025_CS1_Q06",
+    "question_number": 6,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "“I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one’s pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.”\n(From G.K. Chesterton’s “A Piece of Chalk”)\nBased only on the information provided in the above passage, which one of the following statements is true?",
+    "options": {
+      "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+      "B": "The author of the passage had decided to write a poem on epics.",
+      "C": "The pocket-knife is described as the infant of the sword.",
+      "D": "Epics are described as too inconvenient to write."
+    },
+    "correct_answer": "C",
+    "explanation": "Reading the passage directly reveals:\n\n- The passage explicitly states: '...the pocket-knife, for instance the type of all human tools, the infant of the sword.' This directly supports Option C.\n- Option A misinterprets the word 'reflected' (which means thought/pondered, not a literal mirror).\n- Option B is incorrect because he planned to write poems about things in his pocket, not a poem about epics.\n- Option D is incorrect because the passage mentions 'the age of the great epics is past', not that they are inconvenient."
+  },
+  {
+    "id": "GATE2025_CS1_Q07",
+    "question_number": 7,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "In the diagram, the lines QR and ST are parallel to each other. The shortest distance between these two lines is half the shortest distance between the point P and line QR. What is the ratio of the area of the triangle PST to the area of the trapezium SQRT?",
+    "options": {
+      "A": "1/3",
+      "B": "1/4",
+      "C": "2/5",
+      "D": "1/2"
+    },
+    "correct_answer": "A",
+    "explanation": "Let the perpendicular distance from vertex P to line QR be H.\n\n1. Distance between line ST and line QR = H / 2.\n2. Distance from vertex P to line ST = H - (H / 2) = H / 2.\n3. Since ST is parallel to QR, Triangle PST is similar to Triangle PQR (ΔPST ~ ΔPQR).\n4. The ratio of heights of ΔPST to ΔPQR is (H / 2) / H = 1 / 2.\n5. The ratio of their areas equals the square of the ratio of their heights:\n   Area(ΔPST) / Area(ΔPQR) = (1 / 2)² = 1 / 4\n   Implies: Area(ΔPST) = 1/4 * Area(ΔPQR)\n6. The area of trapezium SQRT is the remaining area:\n   Area(SQRT) = Area(ΔPQR) - Area(ΔPST) = Area(ΔPQR) - (1/4 * Area(ΔPQR)) = 3/4 * Area(ΔPQR)\n7. Therefore, Ratio = Area(ΔPST) / Area(SQRT) = (1/4) / (3/4) = 1 / 3."
+  },
+  {
+    "id": "GATE2025_CS1_Q08",
+    "question_number": 8,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A fair six-faced dice, with the faces labelled ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, and ‘6’, is rolled thrice. What is the probability of rolling ‘6’ exactly once?",
+    "options": {
+      "A": "75/216",
+      "B": "1/6",
+      "C": "1/18",
+      "D": "25/216"
+    },
+    "correct_answer": "A",
+    "explanation": "This can be calculated using the Binomial Probability formula: P(X = k) = C(n, k) * (p)^k * (1 - p)^(n - k)\n\n- Number of trials (n) = 3 rolls\n- Probability of getting a '6' on a fair die (p) = 1/6\n- Probability of NOT getting a '6' (1 - p) = 5/6\n- We want exactly k = 1 success.\n\nCalculation:\nP(X = 1) = C(3, 1) * (1/6)^1 * (5/6)^(3 - 1)\nP(X = 1) = 3 * (1/6) * (25/36)\nP(X = 1) = (3 * 25) / 216 = 75 / 216."
+  },
+  {
+    "id": "GATE2025_CS1_Q09",
+    "question_number": 9,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A square paper, shown in figure (I), is folded along the dotted lines as shown in the figures (II) and (III). Then a few cuts are made as shown in figure (IV). Which one of the following patterns will be obtained when the paper is unfolded?",
+    "options": {
+      "A": "Pattern A",
+      "B": "Pattern B",
+      "C": "Pattern C",
+      "D": "Pattern D"
+    },
+    "correct_answer": "A",
+    "explanation": "When a folded sheet of paper undergoes cuts, unfolding it acts like reflecting the cuts along the crease lines (axes of symmetry):\n\n1. Unfolding along the vertical crease reflects the cuts laterally across the vertical axis.\n2. Unfolding along the horizontal crease reflects the combined cuts vertically across the horizontal axis.\n3. This creates a fully symmetric four-quadrant pattern centered at the paper's origin.\n\nComparing the resulting symmetry with the options confirms Pattern A."
+  },
+  {
+    "id": "GATE2025_CS1_Q10",
+    "question_number": 10,
+    "section": "GA",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?",
+    "options": {
+      "A": "4",
+      "B": "20",
+      "C": "24",
+      "D": "48"
+    },
+    "correct_answer": "B",
+    "explanation": "Since repetition of flavors is allowed and the order does not matter, this is a Combinations with Repetition problem (Stars and Bars method).\n\n- Number of distinct flavors (n) = 4\n- Number of scoops to purchase (r) = 3\n- Formula = C(n + r - 1, r)\n\nCalculation:\nNumber of ways = C(4 + 3 - 1, 3) = C(6, 3)\nC(6, 3) = (6 * 5 * 4) / (3 * 2 * 1) = 120 / 6 = 20.\n\nThus, there are 20 different ways to purchase the ice-cream."
+  },
+  {
+    "id": "GATE2025_CS1_Q11",
+    "question_number": 11,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:\n(i) The processor saves the content of the program counter.\n(ii) The program counter is loaded with the start address of the ISR.\n(iii) The processor finishes the present instruction.\nWhich ONE of the following is the CORRECT sequence of steps?",
+    "options": {
+      "A": "(iii), (i), (ii)",
+      "B": "(i), (iii), (ii)",
+      "C": "(i), (ii), (iii)",
+      "D": "(iii), (ii), (i)"
+    },
+    "correct_answer": "A",
+    "explanation": "When an asynchronous hardware interrupt arrives during program execution, the processor follows these sequential hardware steps:\n\n1. Finish Current Instruction (iii): To maintain system state consistency, the processor always finishes the execution cycle of the currently running instruction before responding to the interrupt line.\n2. Save Program Counter (i): The address of the next instruction (stored in PC) is pushed onto the system stack so the processor can return to the main program later.\n3. Load ISR Address (ii): The Program Counter is updated with the starting memory address of the Interrupt Service Routine (ISR) to begin execution of the handler.\n\nHence, the correct execution sequence is (iii), (i), (ii)."
+  },
+  {
+    "id": "GATE2025_CS1_Q12",
+    "question_number": 12,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which ONE of the following statements is FALSE regarding the symbol table?",
+    "options": {
+      "A": "Symbol table is responsible for keeping track of the scope of variables.",
+      "B": "Symbol table can be implemented using a binary search tree.",
+      "C": "Symbol table is not required after the parsing phase.",
+      "D": "Symbol table is created during the lexical analysis phase."
+    },
+    "correct_answer": "C",
+    "explanation": "Let's evaluate each option regarding compiler structure:\n\n- Option A (True): Symbol tables store scope information, variable types, and memory offsets.\n- Option B (True): Symbol tables can be implemented using Hash Tables, Binary Search Trees (BST), or Linked Lists.\n- Option D (True): The symbol table creation starts during Lexical Analysis as tokens are identified.\n- Option C (FALSE): The symbol table is required throughout semantic analysis, intermediate code generation, target code optimization, and final code generation to check type safety, resolve memory addresses, and allocate registers.\n\nTherefore, statement C is false."
+  },
+  {
+    "id": "GATE2025_CS1_Q13",
+    "question_number": 13,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which ONE of the following techniques used in compiler code optimization uses live variable analysis?",
+    "options": {
+      "A": "Run-time function call management",
+      "B": "Register assignment to variables",
+      "C": "Strength reduction",
+      "D": "Constant folding"
+    },
+    "correct_answer": "B",
+    "explanation": "Live Variable Analysis is a data-flow analysis technique that determines which variables are 'live' (i.e., holding a value that will be read later before being overwritten) at any given program point.\n\n- Register Assignment/Allocation relies on live variable analysis to construct interference graphs. If two variables are live at the same time, they cannot share the same CPU register.\n- Constant Folding and Strength Reduction rely on expression evaluation and algebraic simplifications rather than liveness."
+  },
+  {
+    "id": "GATE2025_CS1_Q14",
+    "question_number": 14,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider a demand paging memory management system with 32-bit logical address, 20-bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table?",
+    "options": {
+      "A": "2^21",
+      "B": "2^20",
+      "C": "2^22",
+      "D": "2^24"
+    },
+    "correct_answer": "A",
+    "explanation": "To find the maximum number of page table entries in a single-level page table:\n\n1. Logical Address Size = 32 bits\n2. Page Size = 2048 bytes = 2^11 bytes\n3. Page Offset Bits = log2(2^11) = 11 bits\n4. Page Number Bits = Total Logical Address Bits - Page Offset Bits = 32 - 11 = 21 bits\n5. Number of Page Table Entries = 2^(Page Number Bits) = 2^21.\n\nThus, the page table contains a maximum of 2^21 entries."
+  },
+  {
+    "id": "GATE2025_CS1_Q15",
+    "question_number": 15,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "A schedule of three database transactions T1, T2, and T3 is shown. Ri(A) and Wi(A) denote read and write of data item A by transaction Ti. The transaction T1 aborts at the end. Which other transaction(s) will be required to be rolled back?",
+    "options": {
+      "A": "Only T2",
+      "B": "Only T3",
+      "C": "Both T2 and T3",
+      "D": "Neither T2 nor T3"
+    },
+    "correct_answer": "C",
+    "explanation": "A dirty read occurs when a transaction reads uncommitted data written by another transaction.\n\n1. Transaction T1 performs a write operation W1(Y).\n2. Before T1 commits, T2 performs a read R2(Y) on the value written by T1.\n3. Similarly, T3 performs a read R3(Y) on the uncommitted value written by T1.\n4. When T1 aborts, the value of Y it wrote becomes invalid.\n5. Because both T2 and T3 relied on this invalid uncommitted data, both suffer from cascading rollbacks and must be aborted."
+  },
+  {
+    "id": "GATE2025_CS1_Q16",
+    "question_number": 16,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.\nOSI Layers:\n(a) Network layer\n(b) Transport layer\n(c) Datalink layer\nFunctionalities:\n(I) Packet routing\n(II) Framing and error handling\n(III) Host to host communication",
+    "options": {
+      "A": "(a)-(I), (b)-(II), (c)-(III)",
+      "B": "(a)-(I), (b)-(III), (c)-(II)",
+      "C": "(a)-(II), (b)-(I), (c)-(III)",
+      "D": "(a)-(III), (b)-(II), (c)-(I)"
+    },
+    "correct_answer": "B",
+    "explanation": "Matching layers with their core responsibilities:\n\n- (a) Network Layer: Responsible for end-to-end packet forwarding and logical routing across networks -> Matches (I).\n- (b) Transport Layer: Responsible for host-to-host and end-to-end process communication, data segmentation, and flow control -> Matches (III).\n- (c) Data Link Layer: Responsible for node-to-node physical framing, MAC addressing, and link-level error detection/handling -> Matches (II).\n\nCorrect matching: (a)-(I), (b)-(III), (c)-(II)."
+  },
+  {
+    "id": "GATE2025_CS1_Q17",
+    "question_number": 17,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "g(.) is a function from A to B, f(.) is a function from B to C, and their composition defined as f(g(.)) is a mapping from A to C. If f(.) and f(g(.)) are onto (surjective) functions, which ONE of the following is TRUE about the function g(.)?",
+    "options": {
+      "A": "g(.) must be an onto (surjective) function.",
+      "B": "g(.) must be a one-to-one (injective) function.",
+      "C": "g(.) must be a bijective function, that is, both one-to-one and onto.",
+      "D": "g(.) is not required to be a one-to-one or onto function."
+    },
+    "correct_answer": "D",
+    "explanation": "Let's analyze function composition properties:\n\n- For composite function f(g(x)) to be onto (surjective), the outer function f must be onto.\n- However, the inner function g does not necessarily have to cover all of set B. Set B can contain additional elements outside the image of g, provided function f maps the subset g(A) onto the entire set C.\n- Furthermore, g does not need to be one-to-one (injective) because multiple elements in A could map to the same element in B without violating the surjectivity of f(g(x)).\n\nThus, g(.) is not required to be one-to-one or onto."
+  },
+  {
+    "id": "GATE2025_CS1_Q18",
+    "question_number": 18,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Let G be any undirected graph with positive edge weights, and T be a minimum spanning tree of G. For any two vertices, u and v, let d1(u, v) and d2(u, v) be the shortest distances between u and v in G and T, respectively. Which ONE of the options is CORRECT for all possible G, T, u and v?",
+    "options": {
+      "A": "d1(u, v) = d2(u, v)",
+      "B": "d1(u, v) <= d2(u, v)",
+      "C": "d1(u, v) >= d2(u, v)",
+      "D": "d1(u, v) != d2(u, v)"
+    },
+    "correct_answer": "B",
+    "explanation": "By definition:\n\n1. T is a spanning tree of G, meaning T is a subgraph containing a subset of the edges in G.\n2. Any path connecting vertices u and v in T also exists as a valid path in G.\n3. Because G contains all edges of T plus potentially additional non-tree edges, the shortest path distance in G (d1) can never be greater than the path distance in tree T (d2).\n4. If the shortest path in G uses non-tree edges, d1(u, v) < d2(u, v); if it lies entirely within the tree, d1(u, v) = d2(u, v).\n\nTherefore, d1(u, v) <= d2(u, v) holds true for all cases."
+  },
+  {
+    "id": "GATE2025_CS1_Q19",
+    "question_number": 19,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider the following context-free grammar G, where S, A, and B are the variables, a and b are terminals, S is the start variable:\nS -> aaB | Abb\nA -> a | aA\nB -> b | bB\nWhich ONE of the languages L(G) is accepted by G?",
+    "options": {
+      "A": "L(G) = {a^2 b^n | n >= 1} U {a^n b^2 | n >= 1}",
+      "B": "L(G) = {a^n b^(2n) | n >= 1} U {a^(2n) b^n | n >= 1}",
+      "C": "L(G) = {a^n b^n | n >= 1}",
+      "D": "L(G) = {a^(2n) b^(2n) | n >= 1}"
+    },
+    "correct_answer": "A",
+    "explanation": "Let's analyze the grammar productions separately:\n\n1. From variable A: A -> a | aA generates one or more 'a's, i.e., L(A) = {a^n | n >= 1}.\n2. From variable B: B -> b | bB generates one or more 'b's, i.e., L(B) = {b^n | n >= 1}.\n3. From start variable S:\n   - Branch 1: S -> aaB produces two 'a's followed by one or more 'b's -> {a^2 b^n | n >= 1}.\n   - Branch 2: S -> Abb produces one or more 'a's followed by two 'b's -> {a^n b^2 | n >= 1}.\n\nCombining both branches yields L(G) = {a^2 b^n | n >= 1} U {a^n b^2 | n >= 1}."
+  },
+  {
+    "id": "GATE2025_CS1_Q20",
+    "question_number": 20,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider the following recurrence relation:\nT(n) = 2T(n - 1) + n 2^n for n > 0, T(0) = 1.\nWhich ONE of the following options is CORRECT?",
+    "options": {
+      "A": "T(n) = Theta(n^2 2^n)",
+      "B": "T(n) = Theta(n 2^n)",
+      "C": "T(n) = Theta((log n)^2 2^n)",
+      "D": "T(n) = Theta(4^n)"
+    },
+    "correct_answer": "A",
+    "explanation": "Divide the recurrence relation T(n) = 2T(n - 1) + n * 2^n throughout by 2^n:\n\n1. T(n) / 2^n = (2 * T(n - 1)) / 2^n + (n * 2^n) / 2^n\n2. T(n) / 2^n = T(n - 1) / 2^(n - 1) + n\n3. Substitute S(n) = T(n) / 2^n:\n   S(n) = S(n - 1) + n\n4. Unrolling S(n):\n   S(n) = S(0) + 1 + 2 + 3 + ... + n = 1 + (n * (n + 1)) / 2 = Theta(n^2)\n5. Converting back to T(n):\n   T(n) = 2^n * S(n) = 2^n * Theta(n^2) = Theta(n^2 * 2^n)."
+  },
+  {
+    "id": "GATE2025_CS1_Q21",
+    "question_number": 21,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Consider the following B+ tree with 5 nodes, in which a node can store at most 3 key values. The value 23 is now inserted in the B+ tree. Which of the following option(s) is/are CORRECT?",
+    "options": {
+      "A": "None of the nodes will split.",
+      "B": "At least one node will split and redistribute.",
+      "C": "The total number of nodes will remain same.",
+      "D": "The height of the tree will increase."
+    },
+    "correct_answer": "B;D",
+    "explanation": "In a B+ tree with node capacity of at most 3 keys:\n\n1. Inserting value 23 directs the key into a target leaf node that already contains 3 keys (full capacity).\n2. Overfilling causes this leaf node to split into two separate leaf nodes and push its middle key upward to the parent.\n3. The insertion cascade causes parent/root overflow as well, forcing the root node to split.\n4. A split at the root creates a new root node, thereby increasing the overall height of the tree.\n\nThus, statements B and D are correct."
+  },
+  {
+    "id": "GATE2025_CS1_Q22",
+    "question_number": 22,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?",
+    "options": {
+      "A": "P3: SYN = 1, ACK = 1",
+      "B": "P2: SYN = 1, ACK = 1",
+      "C": "P2: SYN = 0, ACK = 1",
+      "D": "P1: SYN = 1"
+    },
+    "correct_answer": "B;D",
+    "explanation": "The 3-way TCP handshake control flags proceed as follows:\n\n1. Packet 1 (P1 - Client to Server): SYN packet sent to initiate connection. Flags: SYN = 1, ACK = 0.\n2. Packet 2 (P2 - Server to Client): SYN-ACK packet sent to acknowledge client and synchronize sequence number. Flags: SYN = 1, ACK = 1.\n3. Packet 3 (P3 - Client to Server): ACK packet sent to confirm final connection establish. Flags: SYN = 0, ACK = 1.\n\nTherefore, options B and D are correct."
+  },
+  {
+    "id": "GATE2025_CS1_Q23",
+    "question_number": 23,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Consider the given system of linear equations for variables x and y, where k is a real-valued constant:\nx + ky = 1\nkx + y = -1\nWhich of the following option(s) is/are CORRECT?",
+    "options": {
+      "A": "There is exactly one value of k for which the above system of equations has no solution.",
+      "B": "There exist an infinite number of values of k for which the system of equations has no solution.",
+      "C": "There exists exactly one value of k for which the system of equations has exactly one solution.",
+      "D": "There exists exactly one value of k for which the system of equations has an infinite number of solutions."
+    },
+    "correct_answer": "A;D",
+    "explanation": "Write the system in coefficient matrix form: |A| = |1, k; k, 1| = 1 - k^2.\n\n1. Unique Solution (|A| != 0): 1 - k^2 != 0 => k != 1 and k != -1. (Infinite values of k produce a unique solution, making C false).\n2. Case k = 1:\n   Eq 1: x + y = 1\n   Eq 2: x + y = -1\n   These represent parallel lines with no intersection => No Solution.\n   Thus, exactly one value (k = 1) yields no solution (Option A is True).\n3. Case k = -1:\n   Eq 1: x - y = 1\n   Eq 2: -x + y = -1  (Multiply by -1 => x - y = 1)\n   Both equations are identical => Infinite Solutions.\n   Thus, exactly one value (k = -1) yields infinite solutions (Option D is True)."
+  },
+  {
+    "id": "GATE2025_CS1_Q24",
+    "question_number": 24,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Let X be a 3-variable Boolean function that produces output as ‘1’ when at least two of the input variables are ‘1’. Which of the following statement(s) is/are CORRECT, where a, b, c, d, e are Boolean variables?",
+    "options": {
+      "A": "X(a, b, X(c, d, e)) = X(X(a, b, c), d, e)",
+      "B": "X(a, b, X(a, b, c)) = X(a, b, c)",
+      "C": "X(a, b, X(a, c, d)) = (X(a, b, a) AND X(c, d, c))",
+      "D": "X(a, b, c) = X(a, X(a, b, c), X(a, c, c))"
+    },
+    "correct_answer": "B;D",
+    "explanation": "Function X(u, v, w) is the Majority Function defined as X(u, v, w) = uv + vw + wu.\n\n- Evaluating (B):\n  X(a, b, X(a, b, c)) = ab + b*X(a, b, c) + a*X(a, b, c)\n  = ab + (a + b)(ab + bc + ca)\n  = ab + ab + abc + abc + abc + abc = ab + bc + ca = X(a, b, c). (True)\n\n- Evaluating (D):\n  X(a, c, c) = ac + cc + ca = c.\n  X(a, X(a, b, c), X(a, c, c)) = X(a, X(a, b, c), c)\n  = a*X(a, b, c) + c*X(a, b, c) + ac\n  = (a + c)(ab + bc + ca) + ac = ab + bc + ca = X(a, b, c). (True)"
+  },
+  {
+    "id": "GATE2025_CS1_Q25",
+    "question_number": 25,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "The number -6 can be represented as 1010 in 4-bit 2’s complement representation. Which of the following is/are CORRECT 2’s complement representation(s) of -6?",
+    "options": {
+      "A": "1000 1010 in 8-bits",
+      "B": "1111 1010 in 8-bits",
+      "C": "1000 0000 0000 1010 in 16-bits",
+      "D": "1111 1111 1111 1010 in 16-bits"
+    },
+    "correct_answer": "B;D",
+    "explanation": "To extend a signed binary number in 2's complement representation without altering its numerical value, Sign Extension must be applied.\n\n- Sign extension requires copying the Most Significant Bit (MSB/sign bit) to all new higher-order bit positions on the left.\n- For 1010 (-6), the MSB is '1' (indicating negative value).\n- Extending to 8-bits: Pad 4 ones to the left -> 1111 1010 (Option B).\n- Extending to 16-bits: Pad 12 ones to the left -> 1111 1111 1111 1010 (Option D)."
+  },
+  {
+    "id": "GATE2025_CS1_Q26",
+    "question_number": 26,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which of the following statement(s) is/are TRUE for any binary search tree (BST) having n distinct integers?",
+    "options": {
+      "A": "The maximum length of a path from the root node to any other node is (n - 1).",
+      "B": "An inorder traversal will always produce a sorted sequence of elements.",
+      "C": "Finding an element takes O(log2 n) time in the worst case.",
+      "D": "Every BST is also a Min-Heap."
+    },
+    "correct_answer": "A;B",
+    "explanation": "Let's analyze each property of Binary Search Trees:\n\n- Statement A (TRUE): For a fully skewed (degenerate) BST, all nodes form a single linear chain of height n, giving a path length of n - 1 edges from root to deepest node.\n- Statement B (TRUE): Inorder traversal (Left -> Root -> Right) of any BST processes nodes in strictly ascending numerical order.\n- Statement C (FALSE): In the worst case (skewed BST), search time takes O(n) time, not O(log n).\n- Statement D (FALSE): A Min-Heap requires every parent node to be smaller than its children, whereas a BST requires left child < parent < right child."
+  },
+  {
+    "id": "GATE2025_CS1_Q27",
+    "question_number": 27,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "A partial data path of a processor is given in the figure, where RA, RB, and RZ are 32-bit registers. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?",
+    "options": {
+      "A": "The data path can implement arithmetic operations involving two registers.",
+      "B": "The data path can implement arithmetic operations involving one register and one immediate value.",
+      "C": "The data path can implement arithmetic operations involving two immediate values.",
+      "D": "The data path can only implement arithmetic operations involving one register and one immediate value."
+    },
+    "correct_answer": "A;B;C",
+    "explanation": "Analyzing datapath flexibility:\n\n- Data buses and multiplexers feeding into the Arithmetic Logic Unit (ALU) allow inputs from both internal register storage (RA, RB) and sign-extended immediate values.\n- Arithmetic operations can combine two registers (e.g., ADD RA, RB).\n- Arithmetic operations can combine a register and an immediate constant (e.g., ADD RA, #5).\n- Arithmetic operations can compute results using two immediate values via control signal routing.\n\nThus, statements A, B, and C are all valid capabilities of the datapath."
+  },
+  {
+    "id": "GATE2025_CS1_Q28",
+    "question_number": 28,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "A regular language L is accepted by a non-deterministic finite automaton (NFA) with n states. Which of the following statement(s) is/are FALSE?",
+    "options": {
+      "A": "L may have an accepting NFA with < n states.",
+      "B": "L may have an accepting DFA with < n states.",
+      "C": "There exists a DFA with <= 2^n states that accepts L.",
+      "D": "Every DFA that accepts L has > 2^n states."
+    },
+    "correct_answer": "D",
+    "explanation": "Evaluating automata conversions for regular languages:\n\n- Statements A & B: Can be true if the given NFA is not minimal.\n- Statement C: By the Subset Construction algorithm, any NFA with n states can be converted into an equivalent DFA with at most 2^n states.\n- Statement D (FALSE): Claiming that *every* DFA must have *more than* 2^n states contradicts the proven upper bound of <= 2^n states.\n\nTherefore, Statement D is universally false."
+  },
+  {
+    "id": "GATE2025_CS1_Q29",
+    "question_number": 29,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Suppose in a multiprogramming environment, the C program with a scanf and a loop of 20 printfs is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the initial entry) is _______.",
+    "options": null,
+    "correct_answer": "21",
+    "explanation": "Let's track state transitions between Ready Queue and I/O Queue:\n\n1. The process performs 1 `scanf` I/O operation and 20 `printf` I/O operations, giving a total of 1 + 20 = 21 I/O requests.\n2. Each time an I/O request is made, the process leaves the Running state and enters the I/O Waiting Queue.\n3. Upon completion of each I/O operation, the OS moves the process from the I/O Queue back into the Ready Queue.\n4. Therefore, completing 21 distinct I/O operations forces the process to enter the Ready Queue exactly 21 times."
+  },
+  {
+    "id": "GATE2025_CS1_Q30",
+    "question_number": 30,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Let S be the set of all ternary strings defined over the alphabet {a, b, c}. Consider all strings in S that contain at least one occurrence of two consecutive symbols, that is, “aa”, “bb” or “cc”. The number of such strings of length 5 that are possible is _______.",
+    "options": null,
+    "correct_answer": "195",
+    "explanation": "We use the Complement Method:\nAt least 1 consecutive pair = Total strings - Strings with NO consecutive identical symbols.\n\n1. Total ternary strings of length 5 over {a, b, c}:\n   Total = 3^5 = 243.\n2. Strings with NO two adjacent identical characters:\n   - 1st position: 3 choices (a, b, or c)\n   - 2nd position: 2 choices (any symbol except 1st)\n   - 3rd position: 2 choices (any symbol except 2nd)\n   - 4th position: 2 choices\n   - 5th position: 2 choices\n   No-repeat strings = 3 * 2 * 2 * 2 * 2 = 3 * 2^4 = 48.\n3. Target Strings = Total - No-repeat strings = 243 - 48 = 195."
+  },
+  {
+    "id": "GATE2025_CS1_Q31",
+    "question_number": 31,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Consider the given function f(x):\nf(x) = ax + b for x < 1\nf(x) = x^3 + x^2 + 1 for x >= 1\nIf the function is differentiable everywhere, the value of b must be ________.",
+    "options": null,
+    "correct_answer": "-2.1 to -1.9",
+    "explanation": "For a piecewise function to be differentiable at x = 1, it must be both continuous and differentiable at that boundary:\n\n1. Continuous at x = 1:\n   lim (x -> 1-) f(x) = lim (x -> 1+) f(x)\n   a(1) + b = 1^3 + 1^2 + 1 => a + b = 3  --- (Equation 1)\n\n2. Differentiable at x = 1:\n   Left derivative: d/dx (ax + b) = a\n   Right derivative: d/dx (x^3 + x^2 + 1) = 3x^2 + 2x\n   At x = 1: a = 3(1)^2 + 2(1) = 5\n\n3. Solve for b:\n   Substitute a = 5 into Equation 1:\n   5 + b = 3 => b = -2.\n\nThus, b = -2 (which falls within -2.1 to -1.9)."
+  },
+  {
+    "id": "GATE2025_CS1_Q32",
+    "question_number": 32,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, P(head) = 0.5 and for a fake coin, P(head) = 1. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is _______.",
+    "options": null,
+    "correct_answer": "0.49 to 0.51",
+    "explanation": "Using Bayes' Theorem:\n\n1. Prior Probabilities:\n   - P(Fake) = 1/5 = 0.2\n   - P(Regular) = 4/5 = 0.8\n\n2. Conditional Probabilities of getting 2 Heads (2H):\n   - P(2H | Fake) = 1 * 1 = 1\n   - P(2H | Regular) = 0.5 * 0.5 = 0.25\n\n3. Applying Bayes' Formula:\n   P(Fake | 2H) = [P(Fake) * P(2H | Fake)] / [P(Fake) * P(2H | Fake) + P(Regular) * P(2H | Regular)]\n   P(Fake | 2H) = (0.2 * 1) / [(0.2 * 1) + (0.8 * 0.25)]\n   P(Fake | 2H) = 0.2 / (0.2 + 0.2) = 0.2 / 0.4 = 0.5."
+  },
+  {
+    "id": "GATE2025_CS1_Q33",
+    "question_number": 33,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Let A[0,...,29] be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the bubble sort function fun() is called with A[0,...,29] as argument, is __________.",
+    "options": null,
+    "correct_answer": "435",
+    "explanation": "Bubble sort swaps inverted adjacent pairs:\n\n1. Array size N = 30.\n2. The input array is completely inverted (descending order instead of ascending order).\n3. For a reverse-sorted array, standard Bubble Sort performs the maximum possible number of swaps.\n4. Formula for total swaps = N * (N - 1) / 2\n   Swaps = (30 * 29) / 2 = 15 * 29 = 435 swaps."
+  },
+  {
+    "id": "GATE2025_CS1_Q34",
+    "question_number": 34,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "What is the output of the given C program?\n#include <stdio.h>\nvoid foo(int *p, int x){\n *p=x;\n}\nint main(){\n int *z;\n int a = 20, b = 25;\n z = &a;\n foo(z,b);\n printf(\"%d\",a);\n return 0;\n}",
+    "options": null,
+    "correct_answer": "25",
+    "explanation": "Tracing code execution step-by-step:\n\n1. Variables `a = 20` and `b = 25` are declared.\n2. Pointer `z` is assigned the memory address of `a` (`z = &a`).\n3. Function call `foo(z, b)` passes pointer `z` (pointing to `a`) and value `25`.\n4. Inside function `foo`, `*p = x` dereferences `p` and assigns `25` to the memory location of `a`.\n5. Variable `a` is modified directly in main memory to `25`.\n6. `printf(\"%d\", a)` prints 25."
+  },
+  {
+    "id": "GATE2025_CS1_Q35",
+    "question_number": 35,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min-Heap T stores 32 keys. The height of T is _____________.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "A heap is a complete binary tree.\n\n1. Height (measured in edge count) of a complete binary tree with N nodes = floor(log2(N)).\n2. Given N = 32:\n   Height = floor(log2(32)) = floor(5) = 5.\n\nAlternatively:\n- Level 0: 1 node (cumulative 1)\n- Level 1: 2 nodes (cumulative 3)\n- Level 2: 4 nodes (cumulative 7)\n- Level 3: 8 nodes (cumulative 15)\n- Level 4: 16 nodes (cumulative 31)\n- Level 5: 1 node (cumulative 32)\nThe longest edge path from root to level 5 leaf is 5."
+  },
+  {
+    "id": "GATE2025_CS1_Q36",
+    "question_number": 36,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values?",
+    "options": {
+      "A": "6 * 2^10",
+      "B": "8 * 2^10",
+      "C": "2^12",
+      "D": "2^14"
+    },
+    "correct_answer": "A",
+    "explanation": "Let's calculate the bit layout for direct mapping:\n\n1. Block Offset Bits = log2(Cache Block Size) = log2(16 bytes) = 4 bits.\n2. Number of Cache Lines = Cache Size / Block Size = 16 KB / 16 bytes = (16 * 2^10) / 16 = 2^10 lines.\n3. Line Index Bits = log2(2^10) = 10 bits.\n4. Tag Bits per line = Total Address Bits - (Line Bits + Offset Bits) = 20 - 10 - 4 = 6 bits.\n5. Total bits to store all tag values in cache directory = (Tag Bits per line) * (Number of lines) = 6 * 2^10 bits."
+  },
+  {
+    "id": "GATE2025_CS1_Q37",
+    "question_number": 37,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?\nADD R1, #25 // R1 = R1 + 25",
+    "options": {
+      "A": "16",
+      "B": "20",
+      "C": "22",
+      "D": "24"
+    },
+    "correct_answer": "B",
+    "explanation": "To encode instruction `ADD R1, #25` in 32 bits:\n\n1. Opcode field bits = ceil(log2(50 distinct instructions)) = 6 bits (since 2^5 = 32 < 50 <= 64 = 2^6).\n2. Destination Register (R1) field bits = ceil(log2(64 general-purpose registers)) = 6 bits.\n3. Total instruction width = 32 bits.\n4. Immediate Operand Bits = Total Width - Opcode Bits - Register Bits\n   Bits = 32 - 6 - 6 = 20 bits."
+  },
+  {
+    "id": "GATE2025_CS1_Q38",
+    "question_number": 38,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A computer has two processors, M1 and M2. Four processes P1, P2, P3, P4 with CPU bursts of 20, 16, 25, and 10 ms arrive at time 0. Non-preemptive priority execution: M1 priority (P1 > P3 > P2 > P4), M2 priority (P2 > P3 > P4 > P1). What will be the average waiting time of the processes in ms?",
+    "options": {
+      "A": "9.00",
+      "B": "8.75",
+      "C": "6.50",
+      "D": "7.50"
+    },
+    "correct_answer": "A",
+    "explanation": "Trace scheduling on dual processors:\n\n1. At t = 0 ms:\n   - M1 selects highest priority process according to M1 rules: P1 (Burst = 20 ms).\n   - M2 selects highest priority process according to M2 rules: P2 (Burst = 16 ms).\n   - Waiting times: W(P1) = 0 ms, W(P2) = 0 ms.\n2. At t = 16 ms: M2 finishes P2 and becomes free. Available processes: P3, P4.\n   - M2 priority order: P3 > P4 => M2 schedules P3 (Burst = 25 ms).\n   - Waiting time: W(P3) = 16 - 0 = 16 ms.\n3. At t = 20 ms: M1 finishes P1 and becomes free. Available processes: P4.\n   - M1 schedules P4 (Burst = 10 ms).\n   - Waiting time: W(P4) = 20 - 0 = 20 ms.\n\nAverage Waiting Time = (0 + 0 + 16 + 20) / 4 = 36 / 4 = 9.00 ms."
+  },
+  {
+    "id": "GATE2025_CS1_Q39",
+    "question_number": 39,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider two relations describing teams and players in a sports league:\n• teams(tid, tname)\n• players(pid, pname, tid)\nWhich ONE of the following tuple relational calculus queries returns the name of the players who play for the team having tname as 'MI'?",
+    "options": {
+      "A": "{ p.pname | p in players AND EXISTS t (t in teams AND p.tid = t.tid AND t.tname = 'MI')}",
+      "B": "{ p.pname | p in teams AND EXISTS t (t in players AND p.tid = t.tid AND t.tname = 'MI')}",
+      "C": "{ p.pname | p in players AND EXISTS t (t in teams AND t.tname = 'MI')}",
+      "D": "{ p.pname | p in teams AND EXISTS t (t in players AND t.tname = 'MI')}"
+    },
+    "correct_answer": "A",
+    "explanation": "Evaluating Tuple Relational Calculus (TRC) expressions:\n\n1. Target attribute is player name (`p.pname`), so main tuple variable `p` must range over `players` relation (`p in players`).\n2. We must link player to team using foreign key condition `p.tid = t.tid`, where tuple variable `t` ranges over `teams` (`t in teams`).\n3. Filter for team name equal to 'MI' (`t.tname = 'MI'`).\n\nCombining these conditions gives Option A."
+  },
+  {
+    "id": "GATE2025_CS1_Q40",
+    "question_number": 40,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A packet with the destination IP address 145.36.109.70 arrives at a router. Which interface will the packet be forwarded to based on longest prefix matching?",
+    "options": {
+      "A": "E3",
+      "B": "E1",
+      "C": "E2",
+      "D": "E5"
+    },
+    "correct_answer": "A",
+    "explanation": "Longest Prefix Matching Rule: The router compares the incoming IP address (145.36.109.70) against each routing table prefix bit by bit.\n\n- Convert relevant octets to binary and match against subnet masks.\n- Among all matching table entries, interface E3 shares the longest matching prefix mask length.\n- Therefore, the packet is forwarded to interface E3."
+  },
+  {
+    "id": "GATE2025_CS1_Q41",
+    "question_number": 41,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Let A = [[1, 1], [1, -1]]. What are the eigenvalues of the matrix A^13?",
+    "options": {
+      "A": "1, -1",
+      "B": "2*sqrt(2), -2*sqrt(2)",
+      "C": "4*sqrt(2), -4*sqrt(2)",
+      "D": "64*sqrt(2), -64*sqrt(2)"
+    },
+    "correct_answer": "D",
+    "explanation": "Using Spectral Theorem for Eigenvalues of matrix powers:\n\n1. Characteristic equation of matrix A:\n   |A - λI| = (1 - λ)(-1 - λ) - (1)(1) = 0\n   -(1 - λ^2) - 1 = 0 => λ^2 - 1 - 1 = 0 => λ^2 = 2 => λ = ±√2\n2. If λ is an eigenvalue of A, then λ^k is an eigenvalue of A^k.\n3. Eigenvalues of A^13:\n   λ1 = (√2)^13 = (2^(1/2))^13 = 2^(13/2) = 2^6 * 2^(1/2) = 64√2\n   λ2 = (-√2)^13 = -64√2.\n\nTherefore, eigenvalues of A^13 are 64√2 and -64√2."
+  },
+  {
+    "id": "GATE2025_CS1_Q42",
+    "question_number": 42,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider F(b3, b2, b1, b0) = sum_m(0, 2, 4, 8, 10, 11, 12). Which ONE of the following options is the CORRECT minimized Boolean expression for F?",
+    "options": {
+      "A": "b1_bar b0_bar + b2_bar b0_bar + b1 b2_bar b3",
+      "B": "b1_bar b0_bar + b2_bar b0_bar",
+      "C": "b2_bar b0_bar + b1 b2 b3",
+      "D": "b0_bar b2_bar + b3_bar"
+    },
+    "correct_answer": "A",
+    "explanation": "Group minterms using a 4-variable K-Map over variables (b3, b2, b1, b0):\n\n- Group 1 (Quad): Minterms {0, 4, 8, 12} => b1_bar * b0_bar\n- Group 2 (Quad): Minterms {0, 2, 8, 10} => b2_bar * b0_bar\n- Group 3 (Pair): Minterms {10, 11} => b3 * b2_bar * b1\n\nCombining essential prime implicants yields:\nF = b1_bar * b0_bar + b2_bar * b0_bar + b3 * b2_bar * b1."
+  },
+  {
+    "id": "GATE2025_CS1_Q43",
+    "question_number": 43,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Let G(V, E) be an undirected unweighted graph with 100 vertices. The maximum shortest path distance between any two vertices in G is 30. Let T be any BFS tree of G. Which statement is CORRECT?",
+    "options": {
+      "A": "The height of T is exactly 15.",
+      "B": "The height of T is exactly 30.",
+      "C": "The height of T is at least 15.",
+      "D": "The height of T is at least 30."
+    },
+    "correct_answer": "C",
+    "explanation": "Let graph diameter D = 30 (the maximum shortest path distance in G):\n\n1. Let u and v be two vertices with shortest distance d(u, v) = 30.\n2. For any chosen root node r of BFS tree T, by triangle inequality:\n   d(r, u) + d(r, v) >= d(u, v) = 30\n3. Therefore, max(d(r, u), d(r, v)) >= 30 / 2 = 15.\n4. Height of BFS tree from root r equals max distance from r to any vertex, which must be at least 15.\n\nHence, the height of T is at least 15."
+  },
+  {
+    "id": "GATE2025_CS1_Q44",
+    "question_number": 44,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider L1 = { alpha beta alpha | alpha in {a, b}+ AND beta in {a, b}+ } and L2 = { alpha beta alpha | alpha in {a}+ AND beta in {a, b}+ }. Which ONE is CORRECT?",
+    "options": {
+      "A": "Both L1 and L2 are regular languages.",
+      "B": "L1 is a regular language but L2 is not a regular language.",
+      "C": "L1 is not a regular language but L2 is a regular language.",
+      "D": "Neither L1 nor L2 is a regular language."
+    },
+    "correct_answer": "C",
+    "explanation": "Analyzing both formal languages:\n\n- Language L1: Alpha can be any arbitrary non-empty string. Matching an unbounded arbitrary string 'alpha' at both beginning and end requires infinite memory (Non-Regular).\n- Language L2: Alpha is restricted to {a}+ (strings of 'a's). Any string starting with 'a', followed by any non-empty string beta, and ending with 'a' simplifies to regular expression `a(a + b)+ a`, which is recognizable by a Finite Automaton (Regular)[cite: 1].\n\nHence, L1 is not regular but L2 is regular[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q45",
+    "question_number": 45,
+    "section": "CS-1",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider L1 = { a^m b^m c^(m+n) | m, n >= 1 } and L2 = { a^m b^n c^(m+n) | m, n >= 1 }. Which ONE is CORRECT?",
+    "options": {
+      "A": "Both L1 and L2 are context-free languages.",
+      "B": "L1 is a context-free language but L2 is not.",
+      "C": "L1 is not a context-free language but L2 is a context-free language.",
+      "D": "Neither L1 nor L2 are context-free languages."
+    },
+    "correct_answer": "C",
+    "explanation": "Analyzing stack requirements for Pushdown Automata (PDA):\n\n- Language L1: Requires matching count of 'a's with 'b's AND simultaneously matching count of 'a's + 'b's with 'c's. This involves multiple independent comparisons across three symbols, which a single stack PDA cannot track (Not Context-Free).\n- Language L2: Rewritten as count of 'c's = count of 'a's + count of 'b's. A single stack PDA pushes all 'a's and 'b's onto the stack, then pops one element for each incoming 'c'. If stack is empty when input ends, accept (Context-Free).\n\nThus, L1 is not context-free, but L2 is context-free."
+  },
+  {
+    "id": "GATE2025_CS1_Q46",
+    "question_number": 46,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler?",
+    "options": {
+      "A": "For a production A -> epsilon, epsilon will be added to First(A).",
+      "B": "If there is any input right end marker, it will be added to First(S), where S is the start symbol.",
+      "C": "For a production A -> epsilon, epsilon will be added to Follow(A).",
+      "D": "If there is any input right end marker, it will be added to Follow(S), where S is the start symbol."
+    },
+    "correct_answer": "A;D",
+    "explanation": "According to LL(1) parsing table construction rules:\n\n- Statement A (TRUE): If A -> epsilon exists, then epsilon is added to First(A) by definition.\n- Statement D (TRUE): The end marker ($) is placed in Follow(S) for the start symbol S to mark end of input.\n- Statement B (FALSE): First sets contain terminals or epsilon, never the end marker symbol ($).\n- Statement C (FALSE): Epsilon is never added to any Follow set."
+  },
+  {
+    "id": "GATE2025_CS1_Q47",
+    "question_number": 47,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Consider a relational schema team(name, city, owner), with FDs {name -> city, name -> owner}. The relation team is decomposed into t1(name, city) and t2(name, owner). Which of the following is/are TRUE?",
+    "options": {
+      "A": "The relation team is NOT in BCNF.",
+      "B": "The relations t1 and t2 are in BCNF.",
+      "C": "The decomposition constitutes a lossless join.",
+      "D": "The relation team is NOT in 3NF."
+    },
+    "correct_answer": "B;C",
+    "explanation": "Evaluating database normal forms and decomposition:\n\n1. Candidate Key for `team` is `name`.\n2. Since `name` is a superkey in all functional dependencies (name -> city, name -> owner), the original relation `team` is already in BCNF and 3NF.\n3. Decomposed relation t1(name, city) has functional dependency name -> city (in BCNF).\n4. Decomposed relation t2(name, owner) has functional dependency name -> owner (in BCNF).\n5. Lossless Join Check: t1 ∩ t2 = {name}, which forms a superkey in both t1 and t2. Hence, the decomposition is guaranteed to be lossless.\n\nThus, statements B and C are correct."
+  },
+  {
+    "id": "GATE2025_CS1_Q48",
+    "question_number": 48,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which of the following predicate logic formulae is/are CORRECT representation(s) of the statement: “Everyone has exactly one mother”?",
+    "options": {
+      "A": "forall x exists y exists z (mother(y, x) AND NOT mother(z, x))",
+      "B": "forall x exists y [mother(y, x) AND forall z(noteq(z, y) -> NOT mother(z, x))]",
+      "C": "forall x forall y [mother(y, x) -> exists z(mother(z, x) AND NOT noteq(z, y))]",
+      "D": "forall x exists y [mother(y, x) AND NOT exists z(noteq(z, y) AND mother(z, x))]"
+    },
+    "correct_answer": "B;D",
+    "explanation": "\"Everyone has exactly one mother\" translates to two conditions: Existence (x has a mother y) and Uniqueness (no other person z != y is x's mother).\n\n- Option B: States for every x, there exists y such that y is mother of x, AND for any z distinct from y, z is NOT mother of x (Correct uniqueness expression).\n- Option D: States for every x, there exists y such that y is mother of x, AND there does NOT exist any z distinct from y who is mother of x (Logically equivalent to B, Correct)."
+  },
+  {
+    "id": "GATE2025_CS1_Q49",
+    "question_number": 49,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "A = {0, 1, 2, ...} is non-negative integers. F is set of functions from A to itself. (f1 . f2)(n) = f1(n) + f2(n). Which of the following is/are CORRECT about (F, .)?",
+    "options": {
+      "A": "(F, .) is an Abelian group.",
+      "B": "(F, .) is an Abelian monoid.",
+      "C": "(F, .) is a non-Abelian group.",
+      "D": "(F, .) is a non-Abelian monoid."
+    },
+    "correct_answer": "B",
+    "explanation": "Evaluating algebraic structure properties for set of functions F under operation `.` defined as (f1 . f2)(n) = f1(n) + f2(n):\n\n1. Closure & Associativity: Addition of non-negative integers is closed and associative.\n2. Commutativity: (f1 . f2)(n) = f1(n) + f2(n) = f2(n) + f1(n) = (f2 . f1)(n) (Abelian property holds).\n3. Identity Element: Function e(n) = 0 for all n exists in F.\n4. Inverse Element: For a function f(n) = k (where k > 0), the inverse requires -k, which is NOT in non-negative set A. Thus, inverses do NOT exist for all elements.\n\nAn algebraic structure with identity, associativity, and commutativity, but lacking inverses, forms an Abelian Monoid."
+  },
+  {
+    "id": "GATE2025_CS1_Q50",
+    "question_number": 50,
+    "section": "CS-1",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Identify which of the following language(s) is/are accepted by the given DFA in the question.",
+    "options": {
+      "A": "The set of all strings containing an even number of b’s.",
+      "B": "The set of all strings containing the pattern bab.",
+      "C": "The set of all strings ending with the pattern bab.",
+      "D": "The set of all strings not containing the pattern aba."
+    },
+    "correct_answer": "C",
+    "explanation": "Analyzing state transitions in the provided Deterministic Finite Automaton:\n\n1. The machine transitions through state sequences tracking suffix patterns.\n2. Reaching and staying in the accepting state requires the incoming string to end with substring 'bab'.\n3. Any subsequent input symbols transition out of the accept state unless 'bab' is re-formed at the end.\n\nHence, the DFA accepts the set of all strings ending with the pattern 'bab'."
+  },
+  {
+    "id": "GATE2025_CS1_Q51",
+    "question_number": 51,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "A disk size is 512MB, block size 64KB. Linked allocation uses 4 bytes pointer. File of size 1MB stored. Internal fragmentation space wasted = ______ bytes.",
+    "options": null,
+    "correct_answer": "65468",
+    "explanation": "1. Block Size = 64 KB = 65,536 bytes.\n2. Payload capacity per block = Block Size - Pointer Size = 65,536 - 4 = 65,532 bytes.\n3. File Size = 1 MB = 1,048,576 bytes.\n4. Number of blocks required = ceil(1,048,576 / 65,532) = ceil(16.00085) = 17 blocks.\n5. Data stored in first 16 blocks = 16 * 65,532 = 1,048,512 bytes.\n6. Remaining data stored in 17th block = 1,048,576 - 1,048,512 = 64 bytes.\n7. Internal fragmentation wasted in 17th block = Available Payload - Used Data\n   Fragmentation = 65,532 - 64 = 65,468 bytes."
+  },
+  {
+    "id": "GATE2025_CS1_Q52",
+    "question_number": 52,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Refer to the given 3-address code sequence. The number of basic blocks is ________.",
+    "options": null,
+    "correct_answer": "6",
+    "explanation": "To find basic blocks, identify all Leader instructions:\n\n1. First instruction (1001) is a leader.\n2. Target of jump `goto 1002` -> 1002 is a leader.\n3. Target of jump `goto 1003` -> 1003 is a leader.\n4. Instruction immediately following conditional jump at 1009 -> 1010 is a leader.\n5. Instruction immediately following conditional jump at 1011 -> 1012 is a leader.\n6. Target of jump `goto 1013` -> 1013 is a leader.\n\nCounting the leaders gives a total of 6 basic blocks."
+  },
+  {
+    "id": "GATE2025_CS1_Q53",
+    "question_number": 53,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Calculate average memory access time in nanoseconds (ns) given 2-level cache hierarchy parameters.",
+    "options": null,
+    "correct_answer": "11.83 to 11.87",
+    "explanation": "Using standard hierarchical cache access time formula[cite: 1]:\n\nT_avg = T_L1 + (1 - H_L1) * [ T_L2 + (1 - H_L2) * T_MM ][cite: 1]\n\nWhere:\n- T_L1 = L1 access time\n- H_L1 = L1 hit rate\n- T_L2 = L2 access time\n- H_L2 = L2 hit rate\n- T_MM = Main memory access time\n\nSubstituting given performance parameters yields average memory access time = 11.85 ns (valid range: 11.83 to 11.87 ns)[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q54",
+    "question_number": 54,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Modified optimal page replacement algorithm predicting 4 steps ahead with 3 frames. Page reference string: 1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4. Number of page faults = ________.",
+    "options": null,
+    "correct_answer": "6",
+    "explanation": "Tracing page replacement with 3 frames and limited 4-step lookahead horizon[cite: 1]:\n\n1. Access 1: Fault -> Frames [1]\n2. Access 3: Fault -> Frames [1, 3]\n3. Access 2: Fault -> Frames [1, 3, 2]\n4. Access 4: Fault -> Lookahead (2, 3, 1, 2). Replace page 4 into frame by optimal lookahead rule -> 6 total page faults occur during the full sequence execution[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q55",
+    "question_number": 55,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Value returned by SQL Query selecting MIN(P.age) for players managed by coach 'Mark'.",
+    "options": null,
+    "correct_answer": "26",
+    "explanation": "Tracing relational database table joins[cite: 1]:\n\n1. Filter coach table for coach = 'Mark' to identify team assignments[cite: 1].\n2. Match team assignments with player records[cite: 1].\n3. Extract ages of all players belonging to Mark's team[cite: 1].\n4. Computing minimum age across these selected player records gives 26[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q56",
+    "question_number": 56,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "5-bit message transmitted, bit flip probability = 0.01. Probability that message is delivered error-free = _______.",
+    "options": null,
+    "correct_answer": "0.949 to 0.952",
+    "explanation": "1. Probability of a single bit transmitted without error = (1 - p) = 1 - 0.01 = 0.99.\n2. Probability that all 5 independent bits are transmitted without error = (0.99)^5.\n3. Calculation:\n   P = 0.99^5 ≈ 0.95099.\n\nThis falls within the acceptable range of 0.949 to 0.952."
+  },
+  {
+    "id": "GATE2025_CS1_Q57",
+    "question_number": 57,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "15000 bytes message, IPv4 router MTUs. Total number of fragments delivered to destination = _______.",
+    "options": null,
+    "correct_answer": "7",
+    "explanation": "1. Message size = 15,000 bytes[cite: 1].\n2. Accounting for 20-byte IP header per packet across intermediate routers with specific MTU constraints[cite: 1].\n3. Splitting payload into multiples of 8 bytes for proper offset alignment generates a total of 7 fragments delivered at destination[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q58",
+    "question_number": 58,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "P(x) = C x^2 for 1 <= x <= 4. Probability P(2 <= x <= 3) = ________.",
+    "options": null,
+    "correct_answer": "0.300 to 0.302",
+    "explanation": "1. Find constant C using total probability integral = 1:\n   ∫[1 to 4] C * x^2 dx = 1\n   C * [x^3 / 3][1 to 4] = 1 => C * (64/3 - 1/3) = 1 => C * (63/3) = 21 * C = 1 => C = 1 / 21\n\n2. Calculate P(2 <= x <= 3):\n   P(2 <= x <= 3) = ∫[2 to 3] (1/21) * x^2 dx\n   = (1 / 21) * [x^3 / 3][2 to 3] = (1 / 63) * (27 - 8) = 19 / 63 ≈ 0.30158.\n\nThis falls within range 0.300 to 0.302."
+  },
+  {
+    "id": "GATE2025_CS1_Q59",
+    "question_number": 59,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Minimum number of states required to realize the given FSM state transition table = ______.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "Using State Minimization (Equivalence Partitioning Method)[cite: 1]:\n\n1. Partition states into non-accepting and accepting groups[cite: 1].\n2. Iteratively merge equivalent states that produce identical outputs and transitions[cite: 1].\n3. After eliminating redundant states, the minimal Finite State Machine contains 5 states[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q60",
+    "question_number": 60,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Number of distinct states in the given sequential circuit cycle = ______.",
+    "options": null,
+    "correct_answer": "7 to 8",
+    "explanation": "Tracing state transitions across flip-flops in the synchronous sequential circuit[cite: 1]:\n\n1. Determine next-state Boolean functions for each D flip-flop[cite: 1].\n2. Step through clock cycles starting from initial state[cite: 1].\n3. The repeating sequence cycle length measures 7 or 8 distinct states[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q61",
+    "question_number": 61,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Value printed by C code with recursion foo(A, 9) where A[]={0,1,2,2,2,0,0,1,1}.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "The recursive function traverses array elements and counts value transitions between adjacent distinct numbers:\n\n- Transition 1: 0 to 1\n- Transition 2: 1 to 2\n- Transition 3: 2 to 0\n- Transition 4: 0 to 1\n- Base case return value adds 1\nTotal computed return value = 5."
+  },
+  {
+    "id": "GATE2025_CS1_Q62",
+    "question_number": 62,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Number of remaining nodes in linked list L1 after deleting nodes present in L2.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "Tracing algorithm execution[cite: 1]:\n\n1. Iterate through linked list L1[cite: 1].\n2. Search L2 for matching data values[cite: 1].\n3. Unlink and free nodes from L1 whenever a matching value is found in L2[cite: 1].\n4. Counting remaining unlinked nodes in L1 gives 5 nodes[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q63",
+    "question_number": 63,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Output of gate(14362) in given C program.",
+    "options": null,
+    "correct_answer": "46",
+    "explanation": "Tracing function `gate(14362)`:\n\n1. The function isolates alternating digits from input `14362` starting from 2nd position.\n2. Digits extracted: '4' and '6'.\n3. Constructing number from extracted digits produces 46."
+  },
+  {
+    "id": "GATE2025_CS1_Q64",
+    "question_number": 64,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Maximum value of x such that edge B-C is included in EVERY minimum spanning tree = ______.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "According to the Cycle Property of MSTs[cite: 1]:\n\n1. Edge B-C belongs to a cycle formed with alternative path edges[cite: 1].\n2. The max edge weight on the alternative connecting path between B and C equals 6[cite: 1].\n3. To guarantee edge B-C is strictly included in EVERY MST, its weight x must be strictly less than 6 (x < 6)[cite: 1].\n4. Maximum integer value of x = 5[cite: 1]."
+  },
+  {
+    "id": "GATE2025_CS1_Q65",
+    "question_number": 65,
+    "section": "CS-1",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Double hashing slot where key 24 gets stored in hash table of size 11.",
+    "options": null,
+    "correct_answer": "10",
+    "explanation": "1. Hash Table Size = 11.\n2. Given hash functions:\n   h1(k) = k mod 11\n   h2(k) = 1 + (k mod 7)\n   Probe sequence formula: hi(k) = (h1(k) + i * h2(k)) mod 11\n\n3. Insert key 24 after inserting prior keys:\n   - h1(24) = 24 mod 11 = 2\n   - h2(24) = 1 + (24 mod 7) = 1 + 3 = 4\n   - Probe i = 0: (2 + 0 * 4) mod 11 = 2 (Occupied)\n   - Probe i = 1: (2 + 1 * 4) mod 11 = 6 (Occupied)\n   - Probe i = 2: (2 + 2 * 4) mod 11 = 10 (Empty)\n\nKey 24 is stored at slot index 10."
+  }
+]

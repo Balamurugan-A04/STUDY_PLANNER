@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055225370252",
+    "project_id": "modified-model",
+    "storage_bucket": "modified-model.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055225370252:android:fed66a2eee38442d68cda9",
+        "android_client_info": {
+          "package_name": "com.aistudio.aistudyplanner.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5-tt66GnBeeTNzJVeT-VjKbp1WNwMYl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
