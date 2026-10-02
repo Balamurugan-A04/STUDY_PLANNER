@@ -121,7 +121,8 @@ fun MockTestConfigScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(24.dp),
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 24.dp, vertical = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Icon(
@@ -208,18 +209,20 @@ fun MockTestConfigScreen(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     
-                    // Simple FlowRow or Column with checkboxes for subtopics
+                    // Clean Column with checkboxes for subtopics without inner nested vertical scroll
                     Column(
-                        modifier = Modifier.fillMaxWidth().heightIn(max = 150.dp).verticalScroll(rememberScrollState()),
+                        modifier = Modifier.fillMaxWidth(),
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         availableSubtopics.forEach { st ->
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
-                                modifier = Modifier.fillMaxWidth().clickable {
-                                    if (selectedSubtopics.contains(st)) selectedSubtopics.remove(st)
-                                    else selectedSubtopics.add(st)
-                                }
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        if (selectedSubtopics.contains(st)) selectedSubtopics.remove(st)
+                                        else selectedSubtopics.add(st)
+                                    }
                             ) {
                                 Checkbox(
                                     checked = selectedSubtopics.contains(st),
@@ -293,8 +296,10 @@ fun MockTestConfigScreen(
                             modifier = Modifier.padding(horizontal = 16.dp)
                         )
                     } else {
+                        val subjectDisplay = if (selectedSubject == "All Subjects") "all subjects" else "'$selectedSubject'"
+                        val subtopicDisplay = if (selectedSubtopics.isNotEmpty()) " (${selectedSubtopics.size} subtopic(s) selected)" else ""
                         Text(
-                            text = "Gemini will generate $selectedQuestionCount high-quality questions for you.",
+                            text = "AI will generate $selectedQuestionCount high-quality questions for $subjectDisplay$subtopicDisplay.",
                             color = MaterialTheme.colorScheme.primary,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Medium,
@@ -335,12 +340,12 @@ fun MockTestConfigScreen(
                     }
                 }
 
-                Spacer(modifier = Modifier.weight(1f))
+                Spacer(modifier = Modifier.height(24.dp))
 
                 val isBtnEnabled = remember(mode, isGenerating, availableQuestionCount, selectedQuestionCount, selectedSubject, availableSubjectOptions) {
                     if (isGenerating) return@remember false
                     if (mode == PreparationMode.ACADEMIC) {
-                        availableSubjectOptions.isNotEmpty() && selectedSubject.isNotBlank()
+                        availableSubjectOptions.isNotEmpty() && selectedSubject.isNotBlank() && selectedQuestionCount > 0
                     } else {
                         availableQuestionCount > 0
                     }
@@ -360,7 +365,7 @@ fun MockTestConfigScreen(
                     testTag = "btn_start_mock_test"
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(36.dp))
             }
         }
     }

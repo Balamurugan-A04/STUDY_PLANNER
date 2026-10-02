@@ -40,13 +40,13 @@ data class GatePyqItem(
                     else -> ""
                 }
                 if (optText.isNotBlank() && !optText.startsWith("CHECK_", ignoreCase = true)) {
-                    "Option $letter: $optText"
+                    "$cleanAns ($optText)"
                 } else {
-                    "Option $cleanAns"
+                    cleanAns
                 }
             }
             "MSQ" -> {
-                "Option(s): $cleanAns"
+                cleanAns
             }
             "NAT" -> {
                 if (cleanAns.contains("–") || cleanAns.contains("-")) {
@@ -74,59 +74,76 @@ object GatePyqDataset {
         cachedItems?.let { return@withContext it }
 
         val list = mutableListOf<GatePyqItem>()
-        try {
-            val jsonStream = try {
-                context.assets.open("GATE_2023_CS_AI_Tutor.json")
-            } catch (e: Exception) {
-                context.assets.open("GATE_2023_CS_AI_Tutor.json.json")
-            }
-            val jsonText = jsonStream.bufferedReader().use { it.readText() }
-            val jsonArray = org.json.JSONArray(jsonText)
+        val seenIds = mutableSetOf<String>()
+        val seenTexts = mutableSetOf<String>()
 
-            for (i in 0 until jsonArray.length()) {
-                val item = jsonArray.getJSONObject(i)
-                val id = item.optString("id", "GATE2025_CS1_Q${i + 1}")
-                val qNum = item.optInt("question_number", i + 1)
-                val section = item.optString("section", "CS-1")
-                val qType = item.optString("question_type", "MCQ")
-                val marks = item.optInt("marks", 1)
-                val question = item.optString("question_text", "")
-                val correctAns = item.optString("correct_answer", "").trim()
-                val explanation = item.optString("explanation", "").trim()
+        val files = listOf(
+            "GATE_2023_CS_AI_Tutor.json.json",
+            "GATE_2024_CS.json",
+            "GATE_2023_CS.json",
+            "GATE_2022_CS.json"
+        )
 
-                val optObj = item.optJSONObject("options")
-                val optA = optObj?.optString("A", "") ?: ""
-                val optB = optObj?.optString("B", "") ?: ""
-                val optC = optObj?.optString("C", "") ?: ""
-                val optD = optObj?.optString("D", "") ?: ""
+        for (filename in files) {
+            try {
+                val jsonStream = context.assets.open(filename)
+                val jsonText = jsonStream.bufferedReader().use { it.readText() }
+                val jsonArray = org.json.JSONArray(jsonText)
 
-                val (subject, topic) = mapSubjectAndTopic(qNum, section, question)
-                val year = if (id.contains("2025")) "2025" else if (id.contains("2023")) "2023" else "2024"
+                for (i in 0 until jsonArray.length()) {
+                    val item = jsonArray.getJSONObject(i)
+                    val id = item.optString("id", "${filename}_Q${i + 1}")
+                    if (seenIds.contains(id)) continue
 
-                if (question.isNotBlank()) {
-                    list.add(
-                        GatePyqItem(
-                            id = id,
-                            year = year,
-                            exam = "GATE",
-                            branch = "CS",
-                            subject = subject,
-                            topic = topic,
-                            questionType = qType,
-                            marks = marks,
-                            question = question,
-                            optionA = optA,
-                            optionB = optB,
-                            optionC = optC,
-                            optionD = optD,
-                            correctAnswer = correctAns,
-                            explanation = explanation
+                    val qNum = item.optInt("question_number", i + 1)
+                    val section = item.optString("section", "CS-1")
+                    val qType = if (item.has("question_type")) item.optString("question_type") else item.optString("type", "MCQ")
+                    val marks = item.optInt("marks", 1)
+                    val question = if (item.has("question_text")) item.optString("question_text") else item.optString("question", "")
+                    val correctAns = if (item.has("correct_answer")) item.optString("correct_answer") else item.optString("answer", "").trim()
+                    val explanation = item.optString("explanation", "").trim()
+
+                    val optObj = item.optJSONObject("options")
+                    val optA = optObj?.optString("A", "") ?: ""
+                    val optB = optObj?.optString("B", "") ?: ""
+                    val optC = optObj?.optString("C", "") ?: ""
+                    val optD = optObj?.optString("D", "") ?: ""
+
+                    val subject = if (item.has("subject")) item.optString("subject") else mapSubjectAndTopic(qNum, section, question).first
+                    val topic = if (item.has("topic")) item.optString("topic") else mapSubjectAndTopic(qNum, section, question).second
+                    val year = if (item.has("year")) item.optString("year") else {
+                        if (id.contains("2025")) "2025" else if (id.contains("2024")) "2024" else if (id.contains("2023")) "2023" else "2022"
+                    }
+
+                    val normText = normalizeText(question)
+                    if (question.isNotBlank() && (normText.length < 10 || !seenTexts.contains(normText))) {
+                        seenIds.add(id)
+                        if (normText.length >= 10) seenTexts.add(normText)
+
+                        list.add(
+                            GatePyqItem(
+                                id = id,
+                                year = year,
+                                exam = "GATE",
+                                branch = "CS",
+                                subject = subject,
+                                topic = topic,
+                                questionType = qType,
+                                marks = marks,
+                                question = question,
+                                optionA = optA,
+                                optionB = optB,
+                                optionC = optC,
+                                optionD = optD,
+                                correctAnswer = correctAns,
+                                explanation = explanation
+                            )
                         )
-                    )
+                    }
                 }
+            } catch (e: Exception) {
+                // Silently skip missing or invalid optional asset
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
         }
 
         cachedItems = list
@@ -222,13 +239,13 @@ object GatePyqDataset {
             if (normQuestion.isBlank()) continue
 
             if (normQuestion == normalizedQuery) return item
-            if (normalizedQuery.length >= 25 && normQuestion.contains(normalizedQuery)) return item
-            if (normQuestion.length >= 25 && normalizedQuery.contains(normQuestion)) return item
+            if (normalizedQuery.length >= 20 && normQuestion.contains(normalizedQuery)) return item
+            if (normQuestion.length >= 20 && normalizedQuery.contains(normQuestion)) return item
         }
 
         // 2. High-confidence token similarity match
         val queryTokens = tokenize(normalizedQuery)
-        if (queryTokens.size < 4) return null
+        if (queryTokens.size < 3) return null
 
         var bestMatch: GatePyqItem? = null
         var highestScore = 0.0
@@ -236,7 +253,7 @@ object GatePyqDataset {
         for (item in items) {
             val normQuestion = normalizeText(item.question)
             val itemTokens = tokenize(normQuestion)
-            if (itemTokens.size < 4) continue
+            if (itemTokens.size < 3) continue
 
             val intersection = queryTokens.intersect(itemTokens).size
             val union = queryTokens.union(itemTokens).size
@@ -245,7 +262,7 @@ object GatePyqDataset {
             val minTokens = minOf(queryTokens.size, itemTokens.size)
             val overlapRatio = if (minTokens > 0) intersection.toDouble() / minTokens else 0.0
 
-            if (jaccard > 0.65 || (overlapRatio > 0.85 && intersection >= 6)) {
+            if (jaccard > 0.55 || (overlapRatio > 0.75 && intersection >= 5)) {
                 val combinedScore = (jaccard + overlapRatio) / 2.0
                 if (combinedScore > highestScore) {
                     highestScore = combinedScore
@@ -254,7 +271,7 @@ object GatePyqDataset {
             }
         }
 
-        return if (highestScore >= 0.70) bestMatch else null
+        return if (highestScore >= 0.60) bestMatch else null
     }
 
     private fun normalizeText(text: String): String {
@@ -268,6 +285,8 @@ object GatePyqDataset {
             .replace("”", "\"")
             .replace("’", "'")
             .replace("‘", "'")
+            .replace(Regex("^(?:q|question)?\\s*\\d+[\\s.:-]+", RegexOption.IGNORE_CASE), "")
+            .replace(Regex("\\\\(?:left|right|frac|times|le|ge|int|sum|sqrt|cdot|to|in|mid|cup|cap|oplus|neg)"), " ")
             .replace(Regex("(?i)cs\\s+page\\s+\\d+\\s+of\\s+\\d+\\s+gate\\s+2023.*"), "")
             .replace(Regex("(?i)cs\\s+gate\\s+2023.*"), "")
             .replace(Regex("[^a-z0-9\\s]"), " ")
@@ -288,60 +307,10 @@ object GatePyqDataset {
 
 class AiTutorRepository {
 
-    private fun getGenerativeModel(): com.google.firebase.ai.GenerativeModel {
-        return try {
-            Firebase.ai.generativeModel("gemini-1.5-flash")
-        } catch (e: Exception) {
-            Firebase.ai.generativeModel("gemini-2.0-flash")
-        }
-    }
+    val gateAiService = GateAiService()
 
-    suspend fun askGateAiTutor(context: Context, prompt: String): Result<String> = withContext(Dispatchers.IO) {
-        val trimmed = prompt.trim()
-        if (trimmed.isEmpty()) {
-            return@withContext Result.success("Please enter a question.")
-        }
-
-        // 1. Search verified GATE JSON Dataset
-        val pyqItems = GatePyqDataset.getItems(context)
-        val matchedQuestion = GatePyqDataset.findMatchingQuestion(trimmed, pyqItems)
-
-        if (matchedQuestion != null) {
-            val verifiedAnswer = matchedQuestion.getFormattedCorrectAnswer()
-            val explanation = if (matchedQuestion.explanation.isNotBlank()) {
-                matchedQuestion.explanation
-            } else {
-                "This is the official verified answer from the GATE CS dataset (Question ID: ${matchedQuestion.id}, Type: ${matchedQuestion.questionType}, Marks: ${matchedQuestion.marks} Mark)."
-            }
-
-            return@withContext Result.success(
-                "Correct Answer:\n$verifiedAnswer\n\nSimple Explanation:\n$explanation"
-            )
-        }
-
-        // 2. Question NOT found in dataset -> Dynamic response with Gemini
-        val dynamicPrompt = """
-            You are an expert AI Tutor for GATE Computer Science & Information Technology examination preparation.
-            
-            Student's Question:
-            $trimmed
-            
-            Answer the question accurately, clearly, and concisely for GATE aspirants.
-            Include important definitions, key principles, formulas, and examples where helpful.
-        """.trimIndent()
-
-        try {
-            val aiModel = getGenerativeModel()
-            val response = aiModel.generateContent(dynamicPrompt)
-            val text = response.text
-            if (!text.isNullOrBlank()) {
-                return@withContext Result.success(text.trim())
-            }
-        } catch (e: Exception) {
-            // Fallback when network/Gemini is unavailable
-        }
-
-        return@withContext Result.success("I could not find a reliable match for this GATE question in the dataset. Please check your query or verify your internet connection.")
+    suspend fun askGateAiTutor(context: Context, prompt: String, subject: String? = null, subtopic: String? = null): Result<String> = withContext(Dispatchers.IO) {
+        gateAiService.askGateAiTutor(context, prompt, subject, subtopic)
     }
 
     suspend fun askAcademicAiTutor(prompt: String): Result<String> = withContext(Dispatchers.IO) {
@@ -360,47 +329,37 @@ class AiTutorRepository {
     }
 
     suspend fun generatePracticeQuestions(mode: com.example.model.PreparationMode, subject: String, topic: String, count: Int = 5): Result<String> = withContext(Dispatchers.IO) {
-        try {
-            val aiModel = getGenerativeModel()
-            val modeContext = if (mode == com.example.model.PreparationMode.PROFESSIONAL_GATE) "GATE preparation" else "Academic studies"
-            val prompt = """
-                You are generating an $modeContext practice mock test.
-                
-                Mode: ${if (mode == com.example.model.PreparationMode.PROFESSIONAL_GATE) "Professional/GATE" else "Academic"}
-                Subject: $subject
-                Topics/Subtopics: $topic
-                
-                Generate exactly $count high-quality multiple choice questions.
-                The questions must be appropriate for ${if (mode == com.example.model.PreparationMode.PROFESSIONAL_GATE) "GATE aspirants" else "academic students"} and must be based only on the specified subject and topics.
-                
-                Format the response as a JSON object with a root key "questions" containing an array of objects. Each question object must have:
-                - question (string): the question statement
-                - options (array of 4 strings): ["Option A text", "Option B text", "Option C text", "Option D text"]
-                - optionA (string): Option A text
-                - optionB (string): Option B text
-                - optionC (string): Option C text
-                - optionD (string): Option D text
-                - correctAnswer (string): 'A', 'B', 'C', or 'D'
-                - explanation (string): concise explanation of the correct answer
-                - difficulty (string): 'Easy', 'Medium', or 'Hard'
-                - subject (string): '$subject'
-                - subtopic (string): relevant subtopic name
-                
-                Return ONLY valid JSON. No markdown backticks (like ```json), no comments.
-                Ensure all 4 options are non-empty, unique, and plausible.
-                Ensure the correctAnswer matches one of the 4 options.
-                Do not generate GATE questions if the mode is Academic.
-                Do not use GATE previous-year questions if the mode is Academic.
-            """.trimIndent()
-            
-            val response = aiModel.generateContent(prompt)
-            val text = response.text
-            if (!text.isNullOrBlank()) {
-                return@withContext Result.success(text)
+        if (mode == com.example.model.PreparationMode.PROFESSIONAL_GATE) {
+            val questionsResult = gateAiService.generateGatePracticeQuestions(subject, topic, count, "Medium")
+            if (questionsResult.isSuccess) {
+                val questions = questionsResult.getOrNull() ?: emptyList()
+                val jsonArray = org.json.JSONArray()
+                for (q in questions) {
+                    val obj = org.json.JSONObject()
+                    obj.put("question", q.question)
+                    val opts = q.options.take(4)
+                    obj.put("optionA", if (opts.isNotEmpty()) opts[0] else "")
+                    obj.put("optionB", if (opts.size > 1) opts[1] else "")
+                    obj.put("optionC", if (opts.size > 2) opts[2] else "")
+                    obj.put("optionD", if (opts.size > 3) opts[3] else "")
+                    val correctLetter = when (q.correctAnswer) {
+                        0 -> "A"
+                        1 -> "B"
+                        2 -> "C"
+                        3 -> "D"
+                        else -> "A"
+                    }
+                    obj.put("correctAnswer", correctLetter)
+                    obj.put("explanation", q.explanation)
+                    obj.put("difficulty", q.difficulty)
+                    obj.put("subject", q.subject)
+                    obj.put("subtopic", q.topic)
+                    jsonArray.put(obj)
+                }
+                val root = org.json.JSONObject()
+                root.put("questions", jsonArray)
+                return@withContext Result.success(root.toString())
             }
-        } catch (e: Exception) {
-            android.util.Log.e("AiTutorRepo", "Failed to generate AI questions with Gemini", e)
-            return@withContext Result.failure(e)
         }
         Result.failure(Exception("Failed to generate AI questions."))
     }

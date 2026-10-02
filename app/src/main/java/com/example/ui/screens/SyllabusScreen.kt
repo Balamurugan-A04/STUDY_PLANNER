@@ -39,12 +39,14 @@ fun SyllabusScreen(
     onToggleTopic: (String, Boolean) -> Unit,
     onAddSubject: (name: String, importance: String, difficulty: String, availableMinutes: Int, examDate: String) -> Unit,
     onDeleteSubject: (id: String) -> Unit,
+    onDeleteSubtopic: (id: String) -> Unit = {},
     onNavigateSubjectDetail: (id: String) -> Unit,
     onNavigateBack: () -> Unit
 ) {
     var selectedSubjectTab by remember { mutableStateOf("All") }
     var showAddDialog by remember { mutableStateOf(false) }
     var subjectToDelete by remember { mutableStateOf<SubjectData?>(null) }
+    var topicToDelete by remember { mutableStateOf<SyllabusData?>(null) }
 
     val allSubjectNames = remember(syllabusList, subjectDataList) {
         val namesFromSubjects = subjectDataList.map { it.name }
@@ -218,17 +220,15 @@ fun SyllabusScreen(
                                             color = TextPrimary
                                         )
 
-                                        if (mode == PreparationMode.ACADEMIC) {
-                                            IconButton(
-                                                onClick = { subjectToDelete = subject },
-                                                modifier = Modifier.testTag("btn_delete_subject_${subject.id}")
-                                            ) {
-                                                Icon(
-                                                    Icons.Default.Delete,
-                                                    contentDescription = "Delete Subject",
-                                                    tint = MaterialTheme.colorScheme.error
-                                                )
-                                            }
+                                        IconButton(
+                                            onClick = { subjectToDelete = subject },
+                                            modifier = Modifier.testTag("btn_delete_subject_${subject.id}")
+                                        ) {
+                                            Icon(
+                                                Icons.Default.Delete,
+                                                contentDescription = "Delete Subject",
+                                                tint = MaterialTheme.colorScheme.error
+                                            )
                                         }
                                     }
 
@@ -342,6 +342,16 @@ fun SyllabusScreen(
                                             color = TextSecondary
                                         )
                                     }
+                                    IconButton(
+                                        onClick = { topicToDelete = item },
+                                        modifier = Modifier.testTag("btn_delete_topic_${item.id}")
+                                    ) {
+                                        Icon(
+                                            Icons.Default.Delete,
+                                            contentDescription = "Delete Subtopic",
+                                            tint = MaterialTheme.colorScheme.error
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -405,15 +415,15 @@ fun SyllabusScreen(
         )
     }
 
-    // Delete Confirmation Dialog
+    // Delete Subject Confirmation Dialog
     if (subjectToDelete != null) {
         AlertDialog(
             onDismissRequest = { subjectToDelete = null },
             title = {
-                Text("Delete Subject?", fontWeight = FontWeight.Bold)
+                Text("Delete this subject?", fontWeight = FontWeight.Bold)
             },
             text = {
-                Text("Are you sure you want to delete '${subjectToDelete?.name}'?")
+                Text("Deleting this subject will also remove its related subtopics, tasks, schedule data, and other subject-specific data.")
             },
             confirmButton = {
                 Button(
@@ -429,6 +439,36 @@ fun SyllabusScreen(
             },
             dismissButton = {
                 TextButton(onClick = { subjectToDelete = null }) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
+
+    // Delete Subtopic Confirmation Dialog
+    if (topicToDelete != null) {
+        AlertDialog(
+            onDismissRequest = { topicToDelete = null },
+            title = {
+                Text("Delete this subtopic?", fontWeight = FontWeight.Bold)
+            },
+            text = {
+                Text("Are you sure you want to delete '${topicToDelete?.topic}'?")
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        topicToDelete?.let { onDeleteSubtopic(it.id) }
+                        topicToDelete = null
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                    modifier = Modifier.testTag("btn_confirm_delete_subtopic")
+                ) {
+                    Text("Delete")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { topicToDelete = null }) {
                     Text("Cancel")
                 }
             }

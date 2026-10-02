@@ -46,6 +46,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val authRepo = AuthRepository(db.userDao(), FirebaseAuth.getInstance())
     val studyRepo = StudyRepository(db.syllabusDao(), db.noteDao(), db.questionDao(), db.mockTestDao(), db.studyPlanDao(), db.subjectDao())
     val aiTutorRepo = AiTutorRepository()
+    val academicAiService = com.example.data.AcademicAiService()
+    val gateAiService = com.example.data.GateAiService()
 
     private val _currentUser = MutableStateFlow<UserProfile?>(null)
     val currentUser: StateFlow<UserProfile?> = _currentUser.asStateFlow()
@@ -174,29 +176,49 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    private var dataJobs = mutableListOf<kotlinx.coroutines.Job>()
+
     fun refreshModeData(mode: PreparationMode) {
+        dataJobs.forEach { it.cancel() }
+        dataJobs.clear()
         val userId = _currentUser.value?.email ?: ""
-        viewModelScope.launch {
+        _studyPlan.value = null
+
+        val j1 = viewModelScope.launch {
             _pyqYears.value = studyRepo.getPyqYears(mode, userId)
             _filteredQuestions.value = studyRepo.getFilteredPyqs(mode, "All", "All", userId)
 
-            studyRepo.getSyllabusFlow(mode, userId).collect { _syllabusList.value = it }
-        }
-        viewModelScope.launch {
-            studyRepo.getSubjectsFlow(mode, userId).collect { list ->
-                _subjectDataList.value = list
-                _subjects.value = (listOf("All") + list.map { it.name }).distinct()
+            studyRepo.getSyllabusFlow(mode, userId).collect { list ->
+                _syllabusList.value = list.filter { it.mode == mode }
             }
         }
-        viewModelScope.launch {
-            studyRepo.getNotesFlow(mode).collect { _notesList.value = it }
+        val j2 = viewModelScope.launch {
+            studyRepo.getSubjectsFlow(mode, userId).collect { list ->
+                val filtered = list.filter { it.mode == mode }
+                _subjectDataList.value = filtered
+                _subjects.value = (listOf("All") + filtered.map { it.name }).distinct()
+            }
         }
-        viewModelScope.launch {
-            studyRepo.getMockTestsFlow(mode).collect { _testHistory.value = it }
+        val j3 = viewModelScope.launch {
+            studyRepo.getNotesFlow(mode).collect { list ->
+                _notesList.value = list.filter { it.mode == mode }
+            }
         }
-        viewModelScope.launch {
-            studyRepo.getStudyPlanFlow(mode).collect { _studyPlan.value = it }
+        val j4 = viewModelScope.launch {
+            studyRepo.getMockTestsFlow(mode).collect { list ->
+                _testHistory.value = list.filter { it.mode == mode }
+            }
         }
+        val j5 = viewModelScope.launch {
+            studyRepo.getStudyPlanFlow(mode).collect { plan ->
+                if (plan != null && plan.mode == mode) {
+                    _studyPlan.value = plan
+                } else if (_currentUser.value?.mode == mode && plan == null) {
+                    _studyPlan.value = null
+                }
+            }
+        }
+        dataJobs.addAll(listOf(j1, j2, j3, j4, j5))
     }
 
     fun addSubject(
@@ -245,32 +267,86 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteSubject(subjectId: String) {
         viewModelScope.launch {
             val user = _currentUser.value
-            val mode = user?.mode ?: PreparationMode.ACADEMIC
-            val userId = user?.email ?: ""
-            
-            // Prevent deleting predefined GATE subjects
-            if (mode == PreparationMode.PROFESSIONAL_GATE && subjectId.startsWith("gate_")) return@launch
-
             val targetSubj = _subjectDataList.value.find { it.id == subjectId }
+            val mode = targetSubj?.mode ?: (user?.mode ?: PreparationMode.ACADEMIC)
+            val userId = user?.email ?: ""
             val subjectName = targetSubj?.name ?: ""
 
             studyRepo.deleteSubject(subjectId)
             studyRepo.deleteSyllabusTopic("syl_$subjectId")
             if (subjectName.isNotEmpty()) {
                 studyRepo.deleteSyllabusTopicsBySubjectName(subjectName, userId, mode)
+                studyRepo.deleteNotesBySubject(subjectName, mode)
             }
 
+            val remainingSubjects = _subjectDataList.value.filter { it.id != subjectId && it.mode == mode }
             val plan = _studyPlan.value
-            if (plan != null && subjectName.isNotEmpty()) {
+
+            if (remainingSubjects.isEmpty()) {
+                val emptyPlan = StudyPlan(
+                    mode = mode,
+                    dailyHours = 0,
+                    targetExam = if (mode == PreparationMode.PROFESSIONAL_GATE) "GATE CS 2026" else "Academic Preparation",
+                    dailyGoals = emptyList(),
+                    weeklySchedule = emptyList(),
+                    completedGoals = emptyList(),
+                    missedGoals = emptyList()
+                )
+                studyRepo.saveStudyPlan(emptyPlan)
+                _studyPlan.value = emptyPlan
+            } else if (plan != null && subjectName.isNotEmpty()) {
                 val updatedGoals = plan.dailyGoals.filterNot { goal ->
                     goal.contains(subjectName, ignoreCase = true)
                 }
-                val updatedSchedule = plan.weeklySchedule.filterNot { item ->
-                    item.contains(subjectName, ignoreCase = true)
+                val updatedCompleted = plan.completedGoals.filterNot { it.contains(subjectName, ignoreCase = true) }
+                val updatedMissed = plan.missedGoals.filterNot { it.contains(subjectName, ignoreCase = true) }
+
+                val fallbackSubj = remainingSubjects.firstOrNull()
+                val updatedSchedule = plan.weeklySchedule.mapNotNull { item ->
+                    if (!item.contains(subjectName, ignoreCase = true)) {
+                        item
+                    } else {
+                        val colonIdx = item.indexOf(':')
+                        if (colonIdx != -1) {
+                            val prefix = item.substring(0, colonIdx).trim()
+                            val rest = item.substring(colonIdx + 1).trim()
+                            val separators = listOf(",", ";", "|")
+                            val sep = separators.firstOrNull { rest.contains(it) }
+                            if (sep != null) {
+                                val parts = rest.split(sep)
+                                    .map { it.trim() }
+                                    .filter { it.isNotBlank() && !it.contains(subjectName, ignoreCase = true) }
+                                if (parts.isNotEmpty()) {
+                                    "$prefix: ${parts.joinToString(", ")}"
+                                } else if (fallbackSubj != null) {
+                                    "$prefix: Intensive Study on ${fallbackSubj.name} (${fallbackSubj.availableStudyMinutesPerDay} mins)"
+                                } else null
+                            } else if (fallbackSubj != null) {
+                                "$prefix: Intensive Study on ${fallbackSubj.name} (${fallbackSubj.availableStudyMinutesPerDay} mins)"
+                            } else null
+                        } else null
+                    }
                 }
+
+                val finalGoals = if (updatedGoals.isNotEmpty()) {
+                    updatedGoals
+                } else {
+                    remainingSubjects.mapIndexed { idx, subj ->
+                        val priorityLabel = when (idx) {
+                            0 -> "Top Priority (Rank 1)"
+                            1 -> "High Priority (Rank 2)"
+                            2 -> "Core Priority (Rank 3)"
+                            else -> "Standard Priority (Rank ${idx + 1})"
+                        }
+                        "${subj.name}: $priorityLabel [${subj.importance} Importance, ${subj.difficulty} Difficulty, ${subj.availableStudyMinutesPerDay} mins/day]"
+                    }
+                }
+
                 val updatedPlan = plan.copy(
-                    dailyGoals = updatedGoals,
-                    weeklySchedule = updatedSchedule
+                    dailyGoals = finalGoals,
+                    weeklySchedule = updatedSchedule,
+                    completedGoals = updatedCompleted,
+                    missedGoals = updatedMissed
                 )
                 studyRepo.saveStudyPlan(updatedPlan)
                 _studyPlan.value = updatedPlan
@@ -282,14 +358,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun generateStudyPlan() {
         viewModelScope.launch {
-            val mode = _currentUser.value?.mode ?: PreparationMode.ACADEMIC
+            val user = _currentUser.value
+            val mode = user?.mode ?: PreparationMode.ACADEMIC
+            val userId = user?.email ?: ""
             val activeSubjects = _subjectDataList.value.filter { it.mode == mode }
 
             if (activeSubjects.isEmpty()) {
                 val emptyPlan = StudyPlan(
                     mode = mode,
                     dailyHours = 0,
-                    targetExam = if (mode == PreparationMode.PROFESSIONAL_GATE) "GATE Exam" else "Academic Preparation",
+                    targetExam = if (mode == PreparationMode.PROFESSIONAL_GATE) "GATE CS 2026" else "Academic Preparation",
                     dailyGoals = emptyList(),
                     weeklySchedule = emptyList()
                 )
@@ -298,86 +376,81 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 return@launch
             }
 
-            fun parseDateMillis(dateStr: String): Long {
-                if (dateStr.isBlank()) return Long.MAX_VALUE
-                return try {
-                    val sdf = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US)
-                    sdf.parse(dateStr.trim())?.time ?: Long.MAX_VALUE
-                } catch (e: Exception) {
-                    Long.MAX_VALUE
-                }
+            if (mode == PreparationMode.PROFESSIONAL_GATE) {
+                val planResult = gateAiService.generateGateStudySchedule(activeSubjects, _syllabusList.value, userId)
+                val generatedPlan = planResult.getOrNull() ?: StudyPlan(
+                    mode = PreparationMode.PROFESSIONAL_GATE,
+                    dailyHours = 4,
+                    targetExam = "GATE CS 2026",
+                    dailyGoals = listOf("Algorithms - Dynamic Programming", "Practice 10 PYQs on OS", "Review Digital Logic notes"),
+                    weeklySchedule = listOf("Mon: Algorithms", "Tue: OS", "Wed: Computer Networks", "Thu: DBMS", "Fri: Theory of Comp", "Sat: Mock Test", "Sun: Revision"),
+                    completedGoals = emptyList(),
+                    missedGoals = emptyList()
+                )
+                studyRepo.saveStudyPlan(generatedPlan)
+                _studyPlan.value = generatedPlan
+                return@launch
+            } else {
+                val planResult = academicAiService.generateAcademicStudySchedule(activeSubjects, _syllabusList.value, userId)
+                val generatedPlan = planResult.getOrNull() ?: StudyPlan(
+                    mode = PreparationMode.ACADEMIC,
+                    dailyHours = 3,
+                    targetExam = "Academic Preparation",
+                    dailyGoals = listOf("Complete Core Modules", "Review Class Notes", "Prepare Chapter Summaries"),
+                    weeklySchedule = listOf("Mon: Core Subject", "Tue: Secondary Subject", "Wed: Laboratory Work", "Thu: Tutorial", "Fri: Assignments", "Sat: Revision", "Sun: Weekly Review"),
+                    completedGoals = emptyList(),
+                    missedGoals = emptyList()
+                )
+                studyRepo.saveStudyPlan(generatedPlan)
+                _studyPlan.value = generatedPlan
+                return@launch
             }
+        }
+    }
 
-            fun impRank(imp: String) = when (imp.trim().lowercase()) {
-                "high" -> 3
-                "medium" -> 2
-                "low" -> 1
-                else -> 2
+    fun toggleGoalCompletion(goalText: String) {
+        viewModelScope.launch {
+            val currentPlan = _studyPlan.value ?: return@launch
+            val currentCompleted = currentPlan.completedGoals.toMutableList()
+            if (currentCompleted.contains(goalText)) {
+                currentCompleted.remove(goalText)
+            } else {
+                currentCompleted.add(goalText)
             }
+            val updated = currentPlan.copy(completedGoals = currentCompleted)
+            studyRepo.saveStudyPlan(updated)
+            _studyPlan.value = updated
+        }
+    }
 
-            fun diffRank(diff: String) = when (diff.trim().lowercase()) {
-                "hard" -> 3
-                "medium" -> 2
-                "easy" -> 1
-                else -> 2
+    fun rescheduleMissedTasks() {
+        viewModelScope.launch {
+            val user = _currentUser.value
+            val mode = user?.mode ?: PreparationMode.ACADEMIC
+            val userId = user?.email ?: ""
+
+            val currentPlan = _studyPlan.value ?: return@launch
+            val activeSubjects = _subjectDataList.value.filter { it.mode == mode }
+            val res = if (mode == PreparationMode.PROFESSIONAL_GATE) {
+                gateAiService.rescheduleGateMissedTasks(
+                    currentPlan = currentPlan,
+                    completedGoalsList = currentPlan.completedGoals,
+                    subjects = activeSubjects,
+                    syllabus = _syllabusList.value,
+                    userId = userId
+                )
+            } else {
+                academicAiService.rescheduleAcademicMissedTasks(
+                    currentPlan = currentPlan,
+                    completedGoalsList = currentPlan.completedGoals,
+                    subjects = activeSubjects,
+                    syllabus = _syllabusList.value,
+                    userId = userId
+                )
             }
-
-            val sortedSubjects = activeSubjects.sortedWith { s1, s2 ->
-                val i1 = impRank(s1.importance ?: "Medium")
-                val i2 = impRank(s2.importance ?: "Medium")
-                if (i1 != i2) return@sortedWith i2.compareTo(i1)
-
-                val d1 = diffRank(s1.difficulty ?: "Medium")
-                val d2 = diffRank(s2.difficulty ?: "Medium")
-                if (d1 != d2) return@sortedWith d2.compareTo(d1)
-
-                if (s1.availableStudyMinutesPerDay != s2.availableStudyMinutesPerDay) {
-                    return@sortedWith s2.availableStudyMinutesPerDay.compareTo(s1.availableStudyMinutesPerDay)
-                }
-
-                val t1 = parseDateMillis(s1.examDate ?: "")
-                val t2 = parseDateMillis(s2.examDate ?: "")
-                return@sortedWith t1.compareTo(t2)
-            }
-
-            val totalDailyMins = sortedSubjects.sumOf { it.availableStudyMinutesPerDay }
-            val totalDailyHours = (totalDailyMins / 60).coerceAtLeast(1)
-
-            val allSyllabus = _syllabusList.value
-            val dailyGoals = sortedSubjects.mapIndexed { idx, subj ->
-                val rankLabel = when (idx) {
-                    0 -> "Top Priority"
-                    1 -> "High Priority"
-                    else -> "Core Priority"
-                }
-                val subtopics = allSyllabus.filter { it.subject == subj.name && !it.isCompleted }.take(2).joinToString { it.topic }
-                val subtopicInfo = if (subtopics.isNotEmpty()) "\n   Subtopics to cover: $subtopics" else ""
-                
-                "${subj.name}: $rankLabel (${subj.importance} importance, ${subj.difficulty} difficulty) - ${subj.availableStudyMinutesPerDay} mins/day$subtopicInfo"
-            }
-
-            val days = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-            val weeklySchedule = days.mapIndexed { dIdx, day ->
-                val targetSubj = sortedSubjects[dIdx % sortedSubjects.size]
-                "$day: Focus on ${targetSubj.name} (${targetSubj.availableStudyMinutesPerDay} mins) | Exam: ${if (targetSubj.examDate.isBlank()) "Upcoming" else targetSubj.examDate}"
-            }
-
-            val earliestExam = sortedSubjects
-                .filter { it.examDate.isNotBlank() }
-                .minByOrNull { parseDateMillis(it.examDate) }
-                ?.let { "${it.name} Exam: ${it.examDate}" }
-                ?: if (mode == PreparationMode.PROFESSIONAL_GATE) "GATE CS 2026" else "Academic Preparation"
-
-            val generatedPlan = StudyPlan(
-                mode = mode,
-                dailyHours = totalDailyHours,
-                targetExam = earliestExam,
-                dailyGoals = dailyGoals,
-                weeklySchedule = weeklySchedule
-            )
-
-            studyRepo.saveStudyPlan(generatedPlan)
-            _studyPlan.value = generatedPlan
+            val updatedPlan = res.getOrNull() ?: currentPlan
+            studyRepo.saveStudyPlan(updatedPlan)
+            _studyPlan.value = updatedPlan
         }
     }
 
@@ -476,17 +549,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private suspend fun updateSubjectProgress(subjectName: String, mode: PreparationMode, currentList: List<SyllabusData> = _syllabusList.value) {
         val subjectTopics = currentList.filter { it.subject.equals(subjectName, ignoreCase = true) && it.mode == mode }
-        if (subjectTopics.isNotEmpty()) {
-            val completed = subjectTopics.count { it.isCompleted }
-            val total = subjectTopics.size
-            val progress = completed.toFloat() / total.toFloat()
-            
-            val targetSubject = _subjectDataList.value.find { it.name.equals(subjectName, ignoreCase = true) && it.mode == mode }
-            if (targetSubject != null) {
-                db.subjectDao().updateProgress(targetSubject.id, progress)
-                _subjectDataList.value = _subjectDataList.value.map {
-                    if (it.id == targetSubject.id) it.copy(progress = progress) else it
-                }
+        val targetSubject = _subjectDataList.value.find { it.name.equals(subjectName, ignoreCase = true) && it.mode == mode }
+        if (targetSubject != null) {
+            val progress = if (subjectTopics.isNotEmpty()) {
+                val completed = subjectTopics.count { it.isCompleted }
+                val total = subjectTopics.size
+                completed.toFloat() / total.toFloat()
+            } else {
+                0f
+            }
+            db.subjectDao().updateProgress(targetSubject.id, progress)
+            _subjectDataList.value = _subjectDataList.value.map {
+                if (it.id == targetSubject.id) it.copy(progress = progress) else it
             }
         }
     }
@@ -497,8 +571,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val subject = _subjectDataList.value.find { it.id == subjectId } ?: return@launch
             val mode = subject.mode
             val userId = user?.email ?: ""
-            
-            if (mode == PreparationMode.PROFESSIONAL_GATE) return@launch
 
             val newTopic = SyllabusData(
                 id = "sub_${System.currentTimeMillis()}",
@@ -511,7 +583,61 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             )
             studyRepo.addSyllabusTopic(newTopic)
             refreshModeData(mode)
-            updateSubjectProgress(subject.name, mode)
+            val updatedTopics = _syllabusList.value + newTopic
+            updateSubjectProgress(subject.name, mode, updatedTopics)
+        }
+    }
+
+    fun deleteSubtopic(subtopicId: String) {
+        viewModelScope.launch {
+            val user = _currentUser.value
+            val targetTopic = _syllabusList.value.find { it.id == subtopicId }
+            val mode = targetTopic?.mode ?: (user?.mode ?: PreparationMode.ACADEMIC)
+            val subjectName = targetTopic?.subject ?: ""
+            val topicName = targetTopic?.topic ?: ""
+
+            studyRepo.deleteSyllabusTopic(subtopicId)
+            if (topicName.isNotBlank()) {
+                studyRepo.deleteNotesByTopic(topicName, mode)
+            }
+
+            val plan = _studyPlan.value
+            if (plan != null && topicName.isNotBlank()) {
+                val updatedGoals = plan.dailyGoals.mapNotNull { goal ->
+                    if (!goal.contains(topicName, ignoreCase = true)) {
+                        goal
+                    } else {
+                        if (goal.contains("| Topics:", ignoreCase = true)) {
+                            val parts = goal.split("| Topics:")
+                            val remainingTopics = parts[1].split(",")
+                                .map { it.trim() }
+                                .filter { it.isNotBlank() && !it.contains(topicName, ignoreCase = true) }
+                            if (remainingTopics.isNotEmpty()) {
+                                "${parts[0].trim()} | Topics: ${remainingTopics.joinToString(", ")}"
+                            } else {
+                                parts[0].trim()
+                            }
+                        } else {
+                            null
+                        }
+                    }
+                }
+                val updatedCompleted = plan.completedGoals.filterNot { it.contains(topicName, ignoreCase = true) }
+                val updatedMissed = plan.missedGoals.filterNot { it.contains(topicName, ignoreCase = true) }
+                val updatedPlan = plan.copy(
+                    dailyGoals = updatedGoals,
+                    completedGoals = updatedCompleted,
+                    missedGoals = updatedMissed
+                )
+                studyRepo.saveStudyPlan(updatedPlan)
+                _studyPlan.value = updatedPlan
+            }
+
+            refreshModeData(mode)
+            if (subjectName.isNotBlank()) {
+                val remainingTopics = _syllabusList.value.filter { it.id != subtopicId }
+                updateSubjectProgress(subjectName, mode, remainingTopics)
+            }
         }
     }
 
@@ -762,12 +888,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val user = _currentUser.value
         val mode = user?.mode ?: PreparationMode.ACADEMIC
         val userId = user?.email ?: ""
-        val result = aiTutorRepo.generatePracticeQuestions(mode, subject, topic, 5)
-        if (result.isSuccess) {
-            val json = result.getOrNull() ?: return
-            val newQuestions = parseAcademicQuestionsJson(json, subject, topic, userId)
-            if (newQuestions.isNotEmpty()) {
-                studyRepo.insertQuestions(newQuestions)
+        if (mode == PreparationMode.ACADEMIC) {
+            val result = academicAiService.generateAcademicMockQuestions(
+                subject = subject,
+                subtopics = listOf(topic),
+                count = 5,
+                difficulty = "Medium",
+                userId = userId
+            )
+            if (result.isSuccess) {
+                val newQuestions = result.getOrNull() ?: emptyList()
+                if (newQuestions.isNotEmpty()) {
+                    studyRepo.insertQuestions(newQuestions)
+                }
             }
         }
     }
@@ -779,54 +912,59 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val userId = user?.email ?: ""
         
         if (mode == PreparationMode.ACADEMIC) {
-            val userAcademicSubjects = _subjectDataList.value.filter { it.mode == PreparationMode.ACADEMIC }
-            if (userAcademicSubjects.isEmpty()) {
-                return emptyList()
-            }
+            val isAllSubjects = subject.isBlank() || 
+                                subject.equals("All", ignoreCase = true) || 
+                                subject.equals("All Subjects", ignoreCase = true) || 
+                                subject.equals("Full Syllabus", ignoreCase = true)
             
-            val isAllSubjects = subject == "All" || subject == "All Subjects" || subject == "Full Syllabus"
             val targetSubjectsList = if (isAllSubjects) {
-                userAcademicSubjects.map { it.name }
+                val currentSubs = _subjectDataList.value.filter { it.mode == PreparationMode.ACADEMIC }.map { it.name }
+                if (currentSubs.isNotEmpty()) {
+                    currentSubs
+                } else {
+                    val dbSubs = db.subjectDao().getSubjectsByMode(PreparationMode.ACADEMIC, userId).map { it.name }
+                    if (dbSubs.isNotEmpty()) dbSubs else listOf("Academic Studies")
+                }
             } else {
-                listOf(subject)
+                listOf(subject.trim())
             }
             
             val subjectsToUse = targetSubjectsList.joinToString(", ")
-            val topicsToUse = if (subtopics.isEmpty()) "Core syllabus and key concepts" else subtopics.joinToString(", ")
-            
-            val generatedQuestions = mutableListOf<QuestionData>()
-            var retryCount = 0
-            val maxRetries = 1
-            
-            while (retryCount <= maxRetries && generatedQuestions.size < count) {
-                val neededCount = count - generatedQuestions.size
-                val result = aiTutorRepo.generatePracticeQuestions(mode, subjectsToUse, topicsToUse, neededCount)
-                if (result.isSuccess) {
-                    val json = result.getOrNull() ?: ""
-                    val parsed = parseAcademicQuestionsJson(json, subjectsToUse, topicsToUse, userId)
-                    if (parsed.isNotEmpty()) {
-                        generatedQuestions.addAll(parsed)
-                    }
-                }
-                retryCount++
+            val result = academicAiService.generateAcademicMockQuestions(
+                subject = subjectsToUse,
+                subtopics = subtopics,
+                count = count,
+                difficulty = "Medium",
+                userId = userId
+            )
+
+            val generatedQuestions = if (result.isSuccess) {
+                result.getOrNull() ?: emptyList()
+            } else {
+                emptyList()
             }
             
-            if (generatedQuestions.size < count) {
+            val finalQuestions = if (generatedQuestions.size < count) {
                 val needed = count - generatedQuestions.size
                 val fallback = generateLocalAcademicFallbackQuestions(targetSubjectsList, subtopics, needed, userId)
-                generatedQuestions.addAll(fallback)
+                (generatedQuestions + fallback).take(count)
+            } else {
+                generatedQuestions.take(count)
             }
             
-            val finalQuestions = generatedQuestions.take(count)
             studyRepo.insertQuestions(finalQuestions)
             return finalQuestions
         } else {
             val candidateQuestions = studyRepo.getGateMockTestQuestions(getApplication(), subject, subtopics)
-            val selected = candidateQuestions.shuffled().distinctBy { it.id }.take(count)
+            val selected = candidateQuestions.shuffled()
+                .distinctBy { it.id }
+                .distinctBy { com.example.data.CsvQuestionParser.normalizeQuestionText(it.question) }
+                .take(count)
             studyRepo.insertQuestions(selected)
             return selected
         }
     }
+
 
     private suspend fun enrichGateQuestionWithAi(q: QuestionData): QuestionData? {
         val prompt = """
@@ -884,47 +1022,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val userId = user?.email ?: ""
         val topicStr = if (subtopics.isEmpty()) subject else subtopics.joinToString(", ")
         
-        val result = aiTutorRepo.generatePracticeQuestions(PreparationMode.PROFESSIONAL_GATE, subject, topicStr, count)
-        if (result.isSuccess) {
-            val json = result.getOrNull() ?: return emptyList()
-            try {
-                val cleanedJson = json.replace("```json", "").replace("```", "").trim()
-                val adapter = moshi.adapter<Map<String, Any>>(Map::class.java)
-                val root = adapter.fromJson(cleanedJson)
-                val rawList = root?.get("questions") as? List<Map<String, Any>> ?: return emptyList()
-                
-                return rawList.mapIndexed { idx, map ->
-                    val options = listOf(
-                        map["optionA"] as? String ?: "",
-                        map["optionB"] as? String ?: "",
-                        map["optionC"] as? String ?: "",
-                        map["optionD"] as? String ?: ""
-                    )
-                    val correctStr = map["correctAnswer"] as? String ?: "A"
-                    val correctIndex = when(correctStr.uppercase()) {
-                        "A" -> 0 "B" -> 1 "C" -> 2 "D" -> 3 else -> 0
-                    }
-
-                    QuestionData(
-                        id = "ai_gate_${System.currentTimeMillis()}_$idx",
-                        year = "AI Generated",
-                        subject = map["subject"] as? String ?: subject,
-                        topic = map["subtopic"] as? String ?: topicStr,
-                        question = map["question"] as? String ?: "",
-                        options = options,
-                        correctAnswer = correctIndex,
-                        explanation = map["explanation"] as? String ?: "",
-                        difficulty = map["difficulty"] as? String ?: "Medium",
-                        sourceType = SourceType.AI_PRACTICE,
-                        mode = PreparationMode.PROFESSIONAL_GATE,
-                        userId = userId
-                    )
-                }.filter { it.question.isNotBlank() && it.options.size == 4 }
-            } catch (e: Exception) {
-                return emptyList()
-            }
-        }
-        return emptyList()
+        val result = gateAiService.generateGatePracticeQuestions(subject, topicStr, count, "Medium", userId)
+        return result.getOrNull() ?: emptyList()
     }
 
     fun saveMockTestResult(
@@ -994,16 +1093,19 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    suspend fun askAiTutor(query: String): String {
+    suspend fun askAiTutor(query: String, subject: String? = null, subtopic: String? = null): String {
         val mode = _currentUser.value?.mode ?: PreparationMode.ACADEMIC
         return if (mode == PreparationMode.PROFESSIONAL_GATE) {
-            val res = aiTutorRepo.askGateAiTutor(getApplication(), query)
+            val res = gateAiService.askGateAiTutor(getApplication(), query, subject, subtopic)
             res.getOrDefault("Unable to generate the explanation. Please check your internet connection and try again.")
         } else {
-            val res = aiTutorRepo.askAcademicAiTutor(query)
-            res.getOrDefault("I couldn't generate a response right now. Please try again.")
+            val res = academicAiService.askAcademicTutor(query, subject, subtopic)
+            res.getOrElse {
+                "I couldn't generate a response right now. Please check your internet connection and try again."
+            }
         }
     }
+
 
     private suspend fun seedSampleDataIfNeeded() {
         val syllabusDao = db.syllabusDao()

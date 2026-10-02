@@ -34,6 +34,7 @@ fun SubjectSetupScreen(
     onContinue: () -> Unit
 ) {
     var showAddDialog by remember { mutableStateOf(false) }
+    var subjectToDelete by remember { mutableStateOf<SubjectData?>(null) }
 
     AppTheme(mode = mode) {
         Scaffold(
@@ -111,14 +112,12 @@ fun SubjectSetupScreen(
                                         color = TextPrimary,
                                         modifier = Modifier.weight(1f)
                                     )
-                                    if (mode == PreparationMode.ACADEMIC) {
-                                        IconButton(onClick = { onDeleteSubject(subject.id) }) {
-                                            Icon(
-                                                Icons.Default.Delete,
-                                                contentDescription = "Delete",
-                                                tint = MaterialTheme.colorScheme.error
-                                            )
-                                        }
+                                    IconButton(onClick = { subjectToDelete = subject }) {
+                                        Icon(
+                                            Icons.Default.Delete,
+                                            contentDescription = "Delete",
+                                            tint = MaterialTheme.colorScheme.error
+                                        )
                                     }
                                 }
                             }
@@ -160,6 +159,35 @@ fun SubjectSetupScreen(
                 onSaveSubject = { name, imp, diff, mins, date ->
                     onAddSubject(name, imp, diff, mins, date)
                     showAddDialog = false
+                }
+            )
+        }
+
+        if (subjectToDelete != null) {
+            AlertDialog(
+                onDismissRequest = { subjectToDelete = null },
+                title = {
+                    Text("Delete this subject?", fontWeight = FontWeight.Bold)
+                },
+                text = {
+                    Text("Deleting this subject will also remove its related subtopics, tasks, schedule data, and other subject-specific data.")
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            subjectToDelete?.let { onDeleteSubject(it.id) }
+                            subjectToDelete = null
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        modifier = Modifier.testTag("btn_confirm_delete")
+                    ) {
+                        Text("Delete")
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { subjectToDelete = null }) {
+                        Text("Cancel")
+                    }
                 }
             )
         }

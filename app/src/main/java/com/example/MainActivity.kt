@@ -4,7 +4,9 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -43,6 +45,46 @@ class MainActivity : ComponentActivity() {
 
             val mode = currentUser?.mode ?: PreparationMode.ACADEMIC
             val coroutineScope = rememberCoroutineScope()
+
+            var lastBackPressedTime by remember { mutableLongStateOf(0L) }
+            var backToast by remember { mutableStateOf<Toast?>(null) }
+
+            BackHandler(enabled = true) {
+                when (currentScreen) {
+                    is Screen.Dashboard, is Screen.Login -> {
+                        val currentTime = System.currentTimeMillis()
+                        if (lastBackPressedTime != 0L && currentTime - lastBackPressedTime < 2000L) {
+                            backToast?.cancel()
+                            finish()
+                        } else {
+                            lastBackPressedTime = currentTime
+                            backToast?.cancel()
+                            backToast = Toast.makeText(context, "Press back again to exit", Toast.LENGTH_SHORT).apply {
+                                show()
+                            }
+                        }
+                    }
+                    is Screen.AcademicRegister, is Screen.GateRegister -> {
+                        viewModel.navigateTo(Screen.Login)
+                    }
+                    is Screen.SubjectDetail -> {
+                        viewModel.navigateTo(Screen.Syllabus)
+                    }
+                    is Screen.SubjectSetup -> {
+                        if (currentUser != null && subjectDataList.isNotEmpty()) {
+                            viewModel.navigateTo(Screen.Dashboard)
+                        } else {
+                            viewModel.navigateTo(Screen.Login)
+                        }
+                    }
+                    is Screen.Splash -> {
+                        finish()
+                    }
+                    else -> {
+                        viewModel.navigateTo(Screen.Dashboard)
+                    }
+                }
+            }
 
             val filePickerLauncher = rememberLauncherForActivityResult(
                 contract = ActivityResultContracts.GetContent()
@@ -163,7 +205,10 @@ class MainActivity : ComponentActivity() {
                             },
                             onDeleteSubject = { id ->
                                 viewModel.deleteSubject(id)
-                                },
+                            },
+                            onDeleteSubtopic = { id ->
+                                viewModel.deleteSubtopic(id)
+                            },
                             onNavigateSubjectDetail = { id ->
                                 viewModel.navigateTo(Screen.SubjectDetail(id))
                             },
@@ -181,6 +226,8 @@ class MainActivity : ComponentActivity() {
                                 subject = subject,
                                 subtopics = topics,
                                 onAddSubtopic = { name -> viewModel.addSubtopic(subject.id, name) },
+                                onDeleteSubtopic = { id -> viewModel.deleteSubtopic(id) },
+                                onDeleteSubject = { id -> viewModel.deleteSubject(id) },
                                 onToggleSubtopic = { id, done -> viewModel.toggleSyllabusTopic(id, done) },
                                 onNavigateBack = { viewModel.navigateTo(Screen.Syllabus) }
                             )
@@ -300,6 +347,8 @@ class MainActivity : ComponentActivity() {
                             mode = mode,
                             studyPlan = studyPlan,
                             onGenerateStudyPlan = { viewModel.generateStudyPlan() },
+                            onToggleGoal = { goal -> viewModel.toggleGoalCompletion(goal) },
+                            onRescheduleMissed = { viewModel.rescheduleMissedTasks() },
                             onNavigateBack = { viewModel.navigateTo(Screen.Dashboard) }
                         )
                     }
@@ -325,7 +374,9 @@ class MainActivity : ComponentActivity() {
                     is Screen.AiTutor -> {
                         AiTutorScreen(
                             mode = mode,
-                            onSendMessage = { query -> viewModel.askAiTutor(query) },
+                            subjects = subjectDataList,
+                            syllabusList = syllabusList,
+                            onSendMessage = { query, subj, subtop -> viewModel.askAiTutor(query, subj, subtop) },
                             onNavigateTab = { tab ->
                                 when (tab) {
                                     NavTab.HOME -> viewModel.navigateTo(Screen.Dashboard)

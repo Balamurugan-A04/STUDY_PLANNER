@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
         StudyPlan::class,
         SubjectData::class
     ],
-    version = 5,
+    version = 6,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -47,7 +47,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "ai_study_planner_db"
                 )
-                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5)
+                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)
                     .addCallback(DatabaseCallback(context))
                     .build()
                 INSTANCE = instance
@@ -65,6 +65,13 @@ abstract class AppDatabase : RoomDatabase() {
         private val MIGRATION_4_5 = object : Migration(4, 5) {
             override fun migrate(db: SupportSQLiteDatabase) {
                 db.execSQL("ALTER TABLE questions ADD COLUMN userId TEXT NOT NULL DEFAULT ''")
+            }
+        }
+
+        private val MIGRATION_5_6 = object : Migration(5, 6) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE study_plans ADD COLUMN completedGoals TEXT NOT NULL DEFAULT ''")
+                db.execSQL("ALTER TABLE study_plans ADD COLUMN missedGoals TEXT NOT NULL DEFAULT ''")
             }
         }
 

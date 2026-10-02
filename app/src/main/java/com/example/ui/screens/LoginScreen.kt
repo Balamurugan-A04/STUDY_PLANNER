@@ -46,11 +46,14 @@ fun LoginScreen(
                 .testTag("screen_login"),
             color = MaterialTheme.colorScheme.background
         ) {
+            val scrollState = rememberScrollState()
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(24.dp)
-                    .verticalScroll(rememberScrollState()),
+                    .systemBarsPadding()
+                    .imePadding()
+                    .verticalScroll(scrollState)
+                    .padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Spacer(modifier = Modifier.height(32.dp))

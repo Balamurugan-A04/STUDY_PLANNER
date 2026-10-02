@@ -25,6 +25,12 @@ interface NoteDao {
     @Query("DELETE FROM notes WHERE id = :id")
     suspend fun deleteNoteById(id: String)
 
+    @Query("DELETE FROM notes WHERE subject = :subject AND mode = :mode")
+    suspend fun deleteNotesBySubject(subject: String, mode: PreparationMode)
+
+    @Query("DELETE FROM notes WHERE topic = :topic AND mode = :mode")
+    suspend fun deleteNotesByTopic(topic: String, mode: PreparationMode)
+
     @Query("DELETE FROM notes WHERE mode = 'ACADEMIC' AND (id = 'an1' OR (subject = 'Data Structures' AND topic = 'Stack and Queue'))")
     suspend fun deleteLegacyAcademicSeedNotes()
 

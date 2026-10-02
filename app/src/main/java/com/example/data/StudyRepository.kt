@@ -60,6 +60,14 @@ class StudyRepository(
         noteDao.deleteNoteById(id)
     }
 
+    suspend fun deleteNotesBySubject(subject: String, mode: PreparationMode) {
+        noteDao.deleteNotesBySubject(subject, mode)
+    }
+
+    suspend fun deleteNotesByTopic(topic: String, mode: PreparationMode) {
+        noteDao.deleteNotesByTopic(topic, mode)
+    }
+
     // Questions / PYQ
     suspend fun getPyqYears(mode: PreparationMode, userId: String): List<String> {
         val years = questionDao.getPyqYears(mode, userId).toMutableList()

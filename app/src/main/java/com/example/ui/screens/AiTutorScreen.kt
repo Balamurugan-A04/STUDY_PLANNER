@@ -2,6 +2,7 @@ package com.example.ui.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -12,6 +13,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Book
+import androidx.compose.material.icons.filled.Category
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -24,6 +27,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.model.PreparationMode
+import com.example.model.SubjectData
+import com.example.model.SyllabusData
 import com.example.ui.components.BottomNavBar
 import com.example.ui.components.NavTab
 import com.example.ui.theme.AppTheme
@@ -42,11 +47,44 @@ data class ChatMessage(
 @Composable
 fun AiTutorScreen(
     mode: PreparationMode,
-    onSendMessage: suspend (String) -> String,
+    subjects: List<SubjectData> = emptyList(),
+    syllabusList: List<SyllabusData> = emptyList(),
+    onSendMessage: suspend (String, String?, String?) -> String,
     onNavigateTab: (NavTab) -> Unit,
     onNavigateBack: () -> Unit
 ) {
     val context = LocalContext.current
+    val isAcademic = mode == PreparationMode.ACADEMIC
+
+    val academicSubjects = remember(subjects, isAcademic) {
+        if (isAcademic) {
+            val userSubs = subjects.filter { it.mode == PreparationMode.ACADEMIC }.map { it.name }.distinct()
+            if (userSubs.isNotEmpty()) userSubs else listOf("General Academic")
+        } else {
+            emptyList()
+        }
+    }
+
+    var selectedSubject by remember(academicSubjects) {
+        mutableStateOf(if (academicSubjects.isNotEmpty()) academicSubjects.first() else "General Academic")
+    }
+
+    val availableSubtopics = remember(selectedSubject, syllabusList, isAcademic) {
+        if (isAcademic && selectedSubject.isNotBlank() && selectedSubject != "General Academic") {
+            val topics = syllabusList.filter {
+                it.mode == PreparationMode.ACADEMIC &&
+                it.subject.trim().equals(selectedSubject.trim(), ignoreCase = true)
+            }.map { it.topic }.distinct()
+            if (topics.isNotEmpty()) listOf("All Subtopics") + topics else listOf("All Subtopics")
+        } else {
+            listOf("All Subtopics")
+        }
+    }
+
+    var selectedSubtopic by remember(availableSubtopics) {
+        mutableStateOf(if (availableSubtopics.isNotEmpty()) availableSubtopics.first() else "All Subtopics")
+    }
+
     val messages = remember {
         mutableStateListOf(
             ChatMessage(
@@ -54,7 +92,7 @@ fun AiTutorScreen(
                 content = if (mode == PreparationMode.PROFESSIONAL_GATE)
                     "Hello! I am your GATE AI Tutor. Ask me any GATE question, concept explanation, or exam strategy!"
                 else
-                    "Hi! I'm your AI Academic Tutor. Ask me any question from your Academic syllabus (e.g. Mean, Median, MAD, Cloud Computing, Android)!"
+                    "Hi! I'm your AI Academic Tutor powered by gpt-oss-20b. Select your subject and subtopic above and ask any academic concept question!"
             )
         )
     }
@@ -65,7 +103,7 @@ fun AiTutorScreen(
     val coroutineScope = rememberCoroutineScope()
     val listState = rememberLazyListState()
 
-    val suggestedPrompts = remember(mode) {
+    val suggestedPrompts = remember(mode, selectedSubject, selectedSubtopic) {
         if (mode == PreparationMode.PROFESSIONAL_GATE) {
             listOf(
                 "What is a stack in data structures?",
@@ -74,14 +112,34 @@ fun AiTutorScreen(
                 "Explain Newton's second law."
             )
         } else {
-            listOf(
-                "What is mean?",
-                "What is median?",
-                "Define MAD (Mobile Application Development)?",
-                "Uses of Cloud Computing?",
-                "Define Android?",
-                "Uses of MAD?"
-            )
+            val subClean = selectedSubject.lowercase()
+            val topClean = selectedSubtopic.lowercase()
+            when {
+                subClean.contains("cloud") || topClean.contains("cloud") -> listOf(
+                    "What is SaaS?",
+                    "Explain IaaS vs PaaS",
+                    "What are Cloud Deployment Models?",
+                    "Define Cloud Computing"
+                )
+                subClean.contains("mobile") || subClean.contains("mad") || subClean.contains("android") || topClean.contains("android") -> listOf(
+                    "Define Android?",
+                    "Uses of MAD (Mobile Application Development)?",
+                    "What is an Activity Lifecycle in Android?",
+                    "Explain MVC vs MVVM in mobile apps"
+                )
+                subClean.contains("math") || subClean.contains("stat") || topClean.contains("mean") || topClean.contains("median") -> listOf(
+                    "Define Mean?",
+                    "What is Median?",
+                    "Explain Standard Deviation",
+                    "Difference between Mean and Median"
+                )
+                else -> listOf(
+                    "Explain the core principles of $selectedSubject",
+                    "What are the main concepts in $selectedSubtopic?",
+                    "Give an example problem for $selectedSubject",
+                    "What are common exam questions for $selectedSubject?"
+                )
+            }
         }
     }
 
@@ -99,12 +157,15 @@ fun AiTutorScreen(
         messages.add(ChatMessage(role = "user", content = trimmedQuery))
         isLoading = true
 
+        val subjToSend = if (isAcademic) selectedSubject else null
+        val subtopToSend = if (isAcademic && selectedSubtopic != "All Subtopics") selectedSubtopic else null
+
         coroutineScope.launch {
             try {
                 if (messages.isNotEmpty()) {
                     listState.animateScrollToItem(messages.size - 1)
                 }
-                val reply = onSendMessage(trimmedQuery)
+                val reply = onSendMessage(trimmedQuery, subjToSend, subtopToSend)
                 messages.add(ChatMessage(role = "assistant", content = reply))
             } catch (e: Exception) {
                 messages.add(
@@ -130,7 +191,10 @@ fun AiTutorScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Default.AutoAwesome, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text("AI Study Tutor", fontWeight = FontWeight.Bold)
+                            Text(
+                                text = if (isAcademic) "Academic AI Tutor" else "GATE AI Tutor",
+                                fontWeight = FontWeight.Bold
+                            )
                         }
                     },
                     navigationIcon = {
@@ -158,6 +222,99 @@ fun AiTutorScreen(
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
+                // Academic Context Selectors
+                if (isAcademic && academicSubjects.isNotEmpty()) {
+                    Surface(
+                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                // Subject Dropdown
+                                var subjectExpanded by remember { mutableStateOf(false) }
+                                Box(modifier = Modifier.weight(1f)) {
+                                    OutlinedCard(
+                                        shape = RoundedCornerShape(8.dp),
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clickable { subjectExpanded = true }
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
+                                            verticalAlignment = Alignment.CenterVertically
+                                        ) {
+                                            Icon(Icons.Default.Book, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.primary)
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Text(
+                                                text = selectedSubject,
+                                                fontSize = 12.sp,
+                                                fontWeight = FontWeight.SemiBold,
+                                                maxLines = 1
+                                            )
+                                        }
+                                    }
+                                    DropdownMenu(
+                                        expanded = subjectExpanded,
+                                        onDismissRequest = { subjectExpanded = false }
+                                    ) {
+                                        academicSubjects.forEach { sub ->
+                                            DropdownMenuItem(
+                                                text = { Text(sub, fontSize = 13.sp) },
+                                                onClick = {
+                                                    selectedSubject = sub
+                                                    subjectExpanded = false
+                                                }
+                                            )
+                                        }
+                                    }
+                                }
+
+                                // Subtopic Dropdown
+                                var subtopicExpanded by remember { mutableStateOf(false) }
+                                Box(modifier = Modifier.weight(1f)) {
+                                    OutlinedCard(
+                                        shape = RoundedCornerShape(8.dp),
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clickable { subtopicExpanded = true }
+                                    ) {
+                                        Row(
+                                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp),
+                                            verticalAlignment = Alignment.CenterVertically
+                                        ) {
+                                            Icon(Icons.Default.Category, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.primary)
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                            Text(
+                                                text = selectedSubtopic,
+                                                fontSize = 12.sp,
+                                                fontWeight = FontWeight.SemiBold,
+                                                maxLines = 1
+                                            )
+                                        }
+                                    }
+                                    DropdownMenu(
+                                        expanded = subtopicExpanded,
+                                        onDismissRequest = { subtopicExpanded = false }
+                                    ) {
+                                        availableSubtopics.forEach { top ->
+                                            DropdownMenuItem(
+                                                text = { Text(top, fontSize = 13.sp) },
+                                                onClick = {
+                                                    selectedSubtopic = top
+                                                    subtopicExpanded = false
+                                                }
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 // Messages List
                 LazyColumn(
                     state = listState,
@@ -194,7 +351,7 @@ fun AiTutorScreen(
                                 colors = CardDefaults.cardColors(
                                     containerColor = if (isUser) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant
                                 ),
-                                modifier = Modifier.widthIn(max = 290.dp)
+                                modifier = Modifier.widthIn(max = 300.dp)
                             ) {
                                 Text(
                                     text = msg.content,
@@ -233,7 +390,7 @@ fun AiTutorScreen(
                                     strokeWidth = 2.dp
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
-                                Text("AI is thinking...", fontSize = 13.sp, color = TextSecondary, fontWeight = FontWeight.Medium)
+                                Text("AI Tutor is thinking...", fontSize = 13.sp, color = TextSecondary, fontWeight = FontWeight.Medium)
                             }
                         }
                     }
@@ -283,7 +440,11 @@ fun AiTutorScreen(
                                 inputText = it
                                 if (it.isNotBlank()) errorMessage = null
                             },
-                            placeholder = { Text("Ask your AI Tutor...") },
+                            placeholder = {
+                                Text(
+                                    if (isAcademic) "Ask about $selectedSubject..." else "Ask your GATE Tutor..."
+                                )
+                            },
                             shape = RoundedCornerShape(24.dp),
                             modifier = Modifier
                                 .weight(1f)

@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -31,11 +32,15 @@ fun SubjectDetailScreen(
     subject: SubjectData,
     subtopics: List<SyllabusData>,
     onAddSubtopic: (String) -> Unit,
+    onDeleteSubtopic: (String) -> Unit = {},
+    onDeleteSubject: (String) -> Unit = {},
     onToggleSubtopic: (String, Boolean) -> Unit,
     onNavigateBack: () -> Unit
 ) {
     var showAddDialog by remember { mutableStateOf(false) }
     var subtopicName by remember { mutableStateOf("") }
+    var subtopicToDelete by remember { mutableStateOf<SyllabusData?>(null) }
+    var subjectToDelete by remember { mutableStateOf<SubjectData?>(null) }
     
     val completedCount = subtopics.count { it.isCompleted }
     val totalCount = subtopics.size
@@ -52,6 +57,9 @@ fun SubjectDetailScreen(
                         }
                     },
                     actions = {
+                        IconButton(onClick = { subjectToDelete = subject }, modifier = Modifier.testTag("btn_delete_subject")) {
+                            Icon(Icons.Default.Delete, contentDescription = "Delete Subject", tint = MaterialTheme.colorScheme.error)
+                        }
                         IconButton(onClick = { showAddDialog = true }, modifier = Modifier.testTag("btn_open_add_subtopic")) {
                             Icon(Icons.Default.Add, contentDescription = "Add Subtopic")
                         }
@@ -162,6 +170,16 @@ fun SubjectDetailScreen(
                                             color = if (item.isCompleted) MaterialTheme.colorScheme.primary else TextSecondary
                                         )
                                     }
+                                    IconButton(
+                                        onClick = { subtopicToDelete = item },
+                                        modifier = Modifier.testTag("btn_delete_subtopic_${item.id}")
+                                    ) {
+                                        Icon(
+                                            Icons.Default.Delete,
+                                            contentDescription = "Delete Subtopic",
+                                            tint = MaterialTheme.colorScheme.error
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -216,6 +234,67 @@ fun SubjectDetailScreen(
                 },
                 dismissButton = {
                     TextButton(onClick = { showAddDialog = false }) {
+                        Text("Cancel")
+                    }
+                }
+            )
+        }
+
+        if (subtopicToDelete != null) {
+            AlertDialog(
+                onDismissRequest = { subtopicToDelete = null },
+                title = {
+                    Text("Delete this subtopic?", fontWeight = FontWeight.Bold)
+                },
+                text = {
+                    Text("Are you sure you want to delete '${subtopicToDelete?.topic}'?")
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            subtopicToDelete?.let { onDeleteSubtopic(it.id) }
+                            subtopicToDelete = null
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        modifier = Modifier.testTag("btn_confirm_delete_subtopic")
+                    ) {
+                        Text("Delete")
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { subtopicToDelete = null }) {
+                        Text("Cancel")
+                    }
+                }
+            )
+        }
+
+        if (subjectToDelete != null) {
+            AlertDialog(
+                onDismissRequest = { subjectToDelete = null },
+                title = {
+                    Text("Delete this subject?", fontWeight = FontWeight.Bold)
+                },
+                text = {
+                    Text("Deleting this subject will also remove its related subtopics, tasks, schedule data, and other subject-specific data.")
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            subjectToDelete?.let {
+                                onDeleteSubject(it.id)
+                                subjectToDelete = null
+                                onNavigateBack()
+                            }
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        modifier = Modifier.testTag("btn_confirm_delete_subject")
+                    ) {
+                        Text("Delete")
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = { subjectToDelete = null }) {
                         Text("Cancel")
                     }
                 }
