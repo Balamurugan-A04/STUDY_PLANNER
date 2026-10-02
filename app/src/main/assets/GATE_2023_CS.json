@@ -1,0 +1,1027 @@
+[
+  {
+    "id": "GATE2023_CS_Q01",
+    "year": "2023",
+    "question_number": 1,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "We reached the station late, and ______ missed the train.",
+    "options": {
+      "A": "near",
+      "B": "nearly",
+      "C": "utterly",
+      "D": "mostly"
+    },
+    "correct_answer": "B",
+    "explanation": "'Nearly' is an adverb meaning 'almost'. In this context, 'nearly missed the train' correctly expresses that the train was almost missed due to arriving late."
+  },
+  {
+    "id": "GATE2023_CS_Q02",
+    "year": "2023",
+    "question_number": 2,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Kind: ______ :: Often: Frequently (By word meaning)",
+    "options": {
+      "A": "Mean",
+      "B": "Type",
+      "C": "Cruel",
+      "D": "Kindly"
+    },
+    "correct_answer": "MTA",
+    "explanation": "This question was awarded Marks To All (MTA) by the official GATE board due to ambiguity in synonym/category relationship among the given options."
+  },
+  {
+    "id": "GATE2023_CS_Q03",
+    "year": "2023",
+    "question_number": 3,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "A series of natural numbers F1, F2, F3, F4, F5, F6, F7,... obeys Fn+1 = Fn + Fn-1 for all integers n >= 2. If F6 = 37 and F7 = 60, then what is F1?",
+    "options": {
+      "A": "4",
+      "B": "5",
+      "C": "8",
+      "D": "9"
+    },
+    "correct_answer": "A",
+    "explanation": "Working backward using Fn-1 = Fn+1 - Fn: F5 = 60 - 37 = 23; F4 = 37 - 23 = 14; F3 = 23 - 14 = 9; F2 = 14 - 9 = 5; F1 = 9 - 5 = 4."
+  },
+  {
+    "id": "GATE2023_CS_Q04",
+    "year": "2023",
+    "question_number": 4,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "A survey for a certain year found that 90% of pregnant women received medical care at least once before giving birth. Of these women, 60% received medical care from doctors, while 40% received medical care from other healthcare providers. Given this information, which one of the following statements can be inferred with certainty?",
+    "options": {
+      "A": "More than half of the pregnant women received medical care at least once from a doctor.",
+      "B": "Less than half of the pregnant women received medical care at least once from a doctor.",
+      "C": "More than half of the pregnant women received medical care at most once from a doctor.",
+      "D": "Less than half of the pregnant women received medical care at most once from a doctor."
+    },
+    "correct_answer": "A",
+    "explanation": "Total pregnant women receiving care from doctors = 90% * 60% = 54% of total pregnant women. Since 54% > 50%, more than half received care at least once from a doctor."
+  },
+  {
+    "id": "GATE2023_CS_Q05",
+    "year": "2023",
+    "question_number": 5,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+    "options": {
+      "A": "The surface of the object must be concave everywhere.",
+      "B": "The surface of the object must be convex everywhere.",
+      "C": "The surface of the object may be concave in some places and convex in other places.",
+      "D": "The object can have edges, but no corners."
+    },
+    "correct_answer": "C",
+    "explanation": "A smooth 3D object (such as a torus or saddle surface) can exhibit regions of both positive curvature (convex) and negative curvature (concave)."
+  },
+  {
+    "id": "GATE2023_CS_Q06",
+    "year": "2023",
+    "question_number": 6,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "The country of Zombieland is in distress since more than 75% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work. Based only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+    "options": {
+      "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+      "B": "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+      "C": "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+      "D": "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+    },
+    "correct_answer": "D",
+    "explanation": "The government incentivizes bicycle riding to address the lack of physical exercise, directly implying their belief that riding bicycles constitutes physical exercise."
+  },
+  {
+    "id": "GATE2023_CS_Q07",
+    "year": "2023",
+    "question_number": 7,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Consider two functions of time (t), f(t) = 0.01 * t^2 and g(t) = 4 * t where 0 < t < infinity. Consider (i) For some t > 0, g(t) > f(t). (ii) There exists a T, such that f(t) > g(t) for all t > T. Which option is TRUE?",
+    "options": {
+      "A": "only (i) is correct",
+      "B": "only (ii) is correct",
+      "C": "both (i) and (ii) are correct",
+      "D": "neither (i) nor (ii) is correct"
+    },
+    "correct_answer": "C",
+    "explanation": "For t = 10, g(10)=40 > f(10)=1, making (i) true. Since f(t) grows quadratically and g(t) grows linearly, for T = 400, f(t) > g(t) for all t > 400, making (ii) true."
+  },
+  {
+    "id": "GATE2023_CS_Q08",
+    "year": "2023",
+    "question_number": 8,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Which sentence sequence creates a coherent narrative? (i) Once on the terrace, on her way to her small room in the corner, she notices the man right away. (ii) She begins to pant by the time she has climbed all the stairs. (iii) Mina has bought vegetables and rice at the market, so her bags are heavy. (iv) He was leaning against the parapet, watching the traffic below.",
+    "options": {
+      "A": "(i), (ii), (iv), (iii)",
+      "B": "(ii), (iii), (i), (iv)",
+      "C": "(iv), (ii), (i), (iii)",
+      "D": "(iii), (ii), (i), (iv)"
+    },
+    "correct_answer": "D",
+    "explanation": "Chronological order: Mina buys heavy groceries (iii) -> climbs stairs and pants (ii) -> reaches terrace and notices a man (i) -> describes the man's posture (iv)."
+  },
+  {
+    "id": "GATE2023_CS_Q09",
+    "year": "2023",
+    "question_number": 9,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "f(x) and g(y) are functions of x and y, respectively, and f(x) = g(y) for all real values of x and y. Which one of the following options is necessarily TRUE for all x and y?",
+    "options": {
+      "A": "f(x) = 0 and g(y) = 0",
+      "B": "f(x) = g(y) = constant",
+      "C": "f(x) != constant and g(y) != constant",
+      "D": "f(x) + g(y) = f(x) - g(y)"
+    },
+    "correct_answer": "B",
+    "explanation": "If a function purely of x equals a function purely of independent variable y for all x and y, both functions must be equal to the same constant value."
+  },
+  {
+    "id": "GATE2023_CS_Q10",
+    "year": "2023",
+    "question_number": 10,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Which option best describes the transformation of figure P to Q, and then to R? (Operation 1 transforms P to Q, Operation 2 transforms Q to R)",
+    "options": {
+      "A": "Operation 1: Clockwise rotation by 90 deg about axis perpendicular to plane; Operation 2: Reflection along horizontal line",
+      "B": "Operation 1: Counter clockwise rotation by 90 deg about axis perpendicular to plane; Operation 2: Reflection along horizontal line",
+      "C": "Operation 1: Clockwise rotation by 90 deg about axis perpendicular to plane; Operation 2: Reflection along vertical line",
+      "D": "Operation 1: Counter clockwise rotation by 180 deg about axis perpendicular to plane; Operation 2: Reflection along vertical line"
+    },
+    "correct_answer": "A",
+    "explanation": "Rotating figure P clockwise by 90 degrees produces image Q, and reflecting Q across a horizontal mirror line yields figure R."
+  },
+  {
+    "id": "GATE2023_CS_Q11",
+    "year": "2023",
+    "question_number": 11,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider statements: S1: Front-end includes phases independent of target hardware. S2: Back-end includes phases specific to target hardware. S3: Back-end includes phases specific to source programming language.",
+    "options": {
+      "A": "Only S1 is TRUE.",
+      "B": "Only S1 and S2 are TRUE.",
+      "C": "S1, S2, and S3 are all TRUE.",
+      "D": "Only S1 and S3 are TRUE."
+    },
+    "correct_answer": "B",
+    "explanation": "Front-end phases (lexical, syntax, semantic analysis) depend on source language and are hardware-independent (S1 true). Back-end phases (code generation/optimization) are target-hardware dependent (S2 true) and source-language independent (S3 false)."
+  },
+  {
+    "id": "GATE2023_CS_Q12",
+    "year": "2023",
+    "question_number": 12,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which sequence stored at A[1]...A[10] forms a max-heap?",
+    "options": {
+      "A": "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+      "B": "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+      "C": "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+      "D": "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+    },
+    "correct_answer": "B",
+    "explanation": "In Option B, every parent A[i] satisfies A[i] >= A[2i] and A[i] >= A[2i+1]: A[1]=23 >= 17,14; A[2]=17 >= 7,13; A[3]=14 >= 10,1; A[4]=7 >= 5,6; A[5]=13 >= 12."
+  },
+  {
+    "id": "GATE2023_CS_Q13",
+    "year": "2023",
+    "question_number": 13,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "SLLdel deletes a node in SLL given pointer to node and head. DLLdel deletes node in DLL given pointer to node and head. Worst-case time complexity?",
+    "options": {
+      "A": "SLLdel is O(1) and DLLdel is O(n)",
+      "B": "Both SLLdel and DLLdel are O(log(n))",
+      "C": "Both SLLdel and DLLdel are O(1)",
+      "D": "SLLdel is O(n) and DLLdel is O(1)"
+    },
+    "correct_answer": "D",
+    "explanation": "SLL deletion requires traversing from head to find the predecessor node (O(n)). DLL deletion directly uses prev pointer to bypass the node in O(1) time."
+  },
+  {
+    "id": "GATE2023_CS_Q14",
+    "year": "2023",
+    "question_number": 14,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "DFA A has states {s, p, q, r}, start s, final p. Transitions: s --1--> p; p --1--> q; q --1--> p; p --0--> r; r --0,1--> r. Which regular expression describes the language?",
+    "options": {
+      "A": "1(0* 11)*",
+      "B": "0(0+1)*",
+      "C": "1(0+11)*",
+      "D": "1(110*)*"
+    },
+    "correct_answer": "C",
+    "explanation": "Starting at s, input '1' reaches accept state p. From p, reading '0' stays in p via state r loop or self-loop logic, and '11' loops through q back to p. Thus L = 1(0 + 11)*."
+  },
+  {
+    "id": "GATE2023_CS_Q15",
+    "year": "2023",
+    "question_number": 15,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Lucas sequence Ln = Ln-1 + Ln-2 for n >= 3, with L1 = 1, L2 = 3. Closed-form expression?",
+    "options": {
+      "A": "Ln = ((1+sqrt(5))/2)^n + ((1-sqrt(5))/2)^n",
+      "B": "Ln = ((1+sqrt(5))/2)^n - ((1-sqrt(5))/3)^n",
+      "C": "Ln = ((1+sqrt(5))/2)^n + ((1-sqrt(5))/3)^n",
+      "D": "Ln = ((1+sqrt(5))/2)^n - ((1-sqrt(5))/2)^n"
+    },
+    "correct_answer": "A",
+    "explanation": "Roots of characteristic equation r^2 - r - 1 = 0 are r1, r2 = (1 +/- sqrt(5))/2. Solving c1*(r1)^n + c2*(r2)^n with L1=1, L2=3 yields c1=1, c2=1."
+  },
+  {
+    "id": "GATE2023_CS_Q16",
+    "year": "2023",
+    "question_number": 16,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which option refers to the degree (or arity) of a relation in relational database systems?",
+    "options": {
+      "A": "Number of attributes of its relation schema.",
+      "B": "Number of tuples stored in the relation.",
+      "C": "Number of entries in the relation.",
+      "D": "Number of distinct domains of its relation schema."
+    },
+    "correct_answer": "A",
+    "explanation": "Degree (arity) is defined as the total number of attributes in the relation schema, whereas cardinality is the number of tuples."
+  },
+  {
+    "id": "GATE2023_CS_Q17",
+    "year": "2023",
+    "question_number": 17,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Hosts use Stop-and-Wait protocol. In which scenario is link utilization lowest?",
+    "options": {
+      "A": "Longer link length and lower transmission rate",
+      "B": "Longer link length and higher transmission rate",
+      "C": "Shorter link length and lower transmission rate",
+      "D": "Shorter link length and higher transmission rate"
+    },
+    "correct_answer": "B",
+    "explanation": "Efficiency = 1 / (1 + 2a) where a = Tprop / Ttrans. Longer length increases Tprop, and higher transmission rate decreases Ttrans, maximizing 'a' and yielding lowest utilization."
+  },
+  {
+    "id": "GATE2023_CS_Q18",
+    "year": "2023",
+    "question_number": 18,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Matrix A = [[1,2,3,4],[4,1,2,3],[3,4,1,2],[2,3,4,1]], B = [[3,4,1,2],[4,1,2,3],[1,2,3,4],[2,3,4,1]]. Relationship between det(A) and det(B)?",
+    "options": {
+      "A": "det(A) = det(B)",
+      "B": "det(B) = -det(A)",
+      "C": "det(A) = 0",
+      "D": "det(AB) = det(A) + det(B)"
+    },
+    "correct_answer": "B",
+    "explanation": "Matrix B is obtained from matrix A by interchanging Row 1 and Row 3. Interchanging two rows multiplies determinant by -1, so det(B) = -det(A)."
+  },
+  {
+    "id": "GATE2023_CS_Q19",
+    "year": "2023",
+    "question_number": 19,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Lexical token id: letter -> [A-Za-z], digit -> [0-9], id -> letter(letter|digit)*. Which NFA with epsilon transitions accepts valid identifiers?",
+    "options": {
+      "A": "NFA without letter transition from initial state",
+      "B": "NFA allowing initial digit transition",
+      "C": "NFA requiring mandatory initial letter transition followed by loop over letter/digit",
+      "D": "NFA accepting digits at start"
+    },
+    "correct_answer": "C",
+    "explanation": "An identifier must start with a letter transition to reach a state from which zero or more letter or digit transitions loop back via epsilon transitions."
+  },
+  {
+    "id": "GATE2023_CS_Q20",
+    "year": "2023",
+    "question_number": 20,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "An adversary tries to maximize collisions in hash table (k keys, m slots, k > m). Best hashing strategy to counteract adversary?",
+    "options": {
+      "A": "Division method h(k) = k mod m",
+      "B": "Multiplication method h(k) = floor(m*(kA - floor(kA)))",
+      "C": "Universal hashing method",
+      "D": "Division method if prime, else Multiplication method"
+    },
+    "correct_answer": "C",
+    "explanation": "Universal hashing chooses a hash function randomly at runtime independent of keys, preventing a deterministic adversary from crafting worst-case colliding key sets."
+  },
+  {
+    "id": "GATE2023_CS_Q21",
+    "year": "2023",
+    "question_number": 21,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Output Q of 2-input MUX with inputs 0 and Q, and select line S. Functional equivalence?",
+    "options": {
+      "A": "D Flip-flop",
+      "B": "D Latch",
+      "C": "Half-adder",
+      "D": "Demultiplexer"
+    },
+    "correct_answer": "B",
+    "explanation": "When S=0, output retains Q (memory state). When S=1, output follows input D. This level-sensitive behavior matches a D Latch."
+  },
+  {
+    "id": "GATE2023_CS_Q22",
+    "year": "2023",
+    "question_number": 22,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which of the following need to be saved on context switch from thread T1 to thread T2 of same process?",
+    "options": {
+      "A": "Page table base register",
+      "B": "Stack pointer",
+      "C": "Program counter",
+      "D": "General purpose registers"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "Threads share same virtual address space (so Page Table Base Register is unchanged), but each thread has its own Stack Pointer, PC, and CPU registers."
+  },
+  {
+    "id": "GATE2023_CS_Q23",
+    "year": "2023",
+    "question_number": 23,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which options guarantee system transition from user mode to kernel mode?",
+    "options": {
+      "A": "Function Call",
+      "B": "malloc Call",
+      "C": "Page Fault",
+      "D": "System Call"
+    },
+    "correct_answer": "C, D",
+    "explanation": "Page Fault (hardware trap/exception) and System Call (software trap) always cause mode switch to kernel mode. malloc can often be satisfied from heap without system call."
+  },
+  {
+    "id": "GATE2023_CS_Q24",
+    "year": "2023",
+    "question_number": 24,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which statements are CORRECT regarding closure under intersection?",
+    "options": {
+      "A": "Intersection of two regular languages is regular.",
+      "B": "Intersection of two context-free languages is context-free.",
+      "C": "Intersection of two recursive languages is recursive.",
+      "D": "Intersection of two recursively enumerable languages is recursively enumerable."
+    },
+    "correct_answer": "A, C, D",
+    "explanation": "Regular, Recursive, and RE languages are closed under intersection. Context-Free Languages (CFLs) are NOT closed under intersection."
+  },
+  {
+    "id": "GATE2023_CS_Q25",
+    "year": "2023",
+    "question_number": 25,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which statements are INCORRECT about OSPF routing protocol?",
+    "options": {
+      "A": "OSPF implements Bellman-Ford algorithm to find shortest paths.",
+      "B": "OSPF uses Dijkstra's shortest path algorithm to implement least-cost path routing.",
+      "C": "OSPF is used as an inter-domain routing protocol.",
+      "D": "OSPF implements hierarchical routing."
+    },
+    "correct_answer": "A, C",
+    "explanation": "OSPF uses Dijkstra's algorithm (not Bellman-Ford) and is an intra-domain protocol (within an AS), making A and C incorrect statements."
+  },
+  {
+    "id": "GATE2023_CS_Q26",
+    "year": "2023",
+    "question_number": 26,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Geetha's conjecture: forall x (P(x) => exists y Q(x, y)). Which options imply Geetha's conjecture?",
+    "options": {
+      "A": "exists x (P(x) and forall y Q(x,y))",
+      "B": "forall x forall y Q(x,y)",
+      "C": "exists y forall x (P(x) => Q(x,y))",
+      "D": "exists x (P(x) and exists y Q(x,y))"
+    },
+    "correct_answer": "B, C",
+    "explanation": "If Q(x,y) holds for all x,y (B), then premise holds trivially. If there exists y valid for all x such that P(x)=>Q(x,y) (C), it logically implies forall x (P(x) => exists y Q(x,y))."
+  },
+  {
+    "id": "GATE2023_CS_Q27",
+    "year": "2023",
+    "question_number": 27,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which CPU scheduling algorithms can potentially cause starvation?",
+    "options": {
+      "A": "First-in First-Out",
+      "B": "Round Robin",
+      "C": "Priority Scheduling",
+      "D": "Shortest Job First"
+    },
+    "correct_answer": "C, D",
+    "explanation": "Priority Scheduling and SJF suffer from starvation for low-priority / long jobs. FIFO can cause starvation/convoy effect for long jobs blocking short ones in non-preemptive setups."
+  },
+  {
+    "id": "GATE2023_CS_Q28",
+    "year": "2023",
+    "question_number": 28,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "f(x) = x^3 + 15*x^2 - 33*x - 36. Which statements are TRUE?",
+    "options": {
+      "A": "f(x) does not have a local maximum.",
+      "B": "f(x) has a local maximum.",
+      "C": "f(x) does not have a local minimum.",
+      "D": "f(x) has a local minimum."
+    },
+    "correct_answer": "B, D",
+    "explanation": "f'(x) = 3x^2 + 30x - 33 = 0 => x^2 + 10x - 11 = 0 => x = -11, 1. f''(-11) = -36 < 0 (local max at x=-11) and f''(1) = 36 > 0 (local min at x=1)."
+  },
+  {
+    "id": "GATE2023_CS_Q29",
+    "year": "2023",
+    "question_number": 29,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "f(n) = n and g(n) = n^2. Which statements are TRUE?",
+    "options": {
+      "A": "f in O(g)",
+      "B": "f in Omega(g)",
+      "C": "f in o(g)",
+      "D": "f in Theta(g)"
+    },
+    "correct_answer": "A, C",
+    "explanation": "Since n grows strictly slower than n^2, n = O(n^2) and n = o(n^2) both hold true."
+  },
+  {
+    "id": "GATE2023_CS_Q30",
+    "year": "2023",
+    "question_number": 30,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Sum of eigenvalues lambda1 + lambda2 + lambda3 + lambda4 + lambda5 of adjacency matrix A.",
+    "options": null,
+    "correct_answer": "2",
+    "explanation": "Sum of eigenvalues equals trace of adjacency matrix. Depending on graph loop definition in question text, official answer range evaluated to 2 or 4."
+  },
+  {
+    "id": "GATE2023_CS_Q31",
+    "year": "2023",
+    "question_number": 31,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Definite integral from x=-3..3, y=-2..2, z=-1..1 of (4*x^2*y - z^3) dz dy dx.",
+    "options": null,
+    "correct_answer": "0",
+    "explanation": "Since y and z^3 are odd functions integrated over symmetric limits [-2, 2] and [-1, 1], the integral evaluates exactly to 0."
+  },
+  {
+    "id": "GATE2023_CS_Q32",
+    "year": "2023",
+    "question_number": 32,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "A number is written as 132 in radix-4. The same number in radix-5 is:",
+    "options": null,
+    "correct_answer": "110",
+    "explanation": "Decimal value = 1*4^2 + 3*4^1 + 2*4^0 = 16 + 12 + 2 = 30. Converting 30 to radix-5: 30 / 5 = 6 rem 0; 6 / 5 = 1 rem 1; 1 / 5 = 0 rem 1 => 110 in radix-5."
+  },
+  {
+    "id": "GATE2023_CS_Q33",
+    "year": "2023",
+    "question_number": 33,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "3-stage pipeline with stage delays 10 ns, 20 ns, 14 ns. Total execution time for 100 instructions in ns:",
+    "options": null,
+    "correct_answer": "2040",
+    "explanation": "Clock cycle time = max stage delay = 20 ns. Total time = (k + n - 1) * cycle_time = (3 + 100 - 1) * 20 ns = 102 * 20 = 2040 ns."
+  },
+  {
+    "id": "GATE2023_CS_Q34",
+    "year": "2023",
+    "question_number": 34,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "1 keystroke/sec. Polling every 10 ms (100 us/poll) + 200 us on key press -> T1 fraction. Interrupts take 1 ms/keystroke -> T2. Ratio T1/T2:",
+    "options": null,
+    "correct_answer": "10.2",
+    "explanation": "In 1 sec, 100 polls take 100*100us = 10000us = 10ms. 1 key takes 200us = 0.2ms. T1 = 10.2 ms/sec = 0.0102. T2 = 1 ms/sec = 0.001. T1/T2 = 10.2."
+  },
+  {
+    "id": "GATE2023_CS_Q35",
+    "year": "2023",
+    "question_number": 35,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "ANSI-C program output: funcp uses static int x=1; x++; returns x. main: x=funcp(); y=funcp()+x; print(x+y);",
+    "options": null,
+    "correct_answer": "7",
+    "explanation": "1st funcp(): static x becomes 2, returns 2 (so main x=2). 2nd funcp(): static x becomes 3, returns 3. y = 3 + 2 = 5. Output x+y = 2 + 5 = 7."
+  },
+  {
+    "id": "GATE2023_CS_Q36",
+    "year": "2023",
+    "question_number": 36,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Which option represents the activation tree corresponding to the main function in the given program?",
+    "options": {
+      "A": "main -> f1, f2, f3; f2 -> f3, f1",
+      "B": "main -> f1, f2, f3; f1 -> f3, f1",
+      "C": "main -> f3, f1",
+      "D": "main -> f3, f2, f1"
+    },
+    "correct_answer": "A",
+    "explanation": "main calls f1(), f2(2), f3(). Inside f2(2), it recursively calls f2(1) which invokes f3() then f1(), giving activation tree in Option A."
+  },
+  {
+    "id": "GATE2023_CS_Q37",
+    "year": "2023",
+    "question_number": 37,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Control flow graph: B1 (i=m-1, j=n, a=10) -> B2 (j=j-1) -> B3 (a=20) -> B4 (i=a+1, i=i+1). Set of live variables at exit point of each block?",
+    "options": {
+      "A": "B1: {}, B2: {a}, B3: {a}, B4: {a}",
+      "B": "B1: {i, j}, B2: {a}, B3: {a}, B4: {i}",
+      "C": "B1: {a, i, j}, B2: {a, i, j}, B3: {a, i}, B4: {a}",
+      "D": "B1: {a, i, j}, B2: {a, j}, B3: {a, j}, B4: {a, i, j}"
+    },
+    "correct_answer": "D",
+    "explanation": "Variables are live at a block exit if used along some path before redefinition. Analyzing backwards from EXIT yields live sets in Option D."
+  },
+  {
+    "id": "GATE2023_CS_Q38",
+    "year": "2023",
+    "question_number": 38,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "5 threads invoke incr (X=X+1), 3 invoke decr (X=X-1). Initial X=10. Binary sem I-1 init 1, counting sem I-2 init 2. Minimum possible values V1, V2 of X?",
+    "options": {
+      "A": "15, 7",
+      "B": "7, 7",
+      "C": "12, 7",
+      "D": "12, 8"
+    },
+    "correct_answer": "C",
+    "explanation": "With binary semaphore I-1 (mutual exclusion strictly maintained), final X = 10 + 5 - 3 = 12 (V1=12). With counting semaphore I-2 (allows concurrent access), race conditions allow lost updates yielding min V2 = 7.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q39",
+    "year": "2023",
+    "question_number": 39,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Context-free grammar G: S -> aSb | X; X -> aX | Xb | a | b. Language generated by G?",
+    "options": {
+      "A": "(a+b)*",
+      "B": "a*(a+b)b*",
+      "C": "a*b*(a+b)",
+      "D": "Not a regular language"
+    },
+    "correct_answer": "B",
+    "explanation": "S generates equal outer 'a's and 'b's, while X generates at least one 'a' or 'b' with arbitrary surrounding 'a's and 'b's, simplifying to regular expression a*(a+b)b*."
+  },
+  {
+    "id": "GATE2023_CS_Q40",
+    "year": "2023",
+    "question_number": 40,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "PDA P accepting by empty stack on input {a,b}. Stack transitions push A's for 'a's and pop A's for 'b's. Language accepted by P?",
+    "options": {
+      "A": "{a^m b^n | 1 <= m and n < m}",
+      "B": "{a^m b^n | 0 <= n <= m}",
+      "C": "{a^m b^n | 0 <= m and 0 <= n}",
+      "D": "{a^m | 0 <= m} U {b^n | 0 <= n}"
+    },
+    "correct_answer": "A",
+    "explanation": "P pushes m >= 1 'A's onto stack for input 'a's, then pops n 'A's for input 'b's, requiring m > n to empty stack via remaining epsilon transitions."
+  },
+  {
+    "id": "GATE2023_CS_Q41",
+    "year": "2023",
+    "question_number": 41,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "For loop multiplying array elements by 8: a[i] = b[i]*8. Operands (U1, U2, U3, U4) in assembly code?",
+    "options": {
+      "A": "(8, 4, 1, L02)",
+      "B": "(3, 4, 4, L01)",
+      "C": "(8, 1, 1, L02)",
+      "D": "(3, 1, 1, L01)"
+    },
+    "correct_answer": "B",
+    "explanation": "Multiply by 8 is left shift by 3 (U1=3). Byte-addressable 32-bit int requires offset increment of 4 bytes (U2=4, U3=4). Loop jump goes back to condition check L01 (U4=L01).",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q42",
+    "year": "2023",
+    "question_number": 42,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "4 KB byte-addressable memory using four 1 KB blocks decoder on address lines IA4, IA3. Decimal starting memory addresses (Addr=0) for X1, X2, X3, X4?",
+    "options": {
+      "A": "(0, 1, 2, 3)",
+      "B": "(0, 1024, 2048, 3072)",
+      "C": "(0, 8, 16, 24)",
+      "D": "(0, 0, 0, 0)"
+    },
+    "correct_answer": "C",
+    "explanation": "IA4 and IA3 are bits 4 and 3. Incrementing decoder input changes address by 2^3 = 8 bytes. Thus block base addresses are 0, 8, 16, 24.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q43",
+    "year": "2023",
+    "question_number": 43,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Sequential circuit with initial (Q1, Q2, Q3) = (0, 1, 1). Which value of (Q1, Q2, Q3) can NEVER be obtained?",
+    "options": {
+      "A": "(0, 0, 1)",
+      "B": "(1, 0, 0)",
+      "C": "(1, 0, 1)",
+      "D": "(1, 1, 1)"
+    },
+    "correct_answer": "A",
+    "explanation": "Tracing state transitions across clock cycles starting from (0, 1, 1) reveals reachable state sequence, where state (0, 0, 1) is never produced.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q44",
+    "year": "2023",
+    "question_number": 44,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Which set of values for (X0, X1, X2, X3, X4, X5, X6, X7) realizes Boolean function A' + A'*C' + A*B'*C?",
+    "options": {
+      "A": "(1, 1, 0, 0, 1, 1, 1, 0)",
+      "B": "(1, 1, 0, 0, 1, 1, 0, 1)",
+      "C": "(1, 1, 0, 1, 1, 1, 0, 0)",
+      "D": "(0, 0, 1, 1, 0, 1, 1, 1)"
+    },
+    "correct_answer": "C",
+    "explanation": "Evaluating truth table for function f(A,B,C) gives outputs for minterms 0 to 7 corresponding to inputs X0..X7 as (1, 1, 0, 1, 1, 1, 0, 0).",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q45",
+    "year": "2023",
+    "question_number": 45,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "IEEE-754 single precision floats P = 0xC1800000 (-16.0) and Q = 0x3F5C2EF4 (+0.8601...). Product P * Q in hex?",
+    "options": {
+      "A": "0x404C2EF4",
+      "B": "0x405C2EF4",
+      "C": "0xC15C2EF4",
+      "D": "0xC14C2EF4"
+    },
+    "correct_answer": "C",
+    "explanation": "P is negative, Q is positive -> P*Q sign bit is 1 (0xC...). Exponents add with bias adjustment, preserving mantissa bits, resulting in 0xC15C2EF4.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q46",
+    "year": "2023",
+    "question_number": 46,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Priority queue A using max-heap. Worst-case running time of EXTRACT-MAX(A) and INSERT(A, key)?",
+    "options": {
+      "A": "Both run in O(1)",
+      "B": "Both run in O(log(n))",
+      "C": "EXTRACT-MAX runs in O(1), INSERT runs in O(n)",
+      "D": "EXTRACT-MAX runs in O(1), INSERT runs in O(log(n))"
+    },
+    "correct_answer": "B",
+    "explanation": "Both Extract-Max (max-heapify down) and Insert (heapify up) require tree height traversal, taking O(log n) time in the worst case.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q47",
+    "year": "2023",
+    "question_number": 47,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Given binary tree rooted at 10 with left child 5 (left 3, right 8) and right child 11 (right 13). What does recursive function foo print?",
+    "options": {
+      "A": "3 8 5 13 11 10",
+      "B": "3 5 8 10 11 13",
+      "C": "3 8 16 13 24 50",
+      "D": "3 16 8 50 24 13"
+    },
+    "correct_answer": "C",
+    "explanation": "Post-order traversal computes subtree sums: node 3 prints 3; node 8 prints 8; node 5 prints 5+3+8=16; node 13 prints 13; node 11 prints 11+13=24; root 10 prints 10+16+24=50. Sequence: 3 8 16 13 24 50.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q48",
+    "year": "2023",
+    "question_number": 48,
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "U = {1..n}, A and B subsets of size k, disjoint. How many permutations of U separate A from B?",
+    "options": {
+      "A": "n!",
+      "B": "C(n, 2k) * (n-2k)!",
+      "C": "C(n, 2k) * (n-2k)! * (k!)^2",
+      "D": "2 * C(n, 2k) * (n-2k)! * (k!)^2"
+    },
+    "correct_answer": "D",
+    "explanation": "Choose 2k positions out of n in C(n, 2k) ways. Place elements of A before B OR B before A (2 orderings). Arrange elements within A (k!) and B (k!). Arrange remaining (n-2k) elements in (n-2k)! ways.",
+    "question_type": "MCQ"
+  },
+  {
+    "id": "GATE2023_CS_Q49",
+    "year": "2023",
+    "question_number": 49,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "f: A -> B is surjective. Equivalence relation a1 ~ a2 if f(a1)=f(a2). F: E -> B defined by F([x]) = f(x). Which statements are TRUE?",
+    "options": {
+      "A": "F is NOT well-defined.",
+      "B": "F is an onto (surjective) function.",
+      "C": "F is a one-to-one (injective) function.",
+      "D": "F is a bijective function."
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "F maps each equivalence class uniquely to its image, making it well-defined, injective, surjective, and therefore bijective."
+  },
+  {
+    "id": "GATE2023_CS_Q50",
+    "year": "2023",
+    "question_number": 50,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "myTCP over 100 Mbps network, RTT = 150 ms, max segment lifetime = 2 min. Valid lengths of Sequence Number field?",
+    "options": {
+      "A": "30 bits",
+      "B": "32 bits",
+      "C": "34 bits",
+      "D": "36 bits"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "Data sent in 2 min = 120 * 100 Mbps / 8 = 1.5 GB. Minimum sequence numbers needed requires > 30.6 bits, so 32, 34, and 36 bits are all valid lengths."
+  },
+  {
+    "id": "GATE2023_CS_Q51",
+    "year": "2023",
+    "question_number": 51,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "H = (2^X, delta) where A delta B = (A-B) U (B-A) is symmetric difference. Which statements are correct?",
+    "options": {
+      "A": "H is a group.",
+      "B": "Every element has an inverse, but H is NOT a group.",
+      "C": "Inverse of A is complement of A.",
+      "D": "For every A in 2^X, inverse of A is A."
+    },
+    "correct_answer": "A, D",
+    "explanation": "Symmetric difference is associative, has identity empty set, and every set is its own inverse (A delta A = empty set). Hence H is an abelian group and self-inverse holds."
+  },
+  {
+    "id": "GATE2023_CS_Q52",
+    "year": "2023",
+    "question_number": 52,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Web page load DNS lookup (3-tier iterative) + fetch page with 10 small embedded objects. Correct minimum RTTs?",
+    "options": {
+      "A": "7 RTTs for non-persistent HTTP with 5 parallel TCP connections.",
+      "B": "5 RTTs for persistent HTTP with pipelining.",
+      "C": "9 RTTs for non-persistent HTTP with 5 parallel TCP connections.",
+      "D": "6 RTTs for persistent HTTP with pipelining."
+    },
+    "correct_answer": "C, D",
+    "explanation": "DNS lookup takes 4 RTTs (Root, TLD, Auth, plus local). Non-persistent with 5 parallel connections takes 1 (TCP) + 1 (HTML) + 1 (TCP parallel) + 2 (10 objects / 5 = 2 batches * 1 RTT) = 9 RTTs (C). Persistent pipelined takes 4 (DNS) + 1 (TCP + HTML) + 1 (all 10 objects) = 6 RTTs (D)."
+  },
+  {
+    "id": "GATE2023_CS_Q53",
+    "year": "2023",
+    "question_number": 53,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Two fair coins tossed. A: HEAD on both, B: HEAD on 1st, C: HEAD on 2nd. Which statements are TRUE?",
+    "options": {
+      "A": "A and B are independent.",
+      "B": "A and C are independent.",
+      "C": "B and C are independent.",
+      "D": "Prob(B|C) = Prob(B)"
+    },
+    "correct_answer": "C, D",
+    "explanation": "P(B)=1/2, P(C)=1/2, P(B cap C)=1/4 = P(B)*P(C), so B and C are independent (C true), which implies P(B|C) = P(B) (D true)."
+  },
+  {
+    "id": "GATE2023_CS_Q54",
+    "year": "2023",
+    "question_number": 54,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Function_1 executes x=x+1 in nested loops (outer while n>=1, inner for i=1..n; n=floor(n/2)). Function_2 has loop 1..100*n. Executions f1(n) and f2(n). Which are TRUE?",
+    "options": {
+      "A": "f1(n) in Theta(f2(n))",
+      "B": "f1(n) in o(f2(n))",
+      "C": "f1(n) in omega(f2(n))",
+      "D": "f1(n) in O(n)"
+    },
+    "correct_answer": "A, D",
+    "explanation": "f1(n) = n + n/2 + n/4 + ... = 2n = O(n). f2(n) = 100n = O(n). Since both are linearly proportional to n, f1(n) = Theta(f2(n)) and f1(n) = O(n)."
+  },
+  {
+    "id": "GATE2023_CS_Q55",
+    "year": "2023",
+    "question_number": 55,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Greedy vertex coloring on simple graph G with max degree Delta(G). Which statements are TRUE?",
+    "options": {
+      "A": "Procedure results in a proper vertex coloring of G.",
+      "B": "Number of colors used is at most Delta(G) + 1",
+      "C": "Number of colors used is at most Delta(G).",
+      "D": "Number of colors used is equal to chromatic number of G."
+    },
+    "correct_answer": "A, B",
+    "explanation": "Greedy coloring always yields a valid proper coloring (A), and since any vertex has at most Delta(G) neighbors, it requires at most Delta(G) + 1 colors (B)."
+  },
+  {
+    "id": "GATE2023_CS_Q56",
+    "year": "2023",
+    "question_number": 56,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "U = {1, 2, 3}, graph G vertex set 2^U (8 vertices). Edge if A subset B or B subset A. Cardinality of B(empty_set) (BFS orderings starting from empty set):",
+    "options": null,
+    "correct_answer": "5040",
+    "explanation": "Empty set is connected to all non-empty subsets. A BFS starting at empty set visits empty set first, then remaining 7 vertices in any of 7! = 5040 permutations."
+  },
+  {
+    "id": "GATE2023_CS_Q57",
+    "year": "2023",
+    "question_number": 57,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Array D[128][128] stored in row-major order. Page size = 512 ints. 30 page frames allocated, LRU replacement. Column-major loop D[j][i] *= 10. Number of page faults:",
+    "options": null,
+    "correct_answer": "4096",
+    "explanation": "Total size = 16384 ints = 32 pages. Column-major access jumps across rows, causing every access to hit a new page. Since frame count (30) < 32, LRU thrashing occurs, causing 128 * 32 = 4096 page faults."
+  },
+  {
+    "id": "GATE2023_CS_Q58",
+    "year": "2023",
+    "question_number": 58,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "57-bit virtual address, page size 4 KB (2^12 B), page table entry 8 B (2^3 B). Number of levels L in page table:",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "Offset bits = 12. Virtual page number bits = 57 - 12 = 45. Number of entries per page = 4 KB / 8 B = 512 = 2^9 entries (9 index bits per level). L = 45 / 9 = 5 levels."
+  },
+  {
+    "id": "GATE2023_CS_Q59",
+    "year": "2023",
+    "question_number": 59,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Sequence a = [1, 5, 7, 8, 9, 2]. Operations: push all to S; enqueue all to Q; pop S; dequeue Q; pop S; dequeue Q; dequeue Q & push to S; repeat 3 times; pop S; pop S. Top element of S:",
+    "options": null,
+    "correct_answer": "8",
+    "explanation": "Tracing stack S and queue Q step by step reveals that after dequeueing element 8 and pushing to S followed by the final pops, the top of stack S is 8."
+  },
+  {
+    "id": "GATE2023_CS_Q60",
+    "year": "2023",
+    "question_number": 60,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "SDT calculation for string '10#011'. Output value rounded to 3 decimal places:",
+    "options": null,
+    "correct_answer": "2.375",
+    "explanation": "Integer part '10' in binary = 2. Fractional part '#011' gives F.val = 0.375. N.val = 2 + 0.375 = 2.375."
+  },
+  {
+    "id": "GATE2023_CS_Q61",
+    "year": "2023",
+    "question_number": 61,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "SELECT * FROM Student WHERE gender = 'F' AND marks > 65. Number of rows returned:",
+    "options": null,
+    "correct_answer": "2",
+    "explanation": "Filtering table records for female students with marks strictly greater than 65 matches rollNum 2 (Aliya, 70) and rollNum 3 (Aliya, 80), returning 2 rows."
+  },
+  {
+    "id": "GATE2023_CS_Q62",
+    "year": "2023",
+    "question_number": 62,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "25,000 records of 100 B. Block size 1024 B. Index entry = 15 B key + 5 B pointer = 20 B. Worst case block accesses using binary search on index file:",
+    "options": null,
+    "correct_answer": "6",
+    "explanation": "Data blocks = 25000 / (1024/100) = 25000 / 10 = 2500 blocks. Index entries per block = 1024 / 20 = 51. Index blocks = 2500 / 51 = 50 blocks. Binary search accesses = ceil(log2(50)) = 6 blocks."
+  },
+  {
+    "id": "GATE2023_CS_Q63",
+    "year": "2023",
+    "question_number": 63,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Language L over {0,1} of strings not containing three consecutive 1's. Minimum number of states in DFA:",
+    "options": null,
+    "correct_answer": "4",
+    "explanation": "States track count of consecutive 1s seen so far: state 0 (no '1'), state 1 (one '1'), state 2 (two '1's), and state 3 (trap state for three consecutive '1's). Total = 4 states."
+  },
+  {
+    "id": "GATE2023_CS_Q64",
+    "year": "2023",
+    "question_number": 64,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "64 KB 8-way set associative cache, 32-bit address. Block size not specified default 64 B. Number of bits in TAG:",
+    "options": null,
+    "correct_answer": "19",
+    "explanation": "Cache size = 64 KB, 8 ways => 8 KB per way. Number of sets = 8 KB / 64 B = 128 sets (7 index bits). Offset = 6 bits (64 B block). TAG bits = 32 - 7 - 6 = 19 bits."
+  },
+  {
+    "id": "GATE2023_CS_Q65",
+    "year": "2023",
+    "question_number": 65,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Destination address 200.150.68.118 matched against forwarding table using longest prefix match. Forwarding interface ID:",
+    "options": null,
+    "correct_answer": "3",
+    "explanation": "200.150.68.118 matches Interface 1 (/16), Interface 2 (/19), and Interface 3 (/24, prefix 200.150.68.0). Interface 4 (/27 range .64-.95) does not match .118. Longest matching prefix is Interface 3 (/24)."
+  }
+]

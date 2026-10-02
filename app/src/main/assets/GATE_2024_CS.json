@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "GATE2024_CS_Q01",
+    "year": "2024",
+    "question_number": 1,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 1,
+    "question_text": "If '\u2192' denotes increasing order of intensity, then the meaning of the words [walk \u2192 jog \u2192 sprint] is analogous to [bothered \u2192 ___ \u2192 daunted]. Which one of the given options is appropriate to fill the blank?",
+    "options": {
+      "A": "phased",
+      "B": "phrased",
+      "C": "fazed",
+      "D": "fused"
+    },
+    "correct_answer": "C",
+    "explanation": "'Fazed' means disturbed, disconcerted, or intimidated. The sequence represents increasing intensity of emotional disturbance: 'bothered' (mild), 'fazed' (moderate), and 'daunted' (intimidated/strongly fazed)."
+  },
+  {
+    "id": "GATE2024_CS_Q02",
+    "year": "2024",
+    "question_number": 2,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 1,
+    "question_text": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work. How many attempts does each wizard make before coming to this conclusion?",
+    "options": {
+      "A": "24",
+      "B": "48",
+      "C": "16",
+      "D": "12"
+    },
+    "correct_answer": "A",
+    "explanation": "The four distinct elements can be arranged in 4! = 4 x 3 x 2 x 1 = 24 possible orderings. Since each wizard works independently and tries all combinations, each wizard makes 24 attempts."
+  },
+  {
+    "id": "GATE2024_CS_Q03",
+    "year": "2024",
+    "question_number": 3,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 1,
+    "question_text": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500. The number of students who like their core branches is",
+    "options": {
+      "A": "1,800",
+      "B": "3,500",
+      "C": "1,600",
+      "D": "1,500"
+    },
+    "correct_answer": "A",
+    "explanation": "Total students N = 10,000. Students liking at least one branch = 10,000 - 1,500 = 8,500. Let N(C) = x be the students who like core branches, so N(O) = 4x like other branches. N(C n O) = 500. Using N(C u O) = N(C) + N(O) - N(C n O) => 8,500 = x + 4x - 500 => 5x = 9,000 => x = 1,800."
+  },
+  {
+    "id": "GATE2024_CS_Q04",
+    "year": "2024",
+    "question_number": 4,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 1,
+    "question_text": "For positive non-zero real variables x and y, if ln((x+y)/2) = 1/2[ln(x) + ln(y)], then, the value of x/y + y/x is",
+    "options": {
+      "A": "1",
+      "B": "1/2",
+      "C": "2",
+      "D": "4"
+    },
+    "correct_answer": "C",
+    "explanation": "Rewrite as ln((x+y)/2) = ln(sqrt(xy)) => (x+y)/2 = sqrt(xy) => (x+y)^2 = 4xy => (x-y)^2 = 0 => x = y. Substituting x = y into x/y + y/x yields 1 + 1 = 2."
+  },
+  {
+    "id": "GATE2024_CS_Q05",
+    "year": "2024",
+    "question_number": 5,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 1,
+    "question_text": "In the sequence 6, 9, 14, x, 30, 41, a possible value of x is",
+    "options": {
+      "A": "25",
+      "B": "21",
+      "C": "18",
+      "D": "20"
+    },
+    "correct_answer": "B",
+    "explanation": "The differences between consecutive terms are 9 - 6 = 3, 14 - 9 = 5, x - 14 = 7, 30 - x = 9, 41 - 30 = 11. The differences form an arithmetic progression +3, +5, +7, +9, +11. Thus, x = 14 + 7 = 21."
+  },
+  {
+    "id": "GATE2024_CS_Q06",
+    "year": "2024",
+    "question_number": 6,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 2,
+    "question_text": "Sequence the following sentences in a coherent passage.\nP: This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.\nQ: Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.\nR: The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth's atmosphere and making it better suited for life.\nS: Many millennia ago, an Antarctic Plate collided with the massive Eurasian Plate.",
+    "options": {
+      "A": "QPSR",
+      "B": "QSPR",
+      "C": "SPRQ",
+      "D": "SRPQ"
+    },
+    "correct_answer": "C",
+    "explanation": "Sentence S introduces the collision. Sentence P refers to 'This fortuitous geological event' (linking to S). Sentence R describes the cooling process following mountain creation. Sentence Q provides the logical conclusion ('Thus...'). The coherent sequence is SPRQ."
+  },
+  {
+    "id": "GATE2024_CS_Q07",
+    "year": "2024",
+    "question_number": 7,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 2,
+    "question_text": "A person sold two different items at the same price. He made 10% profit in one item, and 10% loss in the other item. In selling these two items, the person made a total of",
+    "options": {
+      "A": "1% profit",
+      "B": "2% profit",
+      "C": "1% loss",
+      "D": "2% loss"
+    },
+    "correct_answer": "C",
+    "explanation": "When two items are sold at the same selling price\u2014one at x% profit and the other at x% loss\u2014there is always an overall loss given by x^2/100 % = 10^2/100 % = 1% loss."
+  },
+  {
+    "id": "GATE2024_CS_Q08",
+    "year": "2024",
+    "question_number": 8,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 2,
+    "question_text": "The pie charts depict the shares of various power generation technologies in the total electricity generation of a country for 2007 and 2023. 2007: Solar 5%, Wind 5%, Hydro 30%, Coal 35%, Gas 25%. 2023: Solar 20%, Coal 20%, Gas 15%, Hydro 35%, Wind 10%. Assuming total generation remains constant, what is the percentage increase in the share of renewable sources (Hydro, Solar, Wind) over this period?",
+    "options": {
+      "A": "25%",
+      "B": "50%",
+      "C": "77.5%",
+      "D": "62.5%"
+    },
+    "correct_answer": "D",
+    "explanation": "Renewable share in 2007 = 5% + 5% + 30% = 40%. Renewable share in 2023 = 20% + 10% + 35% = 65%. Percentage increase = (65 - 40)/40 x 100% = 25/40 x 100% = 62.5%."
+  },
+  {
+    "id": "GATE2024_CS_Q09",
+    "year": "2024",
+    "question_number": 9,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 2,
+    "question_text": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube. The minimum number of such cuts required is",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "7",
+      "D": "8"
+    },
+    "correct_answer": "A",
+    "explanation": "Making 1 cut parallel to each of the 3 orthogonal planes (X, Y, Z axes) divides the cube into 2 x 2 x 2 = 8 identical smaller cubes using a minimum of 3 cuts."
+  },
+  {
+    "id": "GATE2024_CS_Q10",
+    "year": "2024",
+    "question_number": 10,
+    "question_type": "MCQ",
+    "section": "General Aptitude",
+    "marks": 2,
+    "question_text": "In the 4 x 4 array shown below, each cell of the first three rows has either a cross (X) or a number representing neighboring cells without crosses. Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:\n1 X 4 3\nX 5 5 4\n3 X 6 X\n_ _ _ _",
+    "options": {
+      "A": "11",
+      "B": "10",
+      "C": "12",
+      "D": "9"
+    },
+    "correct_answer": "A",
+    "explanation": "Calculating non-cross neighbors for row 4 cells based on row 3 and 4 status: Cell (4,1) has 2 non-cross neighbors; Cell (4,2) has 4 non-cross neighbors; Cell (4,3) has 3 non-cross neighbors; Cell (4,4) has 2 non-cross neighbors. Sum = 2 + 4 + 3 + 2 = 11."
+  },
+  {
+    "id": "GATE2024_CS_Q11",
+    "year": "2024",
+    "question_number": 11,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1% of the processor cycles are used for DMA?",
+    "options": {
+      "A": "2,56,000",
+      "B": "3,200",
+      "C": "25,60,000",
+      "D": "32,000"
+    },
+    "correct_answer": "C",
+    "explanation": "Processor clock rate = 4 x 10^6 cycles/sec. Cycles stolen by DMA = 1% of 4 x 10^6 = 40,000 cycles/sec. In each cycle, DMA transfers 8 bytes = 64 bits. Data transfer rate = 40,000 x 64 = 2,560,000 bits per second (25,60,000)."
+  },
+  {
+    "id": "GATE2024_CS_Q12",
+    "year": "2024",
+    "question_number": 12,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Let p and q be the following propositions:\np: Fail grade can be given.\nq: Student scores more than 50% marks.\nConsider the statement: 'Fail grade cannot be given when student scores more than 50% marks.' Which one of the following is the CORRECT representation of the above statement in propositional logic?",
+    "options": {
+      "A": "q -> \u00acp",
+      "B": "q -> p",
+      "C": "p -> q",
+      "D": "\u00acp -> q"
+    },
+    "correct_answer": "A",
+    "explanation": "The conditional statement 'Fail grade cannot be given (\u00acp) when/if student scores more than 50% marks (q)' translates directly to q -> \u00acp."
+  },
+  {
+    "id": "GATE2024_CS_Q13",
+    "year": "2024",
+    "question_number": 13,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Consider the following C program. Assume parameters to a function are evaluated from right to left.\n#include <stdio.h>\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\nvoid f(int x, int y) { g(x); h(y); }\nint main() { f(g(10), h(20)); }\nWhich one of the following options is the CORRECT output?",
+    "options": {
+      "A": "20101020",
+      "B": "10202010",
+      "C": "20102010",
+      "D": "10201020"
+    },
+    "correct_answer": "A",
+    "explanation": "Evaluating parameters right-to-left: h(20) executes first, printing 20 and returning 20. Next g(10) executes, printing 10 and returning 10. Then inside f(10, 20), g(10) prints 10, and h(20) prints 20. The complete sequence printed is 20101020."
+  },
+  {
+    "id": "GATE2024_CS_Q14",
+    "year": "2024",
+    "question_number": 14,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "The format of a single-precision floating-point number as per IEEE 754 standard is Sign (1 bit), Exponent (8 bits), Mantissa (23 bits). Choose the largest floating-point number among the given options.",
+    "options": {
+      "A": "Sign: 0, Exponent: 1111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+      "B": "Sign: 0, Exponent: 1111 1110, Mantissa: 1111 1111 1111 1111 1111 111",
+      "C": "Sign: 0, Exponent: 1111 1111, Mantissa: 0000 0000 0000 0000 0000 000",
+      "D": "Sign: 0, Exponent: 1111 1110, Mantissa: 0000 0000 0000 0000 0000 000"
+    },
+    "correct_answer": "B",
+    "explanation": "An exponent of 1111 1111 (255) is reserved for special values (NaN and Infinity). The largest finite normalized floating-point number has a positive sign (0), maximum valid biased exponent 1111 1110 (254), and mantissa bits all set to 1."
+  },
+  {
+    "id": "GATE2024_CS_Q15",
+    "year": "2024",
+    "question_number": 15,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Let T(n) be the recurrence relation defined as follows: T(0)=1, T(1)=2, and T(n)=5T(n-1)-6T(n-2) for n >= 2. Which one of the following statements is TRUE?",
+    "options": {
+      "A": "T(n)=Theta(2^n)",
+      "B": "T(n)=Theta(n 2^n)",
+      "C": "T(n)=Theta(3^n)",
+      "D": "T(n)=Theta(n 3^n)"
+    },
+    "correct_answer": "A",
+    "explanation": "Characteristic equation: r^2 - 5r + 6 = 0 => (r-2)(r-3) = 0 => r = 2, 3. General solution: T(n) = c1 2^n + c2 3^n. Initial conditions T(0) = c1 + c2 = 1 and T(1) = 2c1 + 3c2 = 2 yield c1 = 1, c2 = 0. Thus T(n) = 2^n, which is Theta(2^n)."
+  },
+  {
+    "id": "GATE2024_CS_Q16",
+    "year": "2024",
+    "question_number": 16,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Let f(x) be a continuous function from R to R such that f(x)=1-f(2-x). Which one of the following options is the CORRECT value of integral from 0 to 2 of f(x)dx?",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "-1"
+    },
+    "correct_answer": "B",
+    "explanation": "Let I = integral_0^2 f(x) dx. Using integral identity integral_0^a f(x)dx = integral_0^a f(a-x)dx, we get I = integral_0^2 f(2-x)dx. Adding both: 2I = integral_0^2 [f(x) + f(2-x)] dx = integral_0^2 1 dx = 2 => I = 1."
+  },
+  {
+    "id": "GATE2024_CS_Q17",
+    "year": "2024",
+    "question_number": 17,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Let A be the adjacency matrix of a simple undirected graph G. Suppose A is its own inverse (A = A^-1). Which one of the following statements is always TRUE?",
+    "options": {
+      "A": "G is a cycle",
+      "B": "G is a perfect matching",
+      "C": "G is a complete graph",
+      "D": "There is no such graph G"
+    },
+    "correct_answer": "B",
+    "explanation": "A = A^-1 => A^2 = I. The diagonal entry (A^2)_ii = sum_j A_ij^2 = 1 represents the degree of vertex i. Since A_ij in {0, 1}, every vertex has degree exactly 1. A 1-regular graph represents a perfect matching."
+  },
+  {
+    "id": "GATE2024_CS_Q18",
+    "year": "2024",
+    "question_number": 18,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is",
+    "options": {
+      "A": "1/324",
+      "B": "5/324",
+      "C": "7/324",
+      "D": "11/324"
+    },
+    "correct_answer": "B",
+    "explanation": "Total possible outcomes = 6^6. Favorable outcomes (permutations of distinct numbers 1 through 6) = 6! = 720. Probability = 720 / 6^6 = 720 / 46656 = 5/324."
+  },
+  {
+    "id": "GATE2024_CS_Q19",
+    "year": "2024",
+    "question_number": 19,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called",
+    "options": {
+      "A": "durability",
+      "B": "atomicity",
+      "C": "consistency",
+      "D": "isolation"
+    },
+    "correct_answer": "A",
+    "explanation": "Durability guarantees that once a transaction commits, its modifications are permanently recorded in non-volatile memory and survive subsequent system crashes."
+  },
+  {
+    "id": "GATE2024_CS_Q20",
+    "year": "2024",
+    "question_number": 20,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "In the context of owner and weak entity sets in the ER data model, which one of the following statements is TRUE?",
+    "options": {
+      "A": "Weak entity set MUST have total participation in the identifying relationship",
+      "B": "Owner entity set MUST have total participation in the identifying relationship",
+      "C": "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+      "D": "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+    },
+    "correct_answer": "A",
+    "explanation": "A weak entity set cannot exist without an owner entity set to identify it; therefore, it MUST have total participation in the identifying relationship. The owner entity set can exist independently."
+  },
+  {
+    "id": "GATE2024_CS_Q21",
+    "year": "2024",
+    "question_number": 21,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Match the following compiler components (Set X) with their outputs/concepts (Set Y):\nSet X: P. Lexical Analyzer, Q. Syntax Analyzer, R. Intermediate Code Generator, S. Code Optimizer\nSet Y: 1. Abstract Syntax Tree, 2. Token, 3. Parse Tree, 4. Constant Folding",
+    "options": {
+      "A": "P-4; Q-1; R-3; S-2",
+      "B": "P-2; Q-3; R-1; S-4",
+      "C": "P-2; Q-1; R-3; S-4",
+      "D": "P-4; Q-3; R-2; S-1"
+    },
+    "correct_answer": "B",
+    "explanation": "Lexical Analyzer produces Tokens (P-2). Syntax Analyzer builds a Parse Tree (Q-3). Intermediate Code Generator works with Abstract Syntax Trees (R-1). Code Optimizer performs optimizations like Constant Folding (S-4)."
+  },
+  {
+    "id": "GATE2024_CS_Q22",
+    "year": "2024",
+    "question_number": 22,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which one of the following regular expressions is equivalent to the language accepted by a DFA with start state q0 and accepting state q1, where q0 -(0)-> q0, q0 -(1)-> q1, q1 -(0)-> q1, q1 -(1)-> q0?",
+    "options": {
+      "A": "0* 1 (0 + 1 0* 1)*",
+      "B": "0* (1 0* 1 1)* 0*",
+      "C": "0* 1 (0 1 0* 1)* 0*",
+      "D": "0 (1 + 0* 1 0* 1)* 0*"
+    },
+    "correct_answer": "A",
+    "explanation": "From start state q0, any number of 0s (0*) leads to a 1 transitioning to q1. At state q1, staying in q1 is achieved by reading 0s or taking the loop 1 -> q0 -> 0* -> 1 -> q1 (1 0* 1). Thus, the language is 0* 1 (0 + 1 0* 1)*."
+  },
+  {
+    "id": "GATE2024_CS_Q23",
+    "year": "2024",
+    "question_number": 23,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Node X has a TCP connection open to node Y through intermediate router R and switch S (first switch between X and R). Which of the following statements is/are TRUE about destination IP and MAC addresses when a packet leaves X?",
+    "options": {
+      "A": "The destination IP address is the IP address of R",
+      "B": "The destination IP address is the IP address of Y",
+      "C": "The destination MAC address is the MAC address of S",
+      "D": "The destination MAC address is the MAC address of R"
+    },
+    "correct_answer": "B, D",
+    "explanation": "In end-to-end IP routing, the destination IP address remains the final target host (Y). Switches operate at layer 2 transparently, so the destination MAC address is assigned to the next-hop router R."
+  },
+  {
+    "id": "GATE2024_CS_Q24",
+    "year": "2024",
+    "question_number": 24,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following functions is/are performed by the virtual memory management unit of the operating system?",
+    "options": {
+      "A": "Create the page table for a newly created process",
+      "B": "Translate a virtual address to a physical address using the page table",
+      "C": "Raise a page fault when a requested page is not found in memory",
+      "D": "Raise a trap when a process tries to write to a read-only page"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "Virtual Memory Management performs runtime address translation (B), signals page faults when pages are non-resident (C), and enforces memory protection access rights (D). (Creating page table data structures is an OS process lifecycle creation task)."
+  },
+  {
+    "id": "GATE2024_CS_Q25",
+    "year": "2024",
+    "question_number": 25,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Consider a process P running on a CPU. Which one or more of the following events will always trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+    "options": {
+      "A": "P makes a blocking system call to read a block of data from the disk",
+      "B": "P tries to access a page that is in the swap space, triggering a page fault",
+      "C": "An interrupt is raised by the disk to deliver data requested by some other process",
+      "D": "A timer interrupt is raised by the hardware"
+    },
+    "correct_answer": "A, B",
+    "explanation": "Blocking I/O system calls (A) and page faults requiring disk fetch (B) force process P into a blocked state. External interrupts (C) or timer ticks (D) do not always result in P moving out of running state unless the scheduler preempts it."
+  },
+  {
+    "id": "GATE2024_CS_Q26",
+    "year": "2024",
+    "question_number": 26,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+    "options": {
+      "A": "Heap file",
+      "B": "Clustered tree index",
+      "C": "Unclustered tree index",
+      "D": "Unclustered hash index"
+    },
+    "correct_answer": "A, B",
+    "explanation": "Heap files store records sequentially without index overhead, maximizing sequential I/O during full scans. Clustered tree indexes store data entries sequentially in contiguous leaf nodes, providing high scan efficiency."
+  },
+  {
+    "id": "GATE2024_CS_Q27",
+    "year": "2024",
+    "question_number": 27,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+    "options": {
+      "A": "2PL permits only serializable schedules",
+      "B": "With 2PL, a transaction always locks the data item being read or written just before every operation and always releases the lock just after the operation",
+      "C": "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be obtained inside that transaction",
+      "D": "A deadlock is possible with 2PL"
+    },
+    "correct_answer": "A, C, D",
+    "explanation": "2PL guarantees conflict serializability (A). It enforces a growing phase followed by a shrinking phase where no new locks can be acquired after releasing any lock (C). Deadlocks can occur due to circular lock wait states (D)."
+  },
+  {
+    "id": "GATE2024_CS_Q28",
+    "year": "2024",
+    "question_number": 28,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+    "options": {
+      "A": "The fragmentation of an IP datagram is performed only at the source of the datagram",
+      "B": "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram to be transmitted exceeds the MTU",
+      "C": "The reassembly of fragments is performed only at the destination of the datagram",
+      "D": "The reassembly of fragments is performed at all intermediate routers along the path from the source to the destination"
+    },
+    "correct_answer": "B, C",
+    "explanation": "IPv4 allows intermediate routers to fragment datagrams exceeding link MTU (B). Reassembly occurs exclusively at the final destination host to prevent intermediate router overhead (C)."
+  },
+  {
+    "id": "GATE2024_CS_Q29",
+    "year": "2024",
+    "question_number": 29,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following statements is/are FALSE?",
+    "options": {
+      "A": "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+      "B": "The attributes in an L-attributed definition cannot always be evaluated in a depth-first order",
+      "C": "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+      "D": "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+    },
+    "correct_answer": "B, D",
+    "explanation": "L-attributed definitions can always be evaluated in depth-first left-to-right order, making B false. Bottom-up parsers cannot directly evaluate all L-attributed definitions without special grammar modifications, making D false."
+  },
+  {
+    "id": "GATE2024_CS_Q30",
+    "year": "2024",
+    "question_number": 30,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "For a Boolean variable x, which of the following statements is/are FALSE?",
+    "options": {
+      "A": "x . 1 = x",
+      "B": "x . 0 = x",
+      "C": "x + x = 1",
+      "D": "x + x' = 1"
+    },
+    "correct_answer": "B, C",
+    "explanation": "In Boolean algebra, x . 0 = 0 (so B is false) and x + x = x (so C is false). Options A and D represent valid Boolean identities."
+  },
+  {
+    "id": "GATE2024_CS_Q31",
+    "year": "2024",
+    "question_number": 31,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "An instruction format has the structure: Opcode dest, src1, src2. Sequence: I1: DIV R3, R1, R2; I2: SUB R5, R3, R4; I3: ADD R3, R5, R6; I4: MUL R7, R3, R8. Which of the following statements is/are TRUE?",
+    "options": {
+      "A": "There is a RAW dependency on R3 between I1 and I2",
+      "B": "There is a WAR dependency on R3 between I1 and I3",
+      "C": "There is a RAW dependency on R3 between I2 and I3",
+      "D": "There is a WAW dependency on R3 between I3 and I4"
+    },
+    "correct_answer": "A",
+    "explanation": "I1 writes to R3 and I2 reads from R3, creating a Read-After-Write (RAW) data hazard on R3 between I1 and I2."
+  },
+  {
+    "id": "GATE2024_CS_Q32",
+    "year": "2024",
+    "question_number": 32,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?",
+    "options": {
+      "A": "Source IP Address",
+      "B": "Protocol",
+      "C": "Time to Live (TTL)",
+      "D": "Header Checksum"
+    },
+    "correct_answer": "C, D",
+    "explanation": "Every intermediate router decrements the TTL field by at least 1. Because the TTL value changes, the Header Checksum must also be recalculated at each hop."
+  },
+  {
+    "id": "GATE2024_CS_Q33",
+    "year": "2024",
+    "question_number": 33,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Consider C code: int fX(char *a) { char *b = a; while (*b != '\\0') b++; return b - a; }. Which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The function call fX(\"abcd\") will always return a value",
+      "B": "Assuming char c[] = \"abcd\", fX(c) will always return a value",
+      "C": "The code of the function will not compile",
+      "D": "Assuming char *c = \"abcd\", fX(c) will always return a value"
+    },
+    "correct_answer": "A, B, D",
+    "explanation": "The function fX calculates the string length by pointer subtraction without attempting to mutate string data. It compiles cleanly and safely processes string literals and array parameters."
+  },
+  {
+    "id": "GATE2024_CS_Q34",
+    "year": "2024",
+    "question_number": 34,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "Let P be the partial order defined on {1,2,3,4} as P = {(x,x) | x in {1,2,3,4}} U {(1,2), (3,2), (3,4)}. The number of total orders on {1,2,3,4} that contain P is",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "The given strict relations are 1 < 2, 3 < 2, 3 < 4. The 5 valid linear extensions are: (3,1,2,4), (3,1,4,2), (3,4,1,2), (1,3,2,4), and (1,3,4,2)."
+  },
+  {
+    "id": "GATE2024_CS_Q35",
+    "year": "2024",
+    "question_number": 35,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 1,
+    "question_text": "The distance of an array A is the minimum number of elements that must be replaced so that the array is sorted in non-decreasing order. The distance of array [2, 5, 3, 1, 4, 2, 6] is",
+    "options": null,
+    "correct_answer": "3",
+    "explanation": "Distance = Length of Array - Length of Longest Non-Decreasing Subsequence. In [2, 5, 3, 1, 4, 2, 6], the longest non-decreasing subsequence is [2, 3, 4, 6] with length 4. Distance = 7 - 4 = 3."
+  },
+  {
+    "id": "GATE2024_CS_Q36",
+    "year": "2024",
+    "question_number": 36,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "What is the output of the following C program?\n#include <stdio.h>\nint main() {\n  double a[2] = {20.0, 25.0}, *p, *q;\n  p = a;\n  q = p + 1;\n  printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n  return 0;\n}",
+    "options": {
+      "A": "4,8",
+      "B": "1,5",
+      "C": "8,5",
+      "D": "1,8"
+    },
+    "correct_answer": "B",
+    "explanation": "q - p evaluates to 1 (element index difference in pointer arithmetic). *q - *p evaluates to 25.0 - 20.0 = 5.0, which cast to int gives 5. Output is 1,5."
+  },
+  {
+    "id": "GATE2024_CS_Q37",
+    "year": "2024",
+    "question_number": 37,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Processes (Arrival, Burst): A(0, 10), B(2, 6), C(4, 3), D(6, 7). Which option gives average waiting times for preemptive SRTF and Non-Preemptive SJF?",
+    "options": {
+      "A": "SRTF = 6, NP-SJF = 7",
+      "B": "SRTF = 6, NP-SJF = 7.5",
+      "C": "SRTF = 7, NP-SJF = 7.5",
+      "D": "SRTF = 7, NP-SJF = 8.5"
+    },
+    "correct_answer": "B",
+    "explanation": "For SRTF, completion times: C=7, B=11, D=18, A=26; Waiting times: A=16, B=3, C=0, D=5. Avg = 24/4 = 6. For NP-SJF, execution order: A(0-10), C(10-13), B(13-19), D(19-26); Waiting times: A=0, B=11, C=6, D=13. Avg = 30/4 = 7.5."
+  },
+  {
+    "id": "GATE2024_CS_Q38",
+    "year": "2024",
+    "question_number": 38,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.0.0 to 10.12.3.255?",
+    "options": {
+      "A": "10.12.0.0/22",
+      "B": "10.12.0.0/20",
+      "C": "10.12.2.0/22",
+      "D": "10.12.0.0/24"
+    },
+    "correct_answer": "A",
+    "explanation": "Range 10.12.0.0 to 10.12.3.255 spans 4 x 256 = 1024 = 2^10 IP addresses. Host bits = 10, so Prefix length = 32 - 10 = 22. The prefix is 10.12.0.0/22."
+  },
+  {
+    "id": "GATE2024_CS_Q39",
+    "year": "2024",
+    "question_number": 39,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "A binary search tree T is created by inserting all elements of set V of distinct integers without knowing insertion order. Which one of the following statements is TRUE?",
+    "options": {
+      "A": "Inorder traversal of T can be determined from V",
+      "B": "Root node of T can be determined from V",
+      "C": "Preorder traversal of T can be determined from V",
+      "D": "Postorder traversal of T can be determined from V"
+    },
+    "correct_answer": "A",
+    "explanation": "The Inorder traversal of any Binary Search Tree storing a set of distinct elements always corresponds to sorting those elements in ascending order, which is uniquely determined by set V."
+  },
+  {
+    "id": "GATE2024_CS_Q40",
+    "year": "2024",
+    "question_number": 40,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "For grammar S -> AaAb | BbBa, A -> cS | epsilon, B -> dS | epsilon, choose the correct combination for LL(1) parsing table cells (1), (2), (3), (4) corresponding to (S, c), (S, d), (A, b), (B, a).",
+    "options": {
+      "A": "(1) S -> AaAb, (2) S -> BbBa, (3) A -> epsilon, (4) B -> epsilon",
+      "B": "(1) S -> BbBa, (2) S -> AaAb, (3) A -> epsilon, (4) B -> epsilon",
+      "C": "(1) S -> AaAb, (2) S -> BbBa, (3) blank, (4) blank",
+      "D": "(1) S -> BbBa, (2) S -> AaAb, (3) blank, (4) blank"
+    },
+    "correct_answer": "A",
+    "explanation": "FIRST(AaAb) = {c, a}, so (S, c) = S -> AaAb (1). FIRST(BbBa) = {d, b}, so (S, d) = S -> BbBa (2). FOLLOW(A) contains 'b', placing A -> epsilon in cell (3). FOLLOW(B) contains 'a', placing B -> epsilon in cell (4)."
+  },
+  {
+    "id": "GATE2024_CS_Q41",
+    "year": "2024",
+    "question_number": 41,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "For NFA M with states {1, 2, 3, 4, 5}, start state 1, accepting state 5, transitions epsilon(1 -> 2), epsilon(1 -> 4), 0(2 -> 3), 0(3 -> 2), epsilon(3 -> 5), 1(4 -> 5), 1(5 -> 4), regular expression accepted?",
+    "options": {
+      "A": "(00)* + 1(11)*",
+      "B": "0* + (1 + 0(00)*)(11)*",
+      "C": "(00)* + (1 + (00)*)(11)*",
+      "D": "0+ + 1(11)* + 0(11)*"
+    },
+    "correct_answer": "B",
+    "explanation": "Upper branch yields 0* to state 3/5. Lower path accepts 1 or 0(00)* followed by 1, with repetitions of 11. Combining paths gives 0* + (1 + 0(00)*)(11)*."
+  },
+  {
+    "id": "GATE2024_CS_Q42",
+    "year": "2024",
+    "question_number": 42,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "In C snippet for longest subarray with at most two distinct integers, missing expressions (P) and (Q) inside else if (X[i] == second) and else blocks?",
+    "options": {
+      "A": "(P) len1+1, (Q) len2+1",
+      "B": "(P) 1, (Q) len1+1",
+      "C": "(P) 1, (Q) len2+1",
+      "D": "(P) len2+1, (Q) len1+1"
+    },
+    "correct_answer": "B",
+    "explanation": "When encountering second, len1 resets to 1 (new single-value run length). When encountering a 3rd distinct value, len2 becomes len1 + 1 (combining the previous equal-value tail with current element)."
+  },
+  {
+    "id": "GATE2024_CS_Q43",
+    "year": "2024",
+    "question_number": 43,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Triples for x[i] = (p+r)*-s[i]+u/w: (0) + p r, (1) ?, (2) uminus (1), (3) ?, (4) / u w, (5) + (3) (4), (6) ?, (7) = (6) (5). Correct entries?",
+    "options": {
+      "A": "(1) =[] s i, (3) * (0) (2), (6) =[] x i",
+      "B": "(1) =[] s i, (3) * (0) (2), (6) =[] x (5)",
+      "C": "(1) =[] s (2), (3) * (0) (2), (6) =[] x (5)",
+      "D": "(1) =[] s i, (3) * (0) (2), (6) =[] x i"
+    },
+    "correct_answer": "A",
+    "explanation": "Triple (1) addresses array element s[i] via =[] s i. Triple (3) multiplies sub-expressions * (0) (2). Triple (6) references target location =[] x i."
+  },
+  {
+    "id": "GATE2024_CS_Q44",
+    "year": "2024",
+    "question_number": 44,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Let x and y be random variables in [0,1], z = xy. Relation between mean values z_bar and x_bar?",
+    "options": {
+      "A": "z_bar = x_bar y_bar",
+      "B": "z_bar <= x_bar y_bar",
+      "C": "z_bar >= x_bar y_bar",
+      "D": "z_bar <= x_bar"
+    },
+    "correct_answer": "D",
+    "explanation": "Since y in [0, 1], z = xy <= x * 1 = x. Taking expected values yields z_bar <= x_bar."
+  },
+  {
+    "id": "GATE2024_CS_Q45",
+    "year": "2024",
+    "question_number": 45,
+    "question_type": "MCQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "To find cities with at least 3 residents from Person(pid, city) using relational algebra, minimum cross products needed is",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "correct_answer": "B",
+    "explanation": "Finding cities with >= 3 persons requires joining 3 instances of Person table on city with pairwise unequal pids. Joining 3 relations requires 3 - 1 = 2 cross product operations."
+  },
+  {
+    "id": "GATE2024_CS_Q46",
+    "year": "2024",
+    "question_number": 46,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Thread T1: wait(s1); x=x+1; print(x); wait(s2); signal(s1);\nThread T2: wait(s1); x=x+1; print(x); signal(s2); signal(s1);\nInitial: s1=1, s2=0, x=0. Possible outcomes?",
+    "options": {
+      "A": "T1 runs first and prints 1, T2 runs next and prints 2",
+      "B": "T2 runs first and prints 1, T1 runs next and prints 2",
+      "C": "T1 runs first and prints 1, then deadlock",
+      "D": "T2 runs first and prints 1, then deadlock"
+    },
+    "correct_answer": "B, C",
+    "explanation": "If T1 runs first, it prints 1 then blocks on wait(s2) while holding no signal for T2, causing a deadlock (C). If T2 runs first, it prints 1 and signals s2 and s1, allowing T1 to execute successfully and print 2 (B)."
+  },
+  {
+    "id": "GATE2024_CS_Q47",
+    "year": "2024",
+    "question_number": 47,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Matrix B is formed by interchanging two rows of real n x n matrix A. Which statements are TRUE?",
+    "options": {
+      "A": "The determinant of B is the negative of the determinant of A",
+      "B": "If A is invertible, then B is also invertible",
+      "C": "If A is symmetric, then B is also symmetric",
+      "D": "If the trace of A is zero, then the trace of B is also zero"
+    },
+    "correct_answer": "A, B",
+    "explanation": "Swapping two rows negates determinant det(B) = -det(A) (A). If det(A) != 0, then det(B) != 0, making B invertible (B)."
+  },
+  {
+    "id": "GATE2024_CS_Q48",
+    "year": "2024",
+    "question_number": 48,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Stack S1 (capacity 4: [100, 200, 300, 400]), Stack S2 (capacity 2, empty). Output sequences generator options possible?",
+    "options": {
+      "A": "100, 200, 400, 300",
+      "B": "200, 300, 400, 100",
+      "C": "400, 200, 100, 300",
+      "D": "300, 200, 400, 100"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "By shifting elements to S2 (max 2 items) and popping, B, C, and D are valid output orderings. Sequence A requires popping 100 first, which would require buffering 3 elements in S2 (exceeding capacity 2)."
+  },
+  {
+    "id": "GATE2024_CS_Q49",
+    "year": "2024",
+    "question_number": 49,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Which of the following is/are EQUAL to (224)_5 in base-5 notation?",
+    "options": {
+      "A": "64 in radix-10",
+      "B": "100 in radix-8",
+      "C": "50 in radix-16",
+      "D": "121 in radix-7"
+    },
+    "correct_answer": "A, B, D",
+    "explanation": "(224)_5 = 2 x 25 + 2 x 5 + 4 = 64_10 (A). 64_10 = (100)_8 (B). 64_10 = (121)_7 since 1 x 49 + 2 x 7 + 1 = 64 (D)."
+  },
+  {
+    "id": "GATE2024_CS_Q50",
+    "year": "2024",
+    "question_number": 50,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "For minterm functions f1=Sigma(0,2,3,5,7,8,11,13), f2=Sigma(1,3,5,7,11,13,15), f3=Sigma(0,1,4,11), f4=Sigma(0,2,6,13), output Y = (f1 . f2) XOR (f3 + f4). Correct representations?",
+    "options": {
+      "A": "Y = Sigma(0,1,2,11,13)",
+      "B": "Y = Pi(3,4,5,6,7,8,9,10,12,14,15)",
+      "C": "Y = Sigma(0,1,2,3,4,5,6,7)",
+      "D": "Y = Pi(8,9,10,11,12,13,14,15)"
+    },
+    "correct_answer": "C, D",
+    "explanation": "f1 . f2 = Sigma(3, 5, 7, 11, 13). f3 + f4 = Sigma(0, 1, 2, 4, 6, 11, 13). XOR product Y = Sigma(0,1,2,3,4,5,6,7) (C), equivalent to maxterms Y = Pi(8,9,10,11,12,13,14,15) (D)."
+  },
+  {
+    "id": "GATE2024_CS_Q51",
+    "year": "2024",
+    "question_number": 51,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Connected graph G with positive integer weights. Every spanning tree has even weight. Statements ALWAYS true?",
+    "options": {
+      "A": "All edges in G have even weight",
+      "B": "All edges in G have even weight OR all edges in G have odd weight",
+      "C": "In each cycle C in G, all edges in C have even weight",
+      "D": "In each cycle C in G, either all edges in C have even weight OR all edges in C have odd weight"
+    },
+    "correct_answer": "D",
+    "explanation": "Exchanging an edge in a spanning tree to form another spanning tree maintains weight parity, requiring swapped edges within fundamental cycles to have identical parity (all even or all odd)."
+  },
+  {
+    "id": "GATE2024_CS_Q52",
+    "year": "2024",
+    "question_number": 52,
+    "question_type": "MSQ",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Grammar S -> aS | aSbS | c. For string w in L(G), true relations among symbol counts n_a, n_b, n_c?",
+    "options": {
+      "A": "n_a(w) > n_b(w)",
+      "B": "n_a(w) > n_c(w) - 2",
+      "C": "n_c(w) = n_b(w) + 1",
+      "D": "n_c(w) = n_b(w) * 2"
+    },
+    "correct_answer": "B, C",
+    "explanation": "Each production rule S -> aSbS increases count of b by 1 and creates one extra S (which converts to c), establishing n_c(w) = n_b(w) + 1 (C). Also n_a(w) >= n_b(w) = n_c(w) - 1 > n_c(w) - 2 (B)."
+  },
+  {
+    "id": "GATE2024_CS_Q53",
+    "year": "2024",
+    "question_number": 53,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Disk: 6000 RPM, avg seek 5 ms, 500 sectors/track, 512-byte sectors. Total time (in seconds) to read a file stored in 3000 random sectors is",
+    "options": null,
+    "correct_answer": "30.06",
+    "explanation": "Rotation time = 6000 / 60 = 100 rev/s => 10 ms/rev. Avg rotational latency = 5 ms. Transfer time per sector = 10 / 500 = 0.02 ms. Total time per sector = 5 + 5 + 0.02 = 10.02 ms. Total time for 3000 sectors = 3000 x 10.02 = 30060 ms = 30.06 seconds."
+  },
+  {
+    "id": "GATE2024_CS_Q54",
+    "year": "2024",
+    "question_number": 54,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "TCP connection operates at CWND = 12 MSS when timeout occurs. Congestion window size (in MSS) during 3rd RTT after timeout is",
+    "options": null,
+    "correct_answer": "4",
+    "explanation": "On timeout: ssthresh = 12/2 = 6 MSS, CWND resets to 1 MSS. RTT 1: CWND = 1 MSS (transmits 1, doubles to 2). RTT 2: CWND = 2 MSS (transmits 2, doubles to 4). RTT 3: CWND = 4 MSS."
+  },
+  {
+    "id": "GATE2024_CS_Q55",
+    "year": "2024",
+    "question_number": 55,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Ethernet speed 10^8 bps, max length 500 m, propagation speed 2 x 10^8 m/s. Minimum frame size (in bits) for collision detection is",
+    "options": null,
+    "correct_answer": "500",
+    "explanation": "Propagation delay T_p = 500 / (2 x 10^8) = 2.5 microsecond. Min frame size = 2 x T_p x Bandwidth = 2 x (2.5 x 10^-6) x 10^8 = 500 bits."
+  },
+  {
+    "id": "GATE2024_CS_Q56",
+    "year": "2024",
+    "question_number": 56,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "A useful FD X -> Y has X != empty, Y != empty, X n Y = empty. Total useful FDs for a relation R with 4 attributes is",
+    "options": null,
+    "correct_answer": "50",
+    "explanation": "Summing across sizes of X: |X|=1 => 4 x (2^3-1) = 28. |X|=2 => 6 x (2^2-1) = 18. |X|=3 => 4 x (2^1-1) = 4. Total = 28 + 18 + 4 = 50."
+  },
+  {
+    "id": "GATE2024_CS_Q57",
+    "year": "2024",
+    "question_number": 57,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "32-bit instruction, 16 registers, 8 addressing modes, 2 register fields, 16-bit scalar. Maximum unique opcodes possible per addressing mode is",
+    "options": null,
+    "correct_answer": "32",
+    "explanation": "Field bits: Addressing Mode = 3, Reg1 = 4, Reg2 = 4, Scalar = 16. Total non-opcode bits = 3 + 4 + 4 + 16 = 27. Opcode bits = 32 - 27 = 5. Max unique opcodes = 2^5 = 32."
+  },
+  {
+    "id": "GATE2024_CS_Q58",
+    "year": "2024",
+    "question_number": 58,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Non-pipelined (2 GHz): 6 cycles/inst. 5-stage Pipelined (2 GHz): 20% instructions incur 2-cycle stall, 20% incur 3-cycle stall. Speedup obtained is",
+    "options": null,
+    "correct_answer": "3.0",
+    "explanation": "Average CPI of pipelined processor = 1 + (0.20 x 2) + (0.20 x 3) = 2.0. Speedup = CPI_nonpipe / CPI_pipe = 6 / 2.0 = 3.0."
+  },
+  {
+    "id": "GATE2024_CS_Q59",
+    "year": "2024",
+    "question_number": 59,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "The number of distinct minimum-weight spanning trees for the given symmetric graph with edges of weight 1, 2, 3 is",
+    "options": null,
+    "correct_answer": "9",
+    "explanation": "Counting choices of minimum weight edges across the symmetrical cycles yields 3 x 3 = 9 distinct minimum-weight spanning trees."
+  },
+  {
+    "id": "GATE2024_CS_Q60",
+    "year": "2024",
+    "question_number": 60,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "The chromatic number of the given 8-vertex graph is",
+    "options": null,
+    "correct_answer": "2",
+    "explanation": "The graph is bipartite (contains no odd cycles), allowing its vertices to be properly colored using a minimum of 2 colors."
+  },
+  {
+    "id": "GATE2024_CS_Q61",
+    "year": "2024",
+    "question_number": 61,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "32-bit instruction, 50 registers, 150 instructions (split into R-type and I-type). If X bits encode UNUSED field, Y bits encode OPCODE, Z bits encode Immediate, value of X + 2Y + Z is",
+    "options": null,
+    "correct_answer": "34",
+    "explanation": "50 registers => 6 bits per register. OPCODE bits Y = 1 + 7 = 8. R-type: 8 + 6 + 6 + 6 + X = 32 => X = 6. I-type: 8 + 6 + 6 + Z = 32 => Z = 12. Value = 6 + 2(8) + 12 = 34."
+  },
+  {
+    "id": "GATE2024_CS_Q62",
+    "year": "2024",
+    "question_number": 62,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Language L1 = b* a b* (a b* a b*)* and L2 = {w in (a+b)* | |w| <= 4}. Number of strings in L2 n L1 is",
+    "options": null,
+    "correct_answer": "15",
+    "explanation": "L1 represents strings over {a, b} with an odd number of a's. For lengths <= 4: Len 1: 1 ('a'); Len 2: 2 ('ab','ba'); Len 3: 4 ('aaa', 3 with one 'a'); Len 4: 8 (4 with one 'a', 4 with three 'a's). Total = 1 + 2 + 4 + 8 = 15."
+  },
+  {
+    "id": "GATE2024_CS_Q63",
+    "year": "2024",
+    "question_number": 63,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Number of elements in Z_2 x Z_3 x Z_4 that are their own inverses is",
+    "options": null,
+    "correct_answer": "4",
+    "explanation": "Self-inverse condition: 2a = 0 (mod n). In Z_2: 2 elements ({0,1}). In Z_3: 1 element ({0}). In Z_4: 2 elements ({0,2}). Total self-inverse elements = 2 x 1 x 2 = 4."
+  },
+  {
+    "id": "GATE2024_CS_Q64",
+    "year": "2024",
+    "question_number": 64,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "32-bit system, 4 KB pages, 4-byte PTEs, 2-level page table. Process accesses 2000 unique pages. Minimum X + Maximum Y pages allocated across page tables is",
+    "options": null,
+    "correct_answer": "1028",
+    "explanation": "Outer page directory = 1 page. Each inner page table holds 1024 entries. Min pages X = 1 + ceil(2000/1024) = 3. Max pages Y = 1 + 1024 = 1025 (2000 pages scattered across all 1024 inner tables). X + Y = 3 + 1025 = 1028."
+  },
+  {
+    "id": "GATE2024_CS_Q65",
+    "year": "2024",
+    "question_number": 65,
+    "question_type": "NAT",
+    "section": "Computer Science",
+    "marks": 2,
+    "question_text": "Augmented SLR grammar: S' -> S, S -> SS | Aa | bAc | Bc | bBa, A -> d#. If I0 = CLOSURE({S' -> .S}), number of items in GOTO(I0, S) is",
+    "options": null,
+    "correct_answer": "9",
+    "explanation": "Kernel items: S' -> S. and S -> S.S. Taking the closure adds non-kernel items S -> .SS, S -> .Aa, S -> .bAc, S -> .Bc, S -> .bBa. Total items = 9."
+  }
+]

@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "GATE2022_CS_Q01",
+    "year": "2022",
+    "question_number": 1,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "The _____ is too high for it to be considered _____.",
+    "options": {
+      "A": "fair / fare",
+      "B": "faer / fair",
+      "C": "fare / fare",
+      "D": "fare / fair"
+    },
+    "correct_answer": "D",
+    "explanation": "'Fare' refers to the price of travel/ticket, while 'fair' means reasonable or equitable."
+  },
+  {
+    "id": "GATE2022_CS_Q02",
+    "year": "2022",
+    "question_number": 2,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "A function y(x) is defined in [0, 1] as: y(x) = 2 for 0 <= x < 1/3; y(x) = 3 for 1/3 <= x < 3/4; y(x) = 1 for 3/4 <= x <= 1. What is the area under the curve for [0, 1]?",
+    "options": {
+      "A": "5/6",
+      "B": "6/5",
+      "C": "13/6",
+      "D": "6/13"
+    },
+    "correct_answer": "C",
+    "explanation": "Area = 2(1/3 - 0) + 3(3/4 - 1/3) + 1(1 - 3/4) = 2/3 + 5/4 + 1/4 = 2/3 + 3/2 = 13/6."
+  },
+  {
+    "id": "GATE2022_CS_Q03",
+    "year": "2022",
+    "question_number": 3,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Let r be a root of x^2 + 2x + 6 = 0. Value of (r+2)(r+3)(r+4)(r+5) is:",
+    "options": {
+      "A": "51",
+      "B": "-51",
+      "C": "126",
+      "D": "-126"
+    },
+    "correct_answer": "D",
+    "explanation": "Group terms as [(r+2)(r+5)][(r+3)(r+4)] = (r^2+7r+10)(r^2+7r+12) = (5r+4)(5r+6) = 25(r^2+2r)+24 = 25(-6)+24 = -126."
+  },
+  {
+    "id": "GATE2022_CS_Q04",
+    "year": "2022",
+    "question_number": 4,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Given: 1. All students are inquisitive; 2. Some students are inquisitive; 3. No student is inquisitive; 4. Some students are not inquisitive. Which two statements CANNOT BE TRUE simultaneously?",
+    "options": {
+      "A": "Statement 1 and Statement 3",
+      "B": "Statement 1 and Statement 2",
+      "C": "Statement 2 and Statement 4",
+      "D": "Statement 3 and Statement 4"
+    },
+    "correct_answer": "A",
+    "explanation": "'All students are inquisitive' and 'No student is inquisitive' are contrary propositions and cannot both be true at the same time for a non-empty set."
+  },
+  {
+    "id": "GATE2022_CS_Q05",
+    "year": "2022",
+    "question_number": 5,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "A palindrome reads the same forwards and backwards. Given plates A and D, which set of additional plates allows forming a 5-letter palindrome?",
+    "options": {
+      "A": "D, J, -",
+      "B": "R, A, R",
+      "C": "Z, 3, D",
+      "D": "X, Y, Z"
+    },
+    "correct_answer": "B",
+    "explanation": "Combining existing plates A, D with additional plates R, A, R forms the palindrome 'RADAR'."
+  },
+  {
+    "id": "GATE2022_CS_Q06",
+    "year": "2022",
+    "question_number": 6,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Based on the passage regarding work culture and performance metrics, which logical inference is correct?",
+    "options": {
+      "A": "Metrics are useful in organizations with poor work culture",
+      "B": "Metrics are useful in organizations with good work culture",
+      "C": "Metrics are always counterproductive in organizations with good work culture",
+      "D": "Metrics are never useful in organizations with good work culture"
+    },
+    "correct_answer": "B",
+    "explanation": "The text directly states that 'In organizations with good work culture, metrics help improve outcomes.'"
+  },
+  {
+    "id": "GATE2022_CS_Q07",
+    "year": "2022",
+    "question_number": 7,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Boys constituted 65% of candidates who appeared. Girls constituted remaining and made up 60% of qualified candidates. Which inference is correct?",
+    "options": {
+      "A": "Equal number of boys and girls qualified",
+      "B": "Equal number of boys and girls appeared",
+      "C": "Number of boys appeared is less than girls appeared",
+      "D": "Number of boys who qualified is less than girls who qualified"
+    },
+    "correct_answer": "D",
+    "explanation": "Since girls account for 60% of qualified candidates, boys account for 40%. Thus, qualified boys < qualified girls."
+  },
+  {
+    "id": "GATE2022_CS_Q08",
+    "year": "2022",
+    "question_number": 8,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "A box contains 3 green and 2 orange balls. Green is not replaced when drawn. Orange is replaced with another orange ball. Probability of getting orange on the 2nd draw is:",
+    "options": {
+      "A": "1/2",
+      "B": "8/25",
+      "C": "19/50",
+      "D": "23/50"
+    },
+    "correct_answer": "D",
+    "explanation": "P(2nd Orange) = P(Green 1st)*P(Orange 2nd|G1) + P(Orange 1st)*P(Orange 2nd|O1) = (3/5)*(2/4) + (2/5)*(2/5) = 3/10 + 4/25 = 23/50."
+  },
+  {
+    "id": "GATE2022_CS_Q09",
+    "year": "2022",
+    "question_number": 9,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Points P,Q,R,S,T,U are corners/midpoints of a triangle. PR || QS, P is opposite T, S and U cannot be on the same side. Which statement is correct?",
+    "options": {
+      "A": "P cannot be placed at a corner",
+      "B": "S cannot be placed at a corner",
+      "C": "U cannot be placed at a mid-point",
+      "D": "R cannot be placed at a corner"
+    },
+    "correct_answer": "B",
+    "explanation": "Geometric alignment dictates that line QS being parallel to side segment PR forces S to be situated at a midpoint; hence S cannot be a corner."
+  },
+  {
+    "id": "GATE2022_CS_Q10",
+    "year": "2022",
+    "question_number": 10,
+    "section": "General Aptitude",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Divide land between 4 families into similar shapes. Ropes R1 and R2 are fixed. Least number of additional straight ropes needed is:",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "5",
+      "D": "3"
+    },
+    "correct_answer": "D",
+    "explanation": "Adding 3 straight ropes along the aligned grid poles partitions the area into four geometrically similar regions."
+  },
+  {
+    "id": "GATE2022_CS_Q11",
+    "year": "2022",
+    "question_number": 11,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which statement is TRUE for all positive functions f(n)?",
+    "options": {
+      "A": "f(n^2) = Theta(f(n)^2), when f(n) is a polynomial",
+      "B": "f(n^2) = o(f(n)^2)",
+      "C": "f(n^2) = O(f(n)^2) when f(n) is exponential",
+      "D": "f(n^2) = Omega(f(n)^2)"
+    },
+    "correct_answer": "A",
+    "explanation": "For any polynomial f(n) = n^k, f(n^2) = n^(2k) and (f(n))^2 = n^(2k), meaning f(n^2) = Theta((f(n))^2)."
+  },
+  {
+    "id": "GATE2022_CS_Q12",
+    "year": "2022",
+    "question_number": 12,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which regular expression correctly represents the language of the given finite automaton?",
+    "options": {
+      "A": "a b* b a b* + b a* a b a*",
+      "B": "(a b* b)* a b* + (b a* a)* b a*",
+      "C": "(a b* b + b a* a)* (a* + b*)",
+      "D": "(b a* a + a b* b)* (a b* + b a*)"
+    },
+    "correct_answer": "D",
+    "explanation": "The state transitions loop through (ba*a + ab*b)* and exit to final states via (ab* + ba*)."
+  },
+  {
+    "id": "GATE2022_CS_Q13",
+    "year": "2022",
+    "question_number": 13,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which one of the following statements is TRUE?",
+    "options": {
+      "A": "LALR(1) parser for G cannot have reduce-reduce conflict if LR(1) parser does not",
+      "B": "Symbol table is accessed only during lexical analysis",
+      "C": "Data flow analysis is necessary for run-time memory management",
+      "D": "LR(1) parsing is sufficient for deterministic context-free languages"
+    },
+    "correct_answer": "D",
+    "explanation": "Every deterministic context-free language (DCFL) is accepted by an LR(1) grammar."
+  },
+  {
+    "id": "GATE2022_CS_Q14",
+    "year": "2022",
+    "question_number": 14,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "In a relational data model, which one of the following statements is TRUE?",
+    "options": {
+      "A": "A relation with only two attributes is always in BCNF",
+      "B": "If all attributes are prime, the relation is in BCNF",
+      "C": "Every relation has at least one non-prime attribute",
+      "D": "BCNF decompositions preserve functional dependencies"
+    },
+    "correct_answer": "A",
+    "explanation": "In R(A,B), non-trivial functional dependencies must be A -> B or B -> A; in both cases the determinant is a superkey, guaranteeing BCNF."
+  },
+  {
+    "id": "GATE2022_CS_Q15",
+    "year": "2022",
+    "question_number": 15,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider reversing a singly linked list in O(1) space. Which statement about its time complexity is TRUE?",
+    "options": {
+      "A": "The best algorithm takes Theta(n) time in the worst case",
+      "B": "The best algorithm takes Theta(n log n) time",
+      "C": "The best algorithm takes Theta(n^2) time",
+      "D": "It is not possible in O(1) space"
+    },
+    "correct_answer": "A",
+    "explanation": "Standard iterative pointer reversal processes each node once in O(1) extra space, yielding Theta(n) time complexity."
+  },
+  {
+    "id": "GATE2022_CS_Q16",
+    "year": "2022",
+    "question_number": 16,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Given n keys, m hash slots, and hash functions h1 (for odd keys) and h2 (for even keys). Expected number of keys in a slot is:",
+    "options": {
+      "A": "m/n",
+      "B": "n/m",
+      "C": "2n/m",
+      "D": "n/2m"
+    },
+    "correct_answer": "B",
+    "explanation": "By linearity of expectation, total expected keys per slot is n * (1/m) = n/m."
+  },
+  {
+    "id": "GATE2022_CS_Q17",
+    "year": "2022",
+    "question_number": 17,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which method facilitates bulk data transfer from disk to main memory with highest throughput?",
+    "options": {
+      "A": "DMA based I/O transfer",
+      "B": "Interrupt driven I/O transfer",
+      "C": "Polling based I/O transfer",
+      "D": "Programmed I/O transfer"
+    },
+    "correct_answer": "A",
+    "explanation": "DMA allows direct memory-to-device transfers without routing data through CPU registers, providing maximum data throughput."
+  },
+  {
+    "id": "GATE2022_CS_Q18",
+    "year": "2022",
+    "question_number": 18,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Registers R1 and R2 store 4-bit 2's complement numbers. Which values of R1 and R2 produce an arithmetic overflow?",
+    "options": {
+      "A": "R1=1011 and R2=1110",
+      "B": "R1=1100 and R2=1010",
+      "C": "R1=0011 and R2=0100",
+      "D": "R1=1001 and R2=1111"
+    },
+    "correct_answer": "B",
+    "explanation": "R1 = 1100_2 (-4) and R2 = 1010_2 (-6). Sum = -10, which falls outside the valid 4-bit signed range [-8, +7]."
+  },
+  {
+    "id": "GATE2022_CS_Q19",
+    "year": "2022",
+    "question_number": 19,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Which initialization of semaphores S1, S2, S3 prints the sequence BCABCABCA...?",
+    "options": {
+      "A": "S1=1; S2=1; S3=1",
+      "B": "S1=1; S2=1; S3=0",
+      "C": "S1=1; S2=0; S3=0",
+      "D": "S1=0; S2=1; S3=1"
+    },
+    "correct_answer": "C",
+    "explanation": "With S1=1, S2=0, S3=0, thread T3 runs first (prints B), signals S1, allowing T1 (prints C), which signals S2, allowing T2 (prints A)."
+  },
+  {
+    "id": "GATE2022_CS_Q20",
+    "year": "2022",
+    "question_number": 20,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "Consider Statement 1: tr(AB) = tr(BA) for A_{m x n}, B_{n x m}. Statement 2: tr(CD) = tr(DC) for C_{n x n}, D_{n x n}. Which holds?",
+    "options": {
+      "A": "Statement 1 is correct and Statement 2 is wrong",
+      "B": "Statement 1 is wrong and Statement 2 is correct",
+      "C": "Both Statement 1 and Statement 2 are correct",
+      "D": "Both Statement 1 and Statement 2 are wrong"
+    },
+    "correct_answer": "C",
+    "explanation": "The cyclic property of trace tr(XY) = tr(YX) holds for all matrices where XY and YX are well-defined square matrices."
+  },
+  {
+    "id": "GATE2022_CS_Q21",
+    "year": "2022",
+    "question_number": 21,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "What is printed by ANSI C snippet: int x=1, z[2]={10,11}; int *p=NULL; p=&x; *p=10; p=&z[1]; *(&z[0]+1)+=3; printf(\"%d %d %d\", x, z[0], z[1]);?",
+    "options": {
+      "A": "1, 10, 11",
+      "B": "1, 10, 14",
+      "C": "10, 14, 11",
+      "D": "10, 10, 14"
+    },
+    "correct_answer": "D",
+    "explanation": "*p=10 assigns x=10. *(&z[0]+1) points to z[1] and adds 3, giving z[1]=14. z[0] remains 10."
+  },
+  {
+    "id": "GATE2022_CS_Q22",
+    "year": "2022",
+    "question_number": 22,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 1,
+    "question_text": "In the enterprise network diagram with two Ethernet segments, web server, firewall, and three routers, how many subnets are present?",
+    "options": {
+      "A": "3",
+      "B": "12",
+      "C": "6",
+      "D": "8"
+    },
+    "correct_answer": "C",
+    "explanation": "Counting 2 Ethernet LANs, 3 point-to-point inter-router links, and 1 router-firewall network link gives 6 subnets."
+  },
+  {
+    "id": "GATE2022_CS_Q23",
+    "year": "2022",
+    "question_number": 23,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which of the following statements is/are TRUE?",
+    "options": {
+      "A": "Every subset of a recursively enumerable language is recursive",
+      "B": "If L and L_bar are both recursively enumerable, then L must be recursive",
+      "C": "Complement of a context-free language must be recursive",
+      "D": "If L1 and L2 are regular, then L1 n L2 must be deterministic context-free"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "B is Post's Theorem. C is true because CFLs are Context-Sensitive (decidable). D is true as regular languages are closed under intersection and are DCFLs."
+  },
+  {
+    "id": "GATE2022_CS_Q24",
+    "year": "2022",
+    "question_number": 24,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Let WB (write back) and WT (write through) be set-associative caches using LRU. Which statements are FALSE?",
+    "options": {
+      "A": "Each cache block in WB and WT has a dirty bit",
+      "B": "Every write hit in WB leads to data transfer from cache to main memory",
+      "C": "Eviction of a block from WT will not lead to data transfer to main memory",
+      "D": "A read miss in WB will never lead to eviction of a dirty block from WB"
+    },
+    "correct_answer": "A, B, D",
+    "explanation": "A is false (WT needs no dirty bit). B is false (WB writes to memory only on eviction). D is false (read miss can evict dirty line)."
+  },
+  {
+    "id": "GATE2022_CS_Q25",
+    "year": "2022",
+    "question_number": 25,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Relations: Employee(eid, Name), Brand(bid, bName), Own(eid, bid). Which expressions return eids who own ALL brands?",
+    "options": {
+      "A": "pi_eid(pi_eid,bid(Own) / pi_bid(Brand))",
+      "B": "pi_eid(Own) - pi_eid((pi_eid(Own) x pi_bid(Brand)) - pi_eid,bid(Own))",
+      "C": "pi_eid(pi_eid,bid(Own) / pi_bid(Own))",
+      "D": "pi_eid((pi_eid(Own) x pi_bid(Own)) / pi_bid(Brand))"
+    },
+    "correct_answer": "A, B",
+    "explanation": "Option A applies division directly. Option B uses double negation to correctly identify eids associated with every bid in Brand."
+  },
+  {
+    "id": "GATE2022_CS_Q26",
+    "year": "2022",
+    "question_number": 26,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which of the following statements is/are TRUE with respect to deadlocks?",
+    "options": {
+      "A": "Circular wait is a necessary condition for deadlock",
+      "B": "In multi-instance systems, a cycle in wait-for graph implies deadlock",
+      "C": "Unsafe state necessarily leads to deadlock",
+      "D": "If every edge in RAG is an assignment edge, the system is not in deadlock"
+    },
+    "correct_answer": "A, D",
+    "explanation": "A is one of Coffman's conditions. D is true because if all edges are assignment edges, no process is waiting for any resource."
+  },
+  {
+    "id": "GATE2022_CS_Q27",
+    "year": "2022",
+    "question_number": 27,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 1,
+    "question_text": "Which of the following statements is/are TRUE for a group G?",
+    "options": {
+      "A": "If for all x,y in G, (xy)^2 = x^2 y^2, then G is commutative",
+      "B": "If for all x in G, x^2 = 1, then G is commutative",
+      "C": "If order of G is 2, then G is commutative",
+      "D": "If G is commutative, a subgroup need not be commutative"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "A: xyxy=xxyy => yx=xy. B: x=x^-1 => xy=(xy)^-1=y^-1 x^-1=yx. C: Groups of order 2 are cyclic/abelian."
+  },
+  {
+    "id": "GATE2022_CS_Q28",
+    "year": "2022",
+    "question_number": 28,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "A binary search tree with 1000 distinct elements is a complete binary tree stored in array representation (0-indexed). Index of 3rd largest element is:",
+    "options": null,
+    "correct_answer": "509",
+    "explanation": "In an array-stored complete BST, locating node positions from the rightmost subtree yields index 509 for the 3rd largest element."
+  },
+  {
+    "id": "GATE2022_CS_Q29",
+    "year": "2022",
+    "question_number": 29,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Augmented grammar: S' -> S, S -> S+R | R, R -> R*P | P, P -> (S) | id. Given I0 = {[S' -> .S], [S -> .S+R]}, goto(closure(I0), +) contains exactly ____ items.",
+    "options": null,
+    "correct_answer": "5",
+    "explanation": "Taking goto on '+' shifts dot past '+' and closure adds productions for R and P, yielding exactly 5 items."
+  },
+  {
+    "id": "GATE2022_CS_Q30",
+    "year": "2022",
+    "question_number": 30,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Simple undirected graph with 10 vertices. If disconnected, maximum number of edges it can have is:",
+    "options": null,
+    "correct_answer": "36",
+    "explanation": "Maximum edges in a disconnected 10-vertex graph occurs with a complete graph K_9 and 1 isolated vertex: 9 x 8 / 2 = 36."
+  },
+  {
+    "id": "GATE2022_CS_Q31",
+    "year": "2022",
+    "question_number": 31,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Relation R(A,B,C,D,E) with FDs: AB -> C, BC -> D, C -> E. Number of superkeys in R is:",
+    "options": null,
+    "correct_answer": "8",
+    "explanation": "Candidate key is AB. Any superkey must contain attributes AB. Number of superkeys = 2^(5-2) = 2^3 = 8."
+  },
+  {
+    "id": "GATE2022_CS_Q32",
+    "year": "2022",
+    "question_number": 32,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Number of arrangements of six identical balls in three identical bins is:",
+    "options": null,
+    "correct_answer": "7",
+    "explanation": "Partitions of 6 into at most 3 parts: (6,0,0), (5,1,0), (4,2,0), (4,1,1), (3,3,0), (3,2,1), (2,2,2) = 7 ways."
+  },
+  {
+    "id": "GATE2022_CS_Q33",
+    "year": "2022",
+    "question_number": 33,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Hit rate = 0.8, latency = 10 ns, miss penalty = 100 ns. Optimization increases access latency to 15 ns. Minimum hit rate needed so AMAT does not increase is:",
+    "options": null,
+    "correct_answer": "0.85",
+    "explanation": "Original AMAT = 0.8(10) + 0.2(100) = 28 ns. New AMAT = 15h' + 100(1-h') <= 28 => 85h' >= 72 => h' >= 0.847 approx 0.85."
+  },
+  {
+    "id": "GATE2022_CS_Q34",
+    "year": "2022",
+    "question_number": 34,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Value of limit_{x -> 0+} (sqrt(x) / (1 - e^(2 sqrt(x)))) is:",
+    "options": null,
+    "correct_answer": "-0.5",
+    "explanation": "Substituting u = sqrt(x): lim_{u -> 0+} u / (1 - e^(2u)) = lim_{u -> 0+} 1 / (-2e^(2u)) = -0.5."
+  },
+  {
+    "id": "GATE2022_CS_Q35",
+    "year": "2022",
+    "question_number": 35,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 1,
+    "question_text": "Iterative DNS resolution for www.gate.org.in with no caching requires how many query-response pairs?",
+    "options": null,
+    "correct_answer": "4",
+    "explanation": "4 pairs: Root server, .in TLD server, org.in SLD server, and gate.org.in authoritative server."
+  },
+  {
+    "id": "GATE2022_CS_Q36",
+    "year": "2022",
+    "question_number": 36,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Closed form generating function for sequence a_n = n+1 if n is odd, and 1 otherwise:",
+    "options": {
+      "A": "x(1+x^2)/(1-x^2)^2 + 1/(1-x)",
+      "B": "x(3-x^2)/(1-x^2)^2 + 1/(1-x)",
+      "C": "2x/(1-x^2)^2 + 1/(1-x)",
+      "D": "x/(1-x^2)^2 + 1/(1-x)"
+    },
+    "correct_answer": "A",
+    "explanation": "Decomposing a_n = 1 + (n if n is odd else 0) and evaluating generating series gives x(1+x^2)/(1-x^2)^2 + 1/(1-x)."
+  },
+  {
+    "id": "GATE2022_CS_Q37",
+    "year": "2022",
+    "question_number": 37,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "For adjacency matrix A of simple undirected graph, number of 3-cycles is given by trace of:",
+    "options": {
+      "A": "A^3",
+      "B": "A^3 / 2",
+      "C": "A^3 / 3",
+      "D": "A^3 / 6"
+    },
+    "correct_answer": "D",
+    "explanation": "tr(A^3) counts 3-step closed walks. Each 3-cycle is counted 6 times (3 choices of starting vertex x 2 directions), so count is tr(A^3)/6."
+  },
+  {
+    "id": "GATE2022_CS_Q38",
+    "year": "2022",
+    "question_number": 38,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Which one of the following statements is FALSE?",
+    "options": {
+      "A": "TLB performs associative search in parallel on valid entries",
+      "B": "TLB hit + cache miss implies word is present in main memory",
+      "C": "Memory access time using inverted page table is always same for all incoming virtual addresses",
+      "D": "Hashed page table collision leads to different access times"
+    },
+    "correct_answer": "C",
+    "explanation": "Inverted page tables search hash buckets where collision chain lengths vary, making memory access time variable rather than constant."
+  },
+  {
+    "id": "GATE2022_CS_Q39",
+    "year": "2022",
+    "question_number": 39,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Given S: R4(x) R2(x) R3(x) R1(y) W1(y) W2(x) W3(y) R4(y). Which serial schedule is conflict equivalent to S?",
+    "options": {
+      "A": "T1 -> T3 -> T4 -> T2",
+      "B": "T1 -> T4 -> T3 -> T2",
+      "C": "T4 -> T1 -> T3 -> T2",
+      "D": "T3 -> T1 -> T4 -> T2"
+    },
+    "correct_answer": "A",
+    "explanation": "Precedence graph conflicting operations yield edges: T1 -> T3, T3 -> T4, and T4 -> T2, giving order T1 -> T3 -> T4 -> T2."
+  },
+  {
+    "id": "GATE2022_CS_Q40",
+    "year": "2022",
+    "question_number": 40,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Display system with 1024-word memory segment S and 32-word register file R. Functionality of P, Q, and T:",
+    "options": {
+      "A": "P is 10:1 MUX; Q is 5:1 MUX; T is 2:1 MUX",
+      "B": "P is 10:2^10 decoder; Q is 5:2^5 decoder; T is 2:1 ENCODER",
+      "C": "P is 10:2^10 decoder; Q is 5:2^5 decoder; T is 2:1 MUX",
+      "D": "P is 1:10 DEMUX; Q is 1:5 DEMUX; T is 2:1 MUX"
+    },
+    "correct_answer": "C",
+    "explanation": "P decodes 10 address bits (10:2^10 decoder), Q decodes 5 address bits (5:2^5 decoder), and T selects between S and R (2:1 MUX)."
+  },
+  {
+    "id": "GATE2022_CS_Q41",
+    "year": "2022",
+    "question_number": 41,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "IEEE-754 values: RA=0xC1400000 (-12.0), RB=0x42100000 (36.0), RC=0x41400000 (12.0). Which statement is FALSE?",
+    "options": {
+      "A": "A + C = 0",
+      "B": "C = A + B",
+      "C": "B = 3C",
+      "D": "(B - C) > 0"
+    },
+    "correct_answer": "B",
+    "explanation": "A = -12, B = 36, C = 12. A + B = 24 != C (12), making statement B FALSE."
+  },
+  {
+    "id": "GATE2022_CS_Q42",
+    "year": "2022",
+    "question_number": 42,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "Round Robin scheduling (time quantum = 4) with processes P, Q, R, S arriving at t=0. Which CPU burst combination is NOT possible?",
+    "options": {
+      "A": "P=4, Q=10, R=6, S=2",
+      "B": "P=2, Q=9, R=5, S=1",
+      "C": "P=4, Q=12, R=5, S=4",
+      "D": "P=3, Q=7, R=7, S=3"
+    },
+    "correct_answer": "D",
+    "explanation": "Simulating Round Robin with q=4 for option D fails to reproduce the required execution order."
+  },
+  {
+    "id": "GATE2022_CS_Q43",
+    "year": "2022",
+    "question_number": 43,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "What is printed by the C program iterating over 3D array elements?",
+    "options": {
+      "A": "1 2 3 \\n 10 11 12 \\n 19 20 21",
+      "B": "1 4 7 \\n 10 13 16 \\n 19 22 25",
+      "C": "1 2 3 \\n 4 5 6 \\n 7 8 9",
+      "D": "1 2 3 \\n 13 14 15 \\n 25 26 27"
+    },
+    "correct_answer": "A",
+    "explanation": "Outer loop index i selects sub-arrays (i=0,1,2), printing elements at index offset [i][0][k] for k=0,1,2."
+  },
+  {
+    "id": "GATE2022_CS_Q44",
+    "year": "2022",
+    "question_number": 44,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "What is printed by C program using bitwise operations and character casting?",
+    "options": {
+      "A": "ZKS",
+      "B": "83 122 75",
+      "C": "* - +",
+      "D": "P x +"
+    },
+    "correct_answer": "A",
+    "explanation": "Evaluating bitwise shifts and offsets converts intermediate values to ASCII characters 'Z', 'K', 'S'."
+  },
+  {
+    "id": "GATE2022_CS_Q45",
+    "year": "2022",
+    "question_number": 45,
+    "section": "Computer Science",
+    "question_type": "MCQ",
+    "marks": 2,
+    "question_text": "LU decomposition of system: x1+x2-2x3=4, x1+3x2-x3=7, 2x1+x2-5x3=7. Values of L32, U33, x1:",
+    "options": {
+      "A": "L32=2, U33=-1/2, x1=-1",
+      "B": "L32=2, U33=2, x1=-1",
+      "C": "L32=-1/2, U33=2, x1=0",
+      "D": "L32=-1/2, U33=-1/2, x1=0"
+    },
+    "correct_answer": "D",
+    "explanation": "Doolittle factorization gives L_32 = -1/2, U_33 = -1/2, and forward/back substitution yields x1 = 0."
+  },
+  {
+    "id": "GATE2022_CS_Q46",
+    "year": "2022",
+    "question_number": 46,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which of the following problems on Turing machines is/are UNDECIDABLE?",
+    "options": {
+      "A": "Given TMs M1 and M2, decide if L(M1) = L(M2)",
+      "B": "Given TM M, decide if L(M) is regular",
+      "C": "Given TM M, decide if M accepts all strings",
+      "D": "Given TM M, decide if M takes > 10^73 steps on every string"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "A, B, C are non-trivial semantic properties (undecidable by Rice's theorem). D is decidable by bounded step simulation."
+  },
+  {
+    "id": "GATE2022_CS_Q47",
+    "year": "2022",
+    "question_number": 47,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Given L1 = {a^n w a^n | w in {a,b}*} and L2 = {w x w^R | w,x in {a,b}*, |w|,|x| > 0}. Which statements are TRUE?",
+    "options": {
+      "A": "L1 and L2 are regular",
+      "B": "L1 and L2 are context-free",
+      "C": "L1 is regular and L2 is context-free",
+      "D": "L1 and L2 are context-free but not regular"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "L1 = a(a+b)*a and L2 = (a+b)+ are regular languages. Every regular language is also context-free, making A, B, C all true."
+  },
+  {
+    "id": "GATE2022_CS_Q48",
+    "year": "2022",
+    "question_number": 48,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Given L1 = {ww}, L2 = {a^n b^n c^m}, L3 = {a^m b^n c^n}. Which statements are FALSE?",
+    "options": {
+      "A": "L1 is not CFL but L2 and L3 are DCFL",
+      "B": "Neither L1 nor L2 is context-free",
+      "C": "L2, L3 and L2 n L3 all are context-free",
+      "D": "Neither L1 nor its complement is context-free"
+    },
+    "correct_answer": "B, C, D",
+    "explanation": "L2 is CFL (B false). L2 n L3 = {a^n b^n c^n} is not CFL (C false). L1's complement is CFL (D false)."
+  },
+  {
+    "id": "GATE2022_CS_Q49",
+    "year": "2022",
+    "question_number": 49,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Simple undirected weighted graph G with distinct edge weights. Which statements about MST are TRUE?",
+    "options": {
+      "A": "Edge with 2nd smallest weight is always in any MST",
+      "B": "One or both of 3rd and 4th smallest weight edges are in any MST",
+      "C": "Minimum weight edge crossing cut (S, V\\S) is always in any MST",
+      "D": "G can have multiple MSTs"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "With distinct edge weights, MST is unique (D is false). A, B, C follow directly from Kruskal's algorithm and Cut Property."
+  },
+  {
+    "id": "GATE2022_CS_Q50",
+    "year": "2022",
+    "question_number": 50,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which of the following properties hold for the Petersen graph?",
+    "options": {
+      "A": "Chromatic number is 3",
+      "B": "Has a Hamiltonian path",
+      "C": "The graph is isomorphic to Petersen graph representation",
+      "D": "Size of largest independent set is 3"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "Petersen graph has chromatic number 3, contains Hamiltonian paths, and max independent set size = 4 (D is false)."
+  },
+  {
+    "id": "GATE2022_CS_Q51",
+    "year": "2022",
+    "question_number": 51,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Recurrence: f(1)=1, f(2n)=2f(n)-1, f(2n+1)=2f(n)+1. Which statements are TRUE?",
+    "options": {
+      "A": "f(2^n - 1) = 2^n - 1",
+      "B": "f(2^n) = 1",
+      "C": "f(5 . 2^n) = 2^(n+1) + 1",
+      "D": "f(2^n + 1) = 2^n + 1"
+    },
+    "correct_answer": "A, B, C",
+    "explanation": "By evaluating binary representation of inputs in Josephus sequence recurrence, A, B, C hold true."
+  },
+  {
+    "id": "GATE2022_CS_Q52",
+    "year": "2022",
+    "question_number": 52,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Properties of adjacency matrix A of simple undirected graph with n vertices:",
+    "options": {
+      "A": "Diagonal entries of A^2 are vertex degrees",
+      "B": "If connected, no entry of A^(n-1) + I_n can be zero",
+      "C": "If sum of elements <= 2(n-1), graph must be acyclic",
+      "D": "If non-zero in each row/column, graph must be connected"
+    },
+    "correct_answer": "A",
+    "explanation": "(A^2)_ii = sum_j A_ij A_ji = sum_j A_ij^2 = degree(v_i). B, C, D have simple counterexamples."
+  },
+  {
+    "id": "GATE2022_CS_Q53",
+    "year": "2022",
+    "question_number": 53,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which vectors are eigenvector(s) for the given 4x4 matrix?",
+    "options": {
+      "A": "[-1, 1, 0, 1]^T",
+      "B": "[1, 0, -1, 0]^T",
+      "C": "[-1, 0, 2, 2]^T",
+      "D": "[1, -3, 0, 1]^T"
+    },
+    "correct_answer": "A, C, D",
+    "explanation": "Matrix-vector multiplication Av = lambda v holds for vectors A, C, and D."
+  },
+  {
+    "id": "GATE2022_CS_Q54",
+    "year": "2022",
+    "question_number": 54,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "2 KB direct-mapped cache, 64B block size. Words P=0xA248, Q=0xC28A, R=0xCA8A, S=0xA262 accessed in loop. Which statements are TRUE?",
+    "options": {
+      "A": "Every access to S is a hit",
+      "B": "Once P is brought to cache it is never evicted",
+      "C": "At end only R and S reside in cache",
+      "D": "Every access to R evicts Q from cache"
+    },
+    "correct_answer": "A, B, D",
+    "explanation": "P and S map to unique line indices, avoiding eviction. Q and R map to the exact same cache index, thrashing each other."
+  },
+  {
+    "id": "GATE2022_CS_Q55",
+    "year": "2022",
+    "question_number": 55,
+    "section": "Computer Science",
+    "question_type": "MSQ",
+    "marks": 2,
+    "question_text": "Which CIDR prefixes collectively aggregate subnets 12.20.164.0/22, 12.20.170.0/23, 12.20.168.0/23, 12.20.166.0/23?",
+    "options": {
+      "A": "12.20.164.0/20",
+      "B": "12.20.164.0/22",
+      "C": "12.20.164.0/21",
+      "D": "12.20.168.0/22"
+    },
+    "correct_answer": "B, D",
+    "explanation": "12.20.164.0/22 covers 164-167. Combining 168.0/23 and 170.0/23 yields 12.20.168.0/22 (covers 168-171)."
+  },
+  {
+    "id": "GATE2022_CS_Q56",
+    "year": "2022",
+    "question_number": 56,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Given SQL query with EXCEPT and NOT EXISTS on Student, Course, Dept, Register tables. Number of rows returned is:",
+    "options": null,
+    "correct_answer": "2",
+    "explanation": "The relational query filters students enrolled in all courses of department D01, matching exactly 2 student records."
+  },
+  {
+    "id": "GATE2022_CS_Q57",
+    "year": "2022",
+    "question_number": 57,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Distance Vector routing P-Q-R. Link Q-R fails. Probability of routing loop between P and Q (rounded to 1 decimal place) is:",
+    "options": null,
+    "correct_answer": "0.5",
+    "explanation": "With independent update timers, there is a 50% chance (0.5) Q sends update to P before hearing P's route to R, triggering count-to-infinity loop."
+  },
+  {
+    "id": "GATE2022_CS_Q58",
+    "year": "2022",
+    "question_number": 58,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Directed graph on 5 vertices with lower-triangular adjacency matrix. Number of directed spanning trees rooted at vertex 5 is:",
+    "options": null,
+    "correct_answer": "24",
+    "explanation": "By Matrix-Tree Theorem for directed graphs, total rooted spanning trees from source vertex 5 equals 4! = 24."
+  },
+  {
+    "id": "GATE2022_CS_Q59",
+    "year": "2022",
+    "question_number": 59,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "100 Mbps link, distance 2100 km, propagation speed 3x10^8 m/s, packet size 1000 bytes. Total time (ms) to completely receive packet is:",
+    "options": null,
+    "correct_answer": "7.08",
+    "explanation": "Propagation delay = 2100/300000 = 7 ms. Transmission delay = 8000/10^8 = 0.08 ms. Total time = 7.08 ms."
+  },
+  {
+    "id": "GATE2022_CS_Q60",
+    "year": "2022",
+    "question_number": 60,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "1 Gbps TCP link, MSL = 60s. Minimum bits needed for sequence number field to prevent wrap-around during MSL is:",
+    "options": null,
+    "correct_answer": "33",
+    "explanation": "Bytes transferred in 60s = (10^9 x 60)/8 = 7.5 x 10^9. Bits required = ceil(log2(7.5 x 10^9)) = 33."
+  },
+  {
+    "id": "GATE2022_CS_Q61",
+    "year": "2022",
+    "question_number": 61,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Pipeline X1 (base CPI=1, 30% branches, 2 stalls per branch) vs X2 (branch predictor with 80% accuracy). Speedup of X2 over X1 is:",
+    "options": null,
+    "correct_answer": "1.43",
+    "explanation": "CPI_1 = 1 + 0.3(2) = 1.6. CPI_2 = 1 + 0.3(0.2 x 2) = 1.12. Speedup = 1.6 / 1.12 approx 1.43."
+  },
+  {
+    "id": "GATE2022_CS_Q62",
+    "year": "2022",
+    "question_number": 62,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Minimum Enqueue operations on Q1 needed to move elements of Q1 to Q2 in reverse order without extra storage:",
+    "options": null,
+    "correct_answer": "0",
+    "explanation": "Standard queue operations alone cannot reverse data order without auxiliary storage, making 0 extra Enqueues valid."
+  },
+  {
+    "id": "GATE2022_CS_Q63",
+    "year": "2022",
+    "question_number": 63,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Filesystems A (contiguous) and B (linked) store 100 blocks. Insert block in middle. Disk accesses nA and nB. Value of nA + nB is:",
+    "options": null,
+    "correct_answer": "153",
+    "explanation": "Contiguous (nA): read 50 + write 51 = 101. Linked (nB): read 50 + write 2 = 52. nA + nB = 101 + 52 = 153."
+  },
+  {
+    "id": "GATE2022_CS_Q64",
+    "year": "2022",
+    "question_number": 64,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "Demand paging with 4 frames and LRU for sequence [7,2,7,3,2,5,3,4,6,7,7,1,5,6,1]. Page fault ratio is:",
+    "options": null,
+    "correct_answer": "0.6",
+    "explanation": "Simulating LRU page replacement yields 9 page faults across 15 accesses. Ratio = 9/15 = 0.6."
+  },
+  {
+    "id": "GATE2022_CS_Q65",
+    "year": "2022",
+    "question_number": 65,
+    "section": "Computer Science",
+    "question_type": "NAT",
+    "marks": 2,
+    "question_text": "SDT evaluation for expression 20#10%5#8%2%2 with given precedence rules:",
+    "options": null,
+    "correct_answer": "80",
+    "explanation": "Grammar precedence evaluates '%' prior to '#': 20 # (10%5) # ((8%2)%2) = 20 x 2 x 2 = 80."
+  }
+]
